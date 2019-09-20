@@ -1,0 +1,19 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div id="footer">
+            
+    
+        <span><b>Bản quyền © 2012 thuộc về ACB - Website: www.acb.com.vn</b></span>  
+        <br>
+        <span>NGÂN HÀNG Á CHÂU: 442 Nguyễn Thị Minh Khai, Q.3, TP HCM</span>    
+    
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>footer laptop</p>
+</div>
+<!--END LAPTOP-->

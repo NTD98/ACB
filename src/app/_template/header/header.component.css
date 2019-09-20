@@ -1,0 +1,45 @@
+.header{
+    padding: 0px 2px 10px 0px;
+    height: 50px;
+}
+#topmenu {
+    height: 27px;
+    background: url(../../../assets/bg_topmenu.jpg);
+    color: #fff;
+    font-size: 12px;
+}
+.header .header-left{
+    float: left;
+    width: 50%;
+    text-align: left;
+    padding-left: 0px;
+}
+.header .header-right{
+    float: right;
+    width: 115px;
+    padding-right: 0px;
+}
+.topmenu{
+    height: 27px;
+    background: url(../../../assets/bg_topmenu.jpg);
+    color: #fff;
+    font-size: 12px;
+}
+.topmenu .topmenu_left ul{
+    list-style: none;
+}
+.topmenu .topmenu_left ul li{
+    float: left;
+}
+.topmenu .topmenu_left ul li.selected a{
+    color: bisque;
+}
+ul{
+    margin: 0px;
+    padding-inline-start: 10px;
+}
+.topmenu .topmenu_left ul li a {
+    float: left;
+    font-weight: bold;
+    padding: 6px 5px 3px 5px;
+}

@@ -1,0 +1,19 @@
+a{
+    font-size: 11px;
+    color: #545454;
+    font-family: 'Tahoma',Helvetica,sans-serif;
+    font-weight: bold;
+}
+a:hover{
+    color: #1b69c4 !important;
+    cursor: pointer;
+}
+.col-xs-6>div{
+    width: 90%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+.col-xs-6>div>a{
+    text-align: center;
+    width: 90%;
+}

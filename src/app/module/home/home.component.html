@@ -1,0 +1,97 @@
+<!--MOBILE-->
+<div class="container mobile" *ngIf="loginService.isMobile">
+    <div class="row">
+        <div class="col-xs-6" style="text-align: center">
+            <div>
+                <img src="../../../assets/Preview-Files-64.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>Tra cứu thông tin</a>
+            </div>
+            <div>
+                <img src="../../../assets/report-icon.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>Liệt kê giao dịch trực tuyến</a>
+            </div>
+            <div>
+                <img src="../../../assets/wire-transfer-icon-64.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>Chuyển tiền</a>
+            </div>
+            <div>
+                <img src="../../../assets/Money_Pig.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>Tiền gửi có kỳ hạn</a>
+            </div>
+            <div>
+                <img src="../../../assets/Configuration-Settings-64.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>Tiện ích</a>
+            </div>
+            <div>
+                <img src="../../../assets/mobile-banking-64.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>SMS Banking</a>
+            </div>
+            <div>
+                <img src="../../../assets/Partnership.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>Blue Diamond</a>
+            </div>
+            <div>
+                <img src="../../../assets/western_union.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>Western Union</a>
+            </div>
+            <div>
+                <img src="../../../assets/dkonline.jpg" style="width: 64px;border-style:none;">
+                <br>
+                <a>Đăng ký online</a>
+            </div>
+        </div>
+        <div class="col-xs-6" style="text-align: center">
+            <div>
+                <img src="../../../assets/Credit_Card_64.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>Dịch vụ thẻ</a>
+            </div>
+            <div>
+                <img src="../../../assets/note-64.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>Đăng ký tài khoản thụ hưởng</a>
+            </div>
+            <div>
+                <img src="../../../assets/credit-cards-icon-64.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>Thanh toán dịch vụ</a>
+            </div>
+            <div>
+                <img src="../../../assets/budget-money-64.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>Tiền gửi Đầu tư trực tuyến</a>
+            </div>
+            <div>
+                <img src="../../../assets/personal_loan_64.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>Vay trực tuyến</a>
+            </div>
+            <div>
+                <img src="../../../assets/dollars.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>Bán ngoại tệ cho ACB</a>
+            </div>
+            <div>
+                <img src="../../../assets/wallet-icon.png" style="width: 64px;border-style:none;">
+                <br>
+                <a>Ví điện tử</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>home laptop</p>
+</div>
+
+<!--END LAPTOP-->

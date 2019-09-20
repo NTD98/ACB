@@ -1,0 +1,64 @@
+.space{
+    height: 5px;
+    clear: both;
+}
+.left{
+    width: 100%;
+    min-height: 350px;
+}
+.left .box_login {
+    border: 1px solid #C8E3EC;
+    height: 225px;
+    width: 230px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.left .box_login .box_login_in1 {
+    background: url(../../../assets/bg_h2_login.jpg) repeat-x;
+    margin: 1px;
+    height: 23px;
+    text-align: center;
+    padding: 8px 8px 8px 8px;
+    border-bottom: 1px solid #c8e3ec;
+}
+a{
+    font-size: 0.83em;
+}
+.left .box_login .box_login_in {
+    background: url(../../../assets/bg_login.jpg) repeat-x;
+    margin: 1px;
+    text-align: center;
+    padding: 8px 8px 8px 8px;
+}
+.left .box_login .box_login_in input {
+    margin-top: 2px;
+    margin-bottom: 5px;
+    width: 155px;
+}
+.left .box_login .box_login_in .txt_verify {
+    float: center;
+    width: 72px;
+    margin-right: 9px;
+    border-width: 1 !important;
+}
+.left .box_login .box_login_in .img_verify{
+    height: 19px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+.nut1 {
+    background: #dbecf2;
+    border-bottom: #98c6d6 1px solid;
+    border-left: #98c6d6 1px solid;
+    border-right: #98c6d6 1px solid;
+    border-top: #98c6d6 1px solid;
+    color: #0071bb;
+    cursor: cusor;
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+}

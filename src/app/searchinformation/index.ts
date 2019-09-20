@@ -1,0 +1,1 @@
+export { SearchInformationModule } from './searchinformation.module';
