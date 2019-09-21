@@ -1,0 +1,58 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;">TRA CỨU THÔNG TIN</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <div class="col-xs-12">
+                <a style="font-size: 12px;" href="#">Nhấp chọn số tài khoản để xem thông tin chi tiết và in sao kê tài khoản</a>
+            </div>
+            <div class="col-xs-6" style="width: 100%">
+                <strong style="font-size: 12px; padding-left:5px;">Tìm theo số tài khoản</strong>
+            </div>
+            <div class="col-xs-12">
+                <input type="text" name="AccountNumber" value="" size="20" style="height: 20px">
+                <img src="../../../assets//icon_search_rs.png" height="24px" style="padding-bottom: 4px;">
+            </div>
+            <div class="col-xs-12" style="width: 100%">
+                <table class="acctSum" width="100%" cellspacing="1" cellpadding="0" id="table">         
+                    <tbody>
+                        <tr class="evenrowcolor">
+                            <th class="acctSum" style="text-align: center">Số tài khoản</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Số dư</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Ngày đáo hạn</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Sản phẩm</th>
+                        </tr>
+                        <tr class="oddrowcolor">
+                            <td class="acctSum" style="text-align: center" width="15%"><a href="#" class="acc_bold">4504727</a></td><div></div>
+                            <td class="acctSum" style="text-align: right" width="28%"><span class="text_bold">0</span> (VND) <sup class="chuthich_num" style="color: red"> 1</sup><br><span class="text_bold">0</span> (VND) <sup class="chuthich_num" style="color: red"> 2</sup></td><div></div>
+                            <td class="acctSum" style="text-align: center" width="20%">&nbsp;</td><div></div>
+                            <td class="acctSum" style="text-align: left" width="37%">TGTT SINH VIEN KHTN (CN) VND</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-xs-12" style="padding-left: 10px;padding-right:10px;">
+                <p style="font-size: 12px;">
+                    <sup class="chuthich_num" style="color: #c92538;"> 1 </sup> <span style="color: #c92538;font-weight: bold;" class="red_tieude">SỐ DƯ THỰC (CURRENT BALANCE)</span><br>
+                    Là số dư có thực tế trên tài khoản tiền gửi của khách hàng<br>
+                    <br>
+                    <sup class="chuthich_num" style="color: #c92538;"> 2 </sup> <span class="red_tieude" style="color: #c92538;font-weight: bold;"> SỐ DƯ KHẢ DỤNG (AVAILABLE BALANCE)</span><br>
+                    Là số dư trên tài khoản tiền gửi thanh toán mà khách hàng được phép sử dụng. 
+                    Trong trường hợp khách hàng được cấp hạn mức thấu chi thì số dư khả dụng bằng tổng số dư thực cộng với hạn mức thấu chi trừ đi số tiền bị phong tỏa trên tài khoản (nếu có ).
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>onlinetransaction laptop</p>
+</div>
+<!--END LAPTOP-->

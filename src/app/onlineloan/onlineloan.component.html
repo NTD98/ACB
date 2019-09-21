@@ -1,0 +1,11 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <p>onlineloan mobile</p>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>onlineloan laptop</p>
+</div>
+<!--END LAPTOP-->
