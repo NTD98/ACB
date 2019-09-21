@@ -1,0 +1,11 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <p>transferby-cmnd mobile</p>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>transferby-cmnd laptop</p>
+</div>
+<!--END LAPTOP-->

@@ -1,0 +1,11 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <p>fasttransferoutacb mobile</p>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>fasttransferoutacb laptop</p>
+</div>
+<!--END LAPTOP-->
