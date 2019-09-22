@@ -1,0 +1,31 @@
+td{
+    font-size: 12px;
+}
+.white_tieude {
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 20px;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.error {
+    font-family: Arial;
+    font-weight: bold;
+    color: #c92538;
+    text-decoration: none;
+}
+.nut1 {
+    BACKGROUND: #dbecf2;
+    BORDER-BOTTOM: #98c6d6 1px solid;
+    BORDER-LEFT: #98c6d6 1px solid;
+    BORDER-RIGHT: #98c6d6 1px solid;
+    BORDER-TOP: #98c6d6 1px solid;
+    COLOR: #0071bb;
+    CURSOR: cusor;
+    FONT-FAMILY: Arial,sans-serif;
+    font-size: 12px;
+}

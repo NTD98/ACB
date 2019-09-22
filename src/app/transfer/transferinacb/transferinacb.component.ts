@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {LoginService} from '../../module/login/login.service';
 @Component({
   selector: 'app-transferinacb',
   templateUrl: './transferinacb.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransferInACBComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loginService:LoginService) { }
 
   ngOnInit() {
   }

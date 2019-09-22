@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {LoginService} from '../../module/login/login.service';
 @Component({
   selector: 'app-transferby-cmnd',
   templateUrl: './transferby-cmnd.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransferByCMNDComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loginService:LoginService) { }
 
   ngOnInit() {
   }

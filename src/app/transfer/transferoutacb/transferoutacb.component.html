@@ -1,6 +1,211 @@
 <!--MOBILE-->
 <div class="mobile" *ngIf="loginService.isMobile">
-    <p>transferoutacb mobile</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px; text-transform: uppercase">Chuyển khoản trong hệ thống ACB</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						Tài khoản trích tiền 
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 27%;">Chọn tài khoản trích tiền</td>
+                                    <td style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
+                                        <option value="" selected="selected"></option>
+                                        <option value="4504727">4504727</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						Thông tin đơn vị thụ hưởng
+					</td>
+                </tr>
+                <tr>
+                        <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table style="width: 100%" cellspacing="0" cellpadding="0">
+                            <tbody><tr>
+                                <td style="width:27%">Tên đơn vị thụ hưởng</td>
+                                <td style="width:73%"><select name="Tempt" style="width:250px;" id="Tempt">
+                                                <option value="" selected="selected"></option>
+                                                </select>  <input type="hidden" name="AccountNameCo" value="" id="AccountNameCo"></td>
+                            </tr>
+                            <tr>
+                                <td style="height:10px" colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td>Tài khoản thụ hưởng</td>
+                                <td><input type="text" name="AccountNbrCo" value="" size="30" id="AccountNbrCo" readonly="readonly"></td>
+                            </tr>
+                            <tr>
+                                <td style="height:10px" colspan="2"></td>
+                            </tr>
+                            <!--<tr>
+                                <td>Ti&#7873;n t&#7879;</td>
+                                <td><select name="Currency" id="select2" style="width:205px;">
+                                  <option>Viet Nam Dong</option>
+                                </select></td>
+                              </tr>
+                              -->
+                            
+                            <tr>
+                                <td>Tại ngân hàng và chi nhánh</td>
+                                <td><input type="text" name="BranchNameCo" value="" size="30" id="BranchNameCo" readonly="readonly"></td>
+                            </tr>
+                            <tr>
+                                <td style="height:10px" colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td>Tỉnh / thành phố </td>
+                                <td><input type="hidden" name="BranchNbrCo" value="" id="BranchNbrCo"> <input type="text" name="ProvinceNameCo" value="" size="30" id="ProvinceNameCo" readonly="readonly"></td>
+                            </tr>
+    
+                        </tbody></table>
+                        </td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						Thông tin chuyển khoản
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+					<table style="width: 100%" cellspacing="0" cellpadding="0">
+						<tbody><tr>
+							<td>Số tiền</td>
+							<td><input type="text" name="Amount" value="" size="30" id="Amount" maxlength="18"></td>
+						</tr>
+						<tr>
+							<td style="height:7px" colspan="2"></td>
+						</tr>
+						<tr>
+							<td style="width:27%">Số tiền bằng chữ</td>
+							<td style="width:73%"><textarea name="AmountWord" cols="" rows="" wrap="soft" class="text_sotien" id="AmountWord" readonly=""></textarea></td>
+						</tr>
+						<tr>
+							<td style="height:7px" colspan="2"></td>
+						</tr>
+						<tr>
+							<td style="width:27%">Phí giao dịch</td>
+							<td style="width:73%"><input type="text" name="AmountFee" value="" size="30" id="AmountFee" readonly=""></td>
+						</tr>
+						<tr>
+							<td style="height:7px" colspan="2"></td>
+						</tr>
+						<tr>
+							<td style="width:27%">Số tiền phí bằng chữ</td>
+							<td style="width:73%"><input type="text" name="AmountFeeWord" value="" size="30" id="AmountFeeWord" readonly=""></td>
+						</tr>
+						<tr>
+							<td style="height:7px" colspan="2"></td>
+						</tr>
+						<tr>
+							<td style="width:27%"></td>
+							<td id="chiuphi" style="width:73%;display: none;"><input type="radio" name="NhanChiuPhiYN" value="N" checked="checked" id="isnhan1"> Đơn vị chuyển tiền chịu phí
+								<input type="radio" name="NhanChiuPhiYN" value="Y" id="isnhan2"> Đơn vị thụ hưởng chịu phí</td>
+						</tr>
+						<tr>
+							<td style="height:7px" colspan="2"></td>
+						</tr>
+						<tr>
+							<td valign="top">Nội dung giao dịch<input type="hidden" name="glbHoTenKH" value="NGUYEN TIEN DAT"></td>
+							<td><textarea name="Description" cols="" rows="" wrap="soft" class="text_noidung"></textarea></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="ChooseEmail1" value="true" id="ChooseEmail1">Nhận email kết quả giao dịch
+							<input type="hidden" name="ChooseEmail" id="ChooseEmail" value=""></td>
+							<td><input type="text" name="getEmail" value="" size="30" id="getEmail" maxlength="500" disabled=""></td>						
+						</tr>
+						<tr>
+							<td style="height: 3px;" colspan="2"></td>
+						</tr>
+
+					</tbody></table>
+					</td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						Thời gian chuyển
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+					<table style="width: 100%" cellspacing="0" cellpadding="0">
+						<tbody><tr>
+							<td><input type="radio" name="IsFundAfter" value="false" checked="checked" id="isfund1"> Chuyển khoản ngay</td>
+							<td colspan="2">&nbsp;</td>
+						</tr>
+						<tr>
+							<td height="10" colspan="3"></td>
+						</tr>
+						<tr>
+							<td style="height: 20px;width:27%;"><input type="radio" name="IsFundAfter" value="true" id="isfund2"> Chuyển khoản sau vào ngày</td>
+							<td style="height: 20px;width:73%;"><input type="text" name="TransDate" value="" size="20" id="TransDate" maxlength="10" disabled="">&nbsp;dd/mm/yyyy</td>
+							<td width="0%">
+							</td>
+                        </tr>
+                        
+					</tbody></table>
+					</td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						phương pháp xác thực
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 27%;">Chọn phương pháp xác thực</td>
+                                    <td style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
+                                        <option value="" selected="selected"></option>
+                                        <option value="4504727">4504727</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr style="text-align:center;">
+                    
+                    <input name="button" type="button" class="nut1" id="button" value="Đồng ý">
+                    <input name="button2" type="button" class="nut1" id="button2" value="Hủy">
+                </tr>
+                <tr>
+                    <td style="text-align: left;" colspan="2">
+                        <span class="error">Lưu ý:</span><br>
+                        - <span class="copyright">Nếu có nhiều email thì cách nhau bằng dấu chấm (;).
+                        Đối với giao dịch thành công, Ủy nhiệm chi sẽ được đính kèm trong email
+                        </span><br>
+                        - <span class="copyright">Phí chuyển khoản, chuyển tiền được tính theo thời gian ký xác nhận lệnh. Vui lòng tham khảo biểu phí </span><a href="http://acb.com.vn/wps/portal/Home/fee" target="blank_">tại đây</a><br>
+                        - <span class="copyright">Khi chọn Đơn vị thụ hưởng chịu phí, số tiền phí sẽ được trừ vào số tiền chuyển.</span>
+                       </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>
 <!--END MOBILE-->
 

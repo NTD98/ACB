@@ -1,6 +1,275 @@
 <!--MOBILE-->
 <div class="mobile" *ngIf="loginService.isMobile">
-    <p>transferby-cmnd mobile</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px; text-transform: uppercase">
+                    Chuyển tiền cho người nhận bằng cmnd/ passport
+                </a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+                        
+                        
+							THÔNG TIN  ĐƠN VỊ CHUYỂN TIỀN 
+					
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 27%;">Chọn tài khoản trích tiền</td>
+                                    <td style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
+                                        <option value="" selected="selected"></option>
+                                        <option value="4504727">4504727</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+                        
+                        
+                        THÔNG TIN  ĐƠN VỊ THỤ HƯỞNG
+					
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0">
+                            <tbody><tr>
+                                <td style="width:27%;height: 30px;">Tên đơn vị thụ hưởng</td>
+                                <td style="width:73%"><input type="text" name="AccountNameCo" value="" size="30" id="AccountNameCo"></td>
+                            </tr>
+                            <tr>
+                                <td style="height:30px">Nhận bằng</td>
+                                <td><select name="IdTypeCo" id="IdTypeCo" style="width:205px;">
+                                    <option value="CMND">CMND</option>
+                                    <option value="Passport">Passport</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td style="height:30px">Số CMND/Passport</td>
+                                <td><input type="text" name="IdPassportNbrCo" value="" size="30" id="IdPassportNbrCo" ></td>
+                            </tr>
+                            <tr>
+                                <td style="height:30px">Ngày cấp CMND/Passport</td>
+                                <td style="height:30px"><input type="text" name="IdPassportIssueDateCo" value="" size="20" id="IdPassportIssueDateCo" maxlength="10"> dd/mm/yyyy</td>
+                            </tr>
+                            <tr>
+                                <td style="height:30px">Nơi cấp CMND/Passport</td>
+                                <td><input type="text" name="IdPassportIssuePlaceCo" value="" size="30" id="IdPassportIssuePlaceCo"></td>
+                            </tr>
+                            <tr id="hide" name="hide" style="display: none;">
+                                <td style="height:30px">Thời hạn hiệu lực Passport</td>
+                                <td style="height:30px"><input type="text" name="PassportExpiredDateCo" value="" size="20" id="PassportExpiredDateCo" maxlength="10"> dd/mm/yyyy</td>
+                            </tr>
+                        </tbody></table>
+                        </td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+                   
+						THÔNG TIN  CHUYỂN TIỀN 
+					
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+					<table style="width:100%" cellspacing="0" cellpadding="0">
+						<tbody><tr>
+							<td style="height:30px;width:27%;">Nhận tại tỉnh / thành phố</td>
+							<td style="width:73%"><select name="ProvinceNbrCo" id="ProvinceNbrCo" style="width:205px;">
+                                            <option value="" selected="selected">...</option>
+                                            <option value="74">An Giang</option>
+                                            <option value="69">Ba Ria-Vung Tau</option>
+                                            <option value="15">Bac Can</option>
+                                            <option value="26">Bac Giang</option>
+                                            <option value="84">Bac Lieu</option>
+                                            <option value="27">Bac Ninh</option>
+                                            <option value="77">Ben Tre</option>
+                                            <option value="54">Binh Dinh</option>
+                                            <option value="65">Binh Duong</option>
+                                            <option value="66">Binh Phuoc</option>
+                                            <option value="58">Binh Thuan</option>
+                                            <option value="85">Ca Mau</option>
+                                            <option value="80">Can Tho</option>
+                                            <option value="13">Cao Bang</option>
+                                            <option value="51">Da Nang</option>
+                                            <option value="62">Dac Lac</option>
+                                            <option value="57">Dak Nong</option>
+                                            <option value="19">Dien Bien</option>
+                                            <option value="68">Dong Nai</option>
+                                            <option value="72">Dong Thap</option>
+                                            <option value="60">Gia Lai</option>
+                                            <option value="12">Ha Giang</option>
+                                            <option value="32">Ha Nam</option>
+                                            <option value="10">Ha Noi</option>
+                                            <option value="30">Ha Tay</option>
+                                            <option value="38">Ha Tinh</option>
+                                            <option value="24">Hai Duong</option>
+                                            <option value="23">Hai Phong</option>
+                                            <option value="64">Hau Giang</option>
+                                            <option value="50">Ho Chi Minh</option>
+                                            <option value="31">Hoa Binh</option>
+                                            <option value="25">Hung Yen</option>
+                                            <option value="680">Khac</option>
+                                            <option value="56">Khanh Hoa</option>
+                                            <option value="82">Kien Giang</option>
+                                            <option value="61">Kon Tum</option>
+                                            <option value="22">Lai Chau</option>
+                                            <option value="63">Lam Dong</option>
+                                            <option value="14">Lang Son</option>
+                                            <option value="18">Lao Cai</option>
+                                            <option value="70">Long An</option>
+                                            <option value="33">Nam Dinh</option>
+                                            <option value="37">Nghe An</option>
+                                            <option value="34">Ninh Binh</option>
+                                            <option value="59">Ninh Thuan</option>
+                                            <option value="28">Phu Tho</option>
+                                            <option value="55">Phu Yen</option>
+                                            <option value="39">Quang Binh</option>
+                                            <option value="52">Quang Nam</option>
+                                            <option value="53">Quang Ngai</option>
+                                            <option value="21">Quang Ninh</option>
+                                            <option value="40">Quang Tri</option>
+                                            <option value="81">Soc Trang</option>
+                                            <option value="20">Son La</option>
+                                            <option value="67">Tay Ninh</option>
+                                            <option value="35">Thai Binh</option>
+                                            <option value="16">Thai Nguyen</option>
+                                            <option value="36">Thanh Hoa</option>
+                                            <option value="41">Thua Thien Hue</option>
+                                            <option value="76">Tien Giang</option>
+                                            <option value="79">Tra Vinh</option>
+                                            <option value="11">Tuyen Quang</option>
+                                            <option value="78">Vinh Long</option>
+                                            <option value="29">Vinh Phuc</option>
+                                            <option value="17">Yen Bai</option>
+                                            </select></td>
+						</tr>
+						
+						<tr>
+							<td style="height:30px">Ngân hàng</td>
+							<td><select name="BankNbrCo" id="BankNbrCo" style="width:205px;">
+                                </select></td>
+						</tr>
+						
+						<tr>
+							<td style="height:30px">Chi nhánh</td>
+							<td><select name="BranchNbrCo" id="BranchNbrCo" style="width:205px;">
+                                </select></td>
+						</tr>
+						<tr>
+							<td style="height:3px" colspan="2"></td>
+						</tr>
+						<tr>
+							<td>Số tiền</td>
+							<td><input type="text" name="Amount" value="" size="30" id="Amount" maxlength="18"></td>
+						</tr>
+						<tr>
+							<td style="height:7px" colspan="2"></td>
+						</tr>
+						<tr>
+							<td style="width:27%">Số tiền bằng chữ</td>
+							<td style="width:73%"><textarea name="AmountWord" cols="" rows="" wrap="soft" class="text_sotien" id="AmountWord" readonly=""></textarea></td>
+						</tr>
+						<tr>
+							<td style="height:7px" colspan="2"></td>
+						</tr>
+						<tr>
+							<td style="width:27%">Phí giao dịch</td>
+							<td style="width:73%"><input type="text" name="AmountFee" value="" size="30" id="AmountFee" readonly=""></td>
+						</tr>
+						<tr>
+							<td style="height:7px" colspan="2"></td>
+						</tr>
+						<tr>
+							<td style="width:27%">Số tiền phí bằng chữ</td>
+							<td style="width:73%"><input type="text" name="AmountFeeWord" value="" size="30" id="AmountFeeWord" readonly=""></td>
+						</tr>
+						<tr>
+							<td style="height:7px" colspan="2"></td>
+						</tr>
+						<tr>
+							<td style="width:27%"></td>
+							<td id="chiuphi" style="width:73%" style="display: none;"><input type="radio" name="NhanChiuPhiYN" value="N" checked="checked" id="isnhan1"> Đơn vị chuyển tiền chịu phí
+								<input type="radio" name="NhanChiuPhiYN" value="Y" id="isnhan2"> Đơn vị thụ hưởng chịu phí</td>
+						</tr>
+						<tr>
+							<td style="height:7px" colspan="2"></td>
+						</tr>
+						<tr>
+							<td valign="top">Nội dung chuyển tiền</td>
+							<td><textarea name="Description" cols="" rows="" wrap="soft" class="text_noidung"></textarea></td>
+						</tr>
+						<tr>
+							<td valign="top"></td>
+							<td><span class="error">Quý khách vui lòng nhập tên chi nhánh/ phòng giao dịch nhận tiền trong nội dung.</span></td>
+						</tr>
+						<tr>
+							<td style="height:7px" colspan="2"></td>
+						</tr>
+						<tr>
+							<td style="height:7px" colspan="2"></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="ChooseEmail1" value="true" id="ChooseEmail1">Nhận email kết quả giao dịch
+							<input type="hidden" name="ChooseEmail" id="ChooseEmail" value=""></td>
+							<td><input type="text" name="getEmail" value="" size="30" id="getEmail" maxlength="500" disabled=""></td>						
+						</tr>
+						
+					</tbody></table>
+					</td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+                        
+                        
+                        PHƯƠNG PHÁP XÁC THỰC
+
+					
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 27%;">Chọn phương pháp xác thực</td>
+                                    <td style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
+                                        <option value="" selected="selected"></option>
+                                        <option value="4504727">OTP + mật khẩu</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr style="text-align: center;">
+                    <input name="button" type="button" class="nut1" id="button" value="Đồng ý">
+                    <input name="button2" type="button" class="nut1" id="button2" value="Hủy">
+                </tr>
+                <tr>
+                    <td style="text-align: left" colspan="2">
+                    <span class="error">Lưu ý:</span><br>
+                    - <span class="copyright">Khi chọn Đơn vị thụ hưởng chịu phí, số tiền phí sẽ được trừ vào số tiền chuyển.</span><br>
+		            - <span class="copyright">Giao dịch chuyển khoản cho cá nhân nước ngoài: chỉ thực hiện giao dịch chuyển lương và công tác phí. Các giao dịch này phải có chứng từ chứng minh theo quy định
+                   </span></td>
+                 </tr>
+            </table>
+        </div>
+    </div>
 </div>
 <!--END MOBILE-->
 

@@ -1,6 +1,258 @@
 <!--MOBILE-->
 <div class="mobile" *ngIf="loginService.isMobile">
-    <p>fasttransferoutacb mobile</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px; text-transform: uppercase">Chuyển khoản trong hệ thống ACB</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						THÔNG TIN ĐƠN VỊ CHUYỂN TIỀN 
+					</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height: 27px;">
+                        <input type="radio" name="IsAcctCard" value="true" checked="checked" id="IsAcctCard2"> Trích tiền từ tài khoản<br><br>
+                           <input type="radio" name="IsAcctCard" value="false" id="IsAcctCard1"> Trích tiền từ thẻ
+                          
+                         
+                     </td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+						<table style="width: 100%" cellspacing="0" cellpadding="0">
+							<tbody><tr>
+							<td style="height:37px">Chọn tài khoản trích tiền</td>
+							<td style="width:73%"><select name="TkNo" id="TkNo">
+                                            <option value="" selected="selected"></option>
+                                            <option value="4504727">4504727</option>
+                                            </select>
+								</td>
+							</tr>
+							<tr>
+								<td style="height:37px"></td>
+								<td><span class="alert">
+								  </span></td>
+							</tr>
+							<tr>
+								<td style="height:37px"></td>
+								<td><span class="alert">
+								 </span></td>
+							</tr>
+                            </tbody></table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						THÔNG TIN ĐƠN VỊ THỤ HƯỞNG
+					
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table style="width: 100%" cellspacing="0" cellpadding="0">
+                
+                            <tbody><tr>
+                                <td style="height:35px">Chuyển đến</td>
+                                <td>
+                                <select name="IsTaiKhoanTheThuHuong" id="chuyenDenList">
+                                <option value="true" selected="selected">Tài khoản thụ hưởng</option>
+                                <option value="false">Thẻ thụ hưởng</option>
+                                </select>
+                                </td>
+                            </tr>
+                                
+                                <tr>
+                                    <td style="height:35px"><input type="radio" name="IsDonViThuHuong" value="true" checked="checked" id="IsDonViThuHuong1"> Chọn đơn vị thụ hưởng</td>
+                                    <td>
+                                    <select name="DVTH" id="DVTH" style="pointer-events: all;">
+                                    <option value="" selected="selected"></option>
+                                    </select>
+                                    <a href="#" class="acc_bold" >Danh sách thụ hưởng</a>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td style="height:35px"><input type="radio" name="IsDonViThuHuong" value="false" id="IsDonViThuHuong2">Nhập tài khoản thụ hưởng</td>
+                                    <td><input type="text" name="AccountNbrCo" value="" size="30" id="AccountNbrCo" readonly=""></td>
+                                </tr>
+                                
+                                
+                                <tr>
+                                    <td style="height:35px">Chọn ngân hàng thụ hưởng</td>
+                                    <td ><select name="NganHang" id="NganHang" style="pointer-events: none;width: 100%;">
+                                        <option value="" selected="selected"></option>
+                                        <option value="970436">VCB - NH TMCP Ngoại Thương Việt Nam</option>
+                                        <option value="970418">BIDV - NH TMCP Đầu tư và Phát triển Việt Nam</option>
+                                        <option value="970433">VIETBANK - NH TMCP Việt Nam Thương Tín</option>
+                                        <option value="970407">TCB - NH TMCP Kỹ thương Việt Nam</option>
+                                        <option value="970403">STB - NH TMCP Sài Gòn Thương Tín</option>
+                                        <option value="970432">VPB - NH TMCP Việt Nam Thịnh Vượng</option>
+                                        <option value="970431">EIB - NH TMCP Xuất nhập khẩu Việt Nam</option>
+                                        <option value="970425">ABB - NH TMCP An Bình</option>
+                                        <option value="970405">AGRIBANK - NH NN&amp;PTNT Việt Nam</option>
+                                        <option value="970438">BVB - NH TMCP Bảo Việt</option>
+                                        <option value="970409">BacABank - NH TMCP Bắc Á</option>
+                                        <option value="422589">CIMB - NH TNHH MTV CIMB</option>
+                                        <option value="970415">CTG - NH TMCP Công Thương Việt Nam</option>
+                                        <option value="970406">DongABank - NH TMCP Đông Á</option>
+                                        <option value="970408">GPB - NH TM TNHH MTV Dầu Khí Toàn Cầu</option>
+                                        <option value="970437">HDB - NH TMCP Phát Triển Thành Phố Hồ Chí Minh</option>
+                                        <option value="970442">HLB - NH TNHH MTV Hongleong Việt Nam</option>
+                                        <option value="970455">IBK - NH IBK - chi nhánh Hà Nội</option>
+                                        <option value="970434">IVB - NH TNHH Indovina</option>
+                                        <option value="970452">KLB - NH TMCP Kiên Long</option>
+                                        <option value="970449">LPB - NH TMCP Bưu Điện Liên Việt</option>
+                                        <option value="970422">MB - NH TMCP Quân Đội</option>
+                                        <option value="970426">MSB - NH TMCP Hàng Hải Việt Nam</option>
+                                        <option value="970419">NCB - NH TMCP Quốc Dân</option>
+                                        <option value="970428">NamABank - NH TMCP Nam Á</option>
+                                        <option value="970448">OCB - NH TMCP Phương Đông</option>
+                                        <option value="970414">OJB - NH TMCP Đại Dương</option>
+                                        <option value="970439">PBVN - NH TNHH MTV Public Việt Nam</option>
+                                        <option value="970430">PGB - NH TMCP Xăng Dầu Petrolimex</option>
+                                        <option value="970412">PVcomBank - NH TMCP Đại Chúng Việt Nam</option>
+                                        <option value="970429">SCB - NH TMCP Sài Gòn</option>
+                                        <option value="970440">SEAB - NH TMCP Đông Nam Á</option>
+                                        <option value="970400">SGB - NH TMCP Sài Gòn Công Thương</option>
+                                        <option value="970443">SHB - NH TMCP Sài Gòn - Hà Nội</option>
+                                        <option value="970424">SHBVN - NH TNHH MTV Shinhan Việt Nam</option>
+                                        <option value="970423">TPB - NH TMCP Tiên Phong</option>
+                                        <option value="970458">UOB - NH TNHH MTV United Overseas Bank</option>
+                                        <option value="970427">VAB - NH TMCP Việt Á</option>
+                                        <option value="970454">VCCB - NH TMCP Bản Việt</option>
+                                        <option value="970441">VIB - NH TMCP Quốc tế Việt Nam</option>
+                                        <option value="970421">VRB - NH Liên Doanh Việt Nga</option>
+                                        <option value="970457">WOO - NH Wooribank</option>
+                                        </select></td>
+                                </tr>
+                                
+                                
+                                <tr>
+                                    <td style="height:35px" colspan="2">
+                                        <input type="checkbox" name="LuuTT" value="true"> Lưu thông tin đơn vị thụ hưởng
+                                    </td>
+                                </tr> 
+                                 
+                            </tbody></table>
+                            </td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+                        Thông tin chuyển khoản
+
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table style="width: 100%" cellspacing="0" cellpadding="0">
+                            <tbody><tr>
+                                <td style="height:35px">Số tiền</td>
+                                <td><input type="text" name="Amount" value="" size="30" id="Amount" maxlength="18"></td>
+                            </tr>
+                             <tr>
+                                <td style="height:3px" colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:27%">Số tiền bằng chữ</td>
+                                <td style="width:73%"><textarea name="AmountWord" cols="" rows="" wrap="soft" class="text_sotien" id="AmountWord" readonly=""></textarea></td>
+                            </tr>
+                            <tr>
+                                <td style="height:7px" colspan="2"></td>
+                            </tr>
+    
+                            <tr>
+                                    <td style="height:35px">Số tiền phí</td>
+                                    <td><input type="text" name="AmountFee" value="" size="30" id="AmountFee" readonly=""></td>
+                                </tr>
+                        
+                                <tr>
+                                    <td style="width:27%">Số tiền phí bằng chữ</td>
+                                    <td style="width:73%"><input type="text" name="AmountFeeWord" value="" class="text_sotien" id="AmountFeeWord" readonly=""></td>
+                                </tr>
+    
+                            <tr>
+                                <td style="height:7px" colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td style="height:35px">Nội dung giao dịch</td>
+                                <td><textarea name="Description" cols="" rows="" wrap="soft" class="text_noidung" ></textarea></td>
+                            </tr>
+                            <tr>
+                                <td style="height:3px" colspan="2"></td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						Thời gian chuyển
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+					<table style="width: 100%" cellspacing="0" cellpadding="0">
+						<tbody><tr>
+							<td><input type="radio" name="IsFundAfter" value="false" checked="checked" id="isfund1"> Chuyển khoản ngay</td>
+							<td colspan="2">&nbsp;</td>
+						</tr>
+						<tr>
+							<td height="10" colspan="3"></td>
+						</tr>
+						<tr>
+							<td style="height: 20px;width:27%;"><input type="radio" name="IsFundAfter" value="true" id="isfund2"> Chuyển khoản sau vào ngày</td>
+							<td style="height: 20px;width:73%;"><input type="text" name="TransDate" value="" size="20" id="TransDate" maxlength="10" disabled="">&nbsp;dd/mm/yyyy</td>
+							<td width="0%">
+							</td>
+                        </tr>
+                        
+					</tbody></table>
+					</td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						phương pháp xác thực
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 27%;">Chọn phương pháp xác thực</td>
+                                    <td style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
+                                        <option value="" selected="selected"></option>
+                                        <option value="4504727">4504727</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr style="text-align:center;">
+                    
+                    <input name="button" type="button" class="nut1" id="button" value="Đồng ý">
+                    <input name="button2" type="button" class="nut1" id="button2" value="Hủy">
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                    <span class="error">Lưu ý:</span><br>
+		    		<span class="copyright">Thời gian tra soát các giao dịch chuyển tiền nhanh (các giao dịch đang có trạng thái là GD đang xử lý/ GD chờ tra soát) phụ thuộc vào đối tác và ngân hàng thụ hưởng. Thời gian tra soát trong vòng tối đa 02 ngày làm việc (không kể thứ Bảy, Chủ nhật, ngày Lễ) tính từ thời điểm phát sinh giao dịch. Vui lòng tham khảo</span> <a target="_blank" href="/acbib/trogiup/DKDK_ThoigianGD_10_2015.pdf">Điều kiện điều khoản.</a><br>
+                  </td>
+                 </tr>
+            </table>
+        </div>
+    </div>
 </div>
 <!--END MOBILE-->
 

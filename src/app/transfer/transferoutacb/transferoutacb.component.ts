@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {LoginService} from '../../module/login/login.service';
 @Component({
   selector: 'app-transferoutacb',
   templateUrl: './transferoutacb.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransferOutACBComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loginService:LoginService) { }
 
   ngOnInit() {
   }

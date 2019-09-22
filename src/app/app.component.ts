@@ -9,10 +9,16 @@ export class AppComponent {
   title = 'ACB';
   constructor(private loginService: LoginService) { }
   ngOnInit(){
+    console.log(window.innerWidth);
+    if(window.innerWidth<1000)
+    {
+      this.loginService.isMobile=true;
+    }
   }
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    console.log(this.loginService.detectmob());
+    
     this.loginService.detectmob();
+    
   }
 }
