@@ -1,0 +1,178 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px; text-transform: uppercase">Mở tài khoản tiền gửi có kỳ hạn</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+                        THÔNG TIN KHÁCH HÀNG 
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table style="width:100%">
+                         <tbody><tr>
+							<td style="width:27%; text-align: left;">Họ tên khách hàng </td>
+							<td style="width:73%"> <input type="text" name="glbHoTen" value="NGUYEN TIEN DAT" size="35" disabled="disabled"></td>
+						</tr>
+						<tr class="cusInfo" style="display: none;">
+									<td style="width:27%">Quốc tịch <input type="hidden" name="quoctichcode" value="VN" id="quoctichcode"></td>
+									<td style="width:73%"> <input type="text" name="quoctich" value="VIET NAM" size="35" disabled="disabled" id="quoctich"></td>
+								</tr>  
+								 <tr class="cusInfo" style="display: none;">
+                              <td style="width:27%">Ngày hết hiệu lực visa/ giấy phép tạm trú
+							  </td>                        
+                              <td style="width:70%"><input type="text" name="idexpirydate" value="" size="35" class="text_day hasDatepicker" id="idexpirydate" maxlength="10" ><img class="ui-datepicker-trigger" src="../../../assets/calendar.png" alt="Chọn ngày" title="Chọn ngày"> dd/mm/yyyy</td>                           				
+                            </tr>    
+                            <tr class="cusInfo" style="display: none;">
+                             
+                              <td colspan="2">
+                              <label>
+                              <input type="checkbox" name="ChooseAssurance" value="true" id="ChooseAssurance">
+                              Cam kết không thuộc đối tượng cá nhân người nước ngoài cư trú tại Việt Nam dưới 06 tháng
+                              </label>
+							</td>
+                            </tr> 
+                                        
+                        </tbody></table></td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+                        TÀI KHOẢN TRÍCH TIỀN 
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table style="width:100%" cellspacing="0" cellpadding="0">
+                          <tbody><tr valign="bottom">
+                          	<td style="width:27;height:25px" >Tài khoản</td><td style="width:73%">
+                                <select name="AccountNbrNo" id="AccountNbrNo" style="width:250px;">
+                                <option value="" selected="selected">Chọn tài khoản...</option>
+                                <option value="4504727">4504727 - TGTT SINH VIEN KHTN (CN) VND</option>
+                                </select></td>
+                          </tr>
+                          <tr>
+							<td></td>
+							<td height="5"><span class="alert">
+							<br>
+							 </span></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td height="5"><span class="alert">
+							 </span></td>
+						</tr>	
+						
+	              
+                          </tbody></table>
+                          </td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+                        THÔNG TIN TÀI KHOẢN TIỀN GỬI CÓ KỲ HẠN 
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table style="width:100%" cellspacing="0" cellpadding="0">
+                          <tbody><tr>
+                          	<td style="width:27%; height: 30px;">Mở tài khoản</td><td style="width:73%">
+                                <select name="edtProduct" id="edtProduct" style="width:250px;">
+                                <option value="" selected="selected">Chọn loại tài khoản tiền gửi có kỳ hạn</option>
+                                <option value="IB19">TG ONLINE 1 TUAN VND</option>
+                                <option value="IB20">TG ONLINE 2 TUAN VND</option>
+                                <option value="IB21">TG ONLINE 3 TUAN VND</option>
+                                <option value="IB22">TG ONLINE 1 THANG VND</option>
+                                <option value="IB23">TG ONLINE 2 THANG VND</option>
+                                <option value="IB24">TG ONLINE 3 THANG VND</option>
+                                <option value="IB25">TG ONLINE 6 THANG VND</option>
+                                <option value="IB26">TG ONLINE 9 THANG VND</option>
+                                <option value="IB27">TG ONLINE 12 THANG VND</option>
+                                </select></td>
+                          </tr>
+                          <!-- <tr>
+                          	<td style="width:27%" height="20"></td><td><a class="acc_bold" href="http://acb.com.vn/wps/portal/Home/Viewer/!ut/p/z1/pVFNT8MwDP0tHHqM7KZdmx4zVULqxIpAsDUX5LZhDd3SjmYD_j0ZF4T4EsInW7bfe34GBWtQlo5mQ84Mlra-rlRylyCeYxbzhQgzgVLKfCGKPCxnMdyCAtVYN7oOKmrqJ11PxukAfc6ONsBRP04nqAAdGdZ3A1nmjLZsczAB9h01AW59ZzqQO2GNjWmhEnVNaUPEokzHLA6xZXXbCjbDRIQ8SXUqEli9icNvQiKon7WvTnyfECTOr_g88msl_3LgA0XlNaTvJGV-wT3JTRkVGQ_jS4TrPx5V_Kbav8Q87PdKet8H6_Szg_W_jR93OxG9sP5-uWSqkmevYCROrw!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" target="_blank"> Lãi su&#7845;t tham chi&#7871;u</a></td>
+                          </tr> -->
+                          <tr>
+                           <td style="height: 30px;">Số tiền</td>
+	                          <td style="width:73%">
+									<input type="text" name="Amount" value="" size="31" id="Amount" maxlength="18">
+								</td>
+                          </tr>
+                           
+	                      	<tr class="thongtinlaisuat" style="display: none;">
+								<td>Lãi suất (%/năm)</td>
+								<td style="width:73%"> <input type="text" name="laisuat" value="" size="31" disabled="disabled"> </td> 
+							</tr>
+								<tr class="thongtinlaisuat" style="display: none;">
+								<td>Ngày đáo hạn</td>
+								<td style="width:73%"> <input type="text" name="ngaydaohan" value="" size="31" disabled="disabled"></td>
+							</tr>
+							
+	                      	<tr class="thongtinlaisuat" style="display: none;">
+								<td>Tiền lãi dự kiến</td>
+								<td style="width:73%"> <input type="text" name="tienlai" value="" size="31" disabled="disabled"></td>
+							</tr>
+	                      	<tr class="thongtinlaisuat" style="display: none;">
+								<td>Tổng tiền nhận dự kiến</td>
+								<td style="width:73%"> <input type="text" name="tongtien" value="" size="31" disabled="disabled"></td>
+							</tr>
+							
+                          </tbody></table>
+                          </td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+                            Thỏa thuận điều khoản chung
+
+					</td>
+                </tr>
+                <tr>
+                    <td>
+						Quý khách vui lòng nhấp chọn vào
+		                <a class="acc_bold" href="/acbib/trogiup/ThoaThuanDKDK_TGCKH_vi.pdf" target="_blank">"Thỏa thuận điều khoản chung"</a>để xem chi tiết<br>
+		            </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label>
+                            <input type="checkbox" name="acceptTerms" value="true" id="acceptTerms">
+                            <input type="hidden" name="acceptTerms" value="false"> 
+                              Xác nhận đã đọc, hiểu rõ và hoàn toàn đồng ý, thống nhất với các thông tin tài khoản TG CKH và các quy định trong "Thỏa thuận điều khoản chung TG CKH"
+                            </label>
+					</td>
+                </tr>
+                <tr style="text-align:center;">
+                    <input name="button" type="button" class="nut1" id="button" value="Đồng ý">
+                    <input name="button2" type="button" class="nut1" id="button2" value="Hủy">
+                </tr>
+                <tr>
+                    <td><p> <span class="note-red">Lưu ý:</span><br>
+                   <span class="copyright">(*)Tiền lãi chỉ mang tính chất tham khảo.</span><br>
+                   <span class="copyright">Hệ thống mặc định, vào ngày đến hạn, Ngân hàng sẽ tái tục Vốn sang kỳ hạn mới tương đương kỳ hạn gửi ban đầu. Lãi chuyển vào tài khoản thanh toán của khách hàng.</span><br>
+                   <span class="copyright">Sau khi mở tài khoản thành công, Quý khách có thể:</span><br>
+                   &nbsp;&nbsp;• Thay đổi chỉ thị tái tục tại mục &lt;Cập nhật chỉ thị tái tục&gt;<br>
+                   &nbsp;&nbsp;• Đăng ký email/ĐTDĐ nhận thông báo biến động số dư tài khoản tại mục &lt;Tiện ích / Thông báo tự động&gt;<br></p>
+                  </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>sellcurrentcyforacb laptop</p>
+</div>
+<!--END LAPTOP-->

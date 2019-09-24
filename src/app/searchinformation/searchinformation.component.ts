@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SearchInformationModule} from './searchinformation.module';
 import {LoginService} from '../module/login/login.service';
+
 @Component({
   selector: 'app-searchinformation',
   templateUrl: './searchinformation.component.html',

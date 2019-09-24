@@ -1,0 +1,128 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+        <div class="container">
+                <div class="row">
+                    <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                        <a style="color: #0071bc; font-weight:bold;font-size: 13px; text-transform: uppercase"> CẬP NHẬT CHỈ THỊ TÁI TỤC CHO TÀI KHOẢN TIỀN GỬI CÓ KỲ HẠN</a>
+                    </div>
+                    <div class="col-xs-12" style="text-align: right;width: 100%;">
+                        <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+                    </div>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+                                
+                                TÀI KHOẢN TRÍCH TIỀN 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                                <table style="width:100%" cellspacing="0" cellpadding="0">
+                                <tbody><tr valign="bottom">
+                                    <td style="width:27;height:25px" >Số tài khoản</td><td style="width:73%">
+                                        <select name="AccountNbrNo" id="AccountNbrNo" style="width:250px;">
+                                        <option value="" selected="selected">Chọn tài khoản...</option>
+                                        <option value="4504727">4504727 - TGTT SINH VIEN KHTN (CN) VND</option>
+                                        </select></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td height="5"><span class="alert">
+                                    <br>
+                                    </span></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td height="5"><span class="alert">
+                                    </span></td>
+                                </tr>	
+                                
+                        
+                                </tbody></table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+                                    
+                                    CHỈ THỊ TÁI TỤC CHO TÀI KHOẢN TIỀN GỬI CÓ KỲ HẠN 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                                    <table style="width:100%" cellspacing="0" cellpadding="0">
+                                        <tbody><tr valign="bottom">
+                                            <td style="width:2%;height:25px;" valign="top">
+                                            <input type="radio" name="radiochithi" value="1">
+                                            </td>
+                                            <td style="width:98%;height:25px;">
+                                            <i>Chỉ thị 1: </i>Tái tục cả Vốn và Lãi sang kỳ hạn mới tương đương kỳ hạn gửi ban đầu đối với <span class="text_bold">sản phẩm tiền gửi có kỳ hạn</span>; hoặc<br>ACB tự động nhập tiền lãi ở cuối mỗi kỳ lãnh lãi vào vốn gốc của khách hàng đối với <span class="text_bold">sản phẩm tiền gửi lãi suất thả nổi – Online</span>.
+                                            </td>
+                                        </tr>
+                                        <tr valign="bottom">
+                                            <td style="width:2%;height:25px;" valign="top">
+                                            <input type="radio" name="radiochithi" value="2">
+                                            </td>
+                                            <td style="width:98%;height:25px;">
+                                            <i>Chỉ thị 2: </i>Tái tục Vốn  sang kỳ hạn mới tương đương kỳ hạn gửi ban đầu. Lãi chuyển vào tài khoản tiền gửi thanh toán của khách hàng đối với <span class="text_bold">sản phẩm tiền gửi có kỳ hạn</span>; hoặc<br>ACB tự động trích tiền lãi ở cuối mỗi kỳ lãnh lãi và chuyển sang tài khoản tiền gửi thanh toán của khách hàng đối với <span class="text_bold">sản phẩm tiền gửi lãi suất thả nổi – Online</span>.
+                                            </td>
+                                        </tr>
+                                        <tr valign="bottom">
+                                            <td style="width:2%;height:20px;" valign="top">
+                                            <input type="radio" name="radiochithi" value="3">
+                                            </td>
+                                            <td style="width:98%;height: 20px;">
+                                            <i>Chỉ thị 3: </i>Tất toán và chuyển cả Vốn và Lãi vào tài khoản tiền gửi thanh toán của khách hàng vào cuối kỳ lãnh lãi hoặc vào ngày đáo hạn tài khoản.<br>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+                                    
+                                        TÀI KHOẢN TIỀN GỬI THANH TOÁN 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                                    <table style="width: 100%;" cellspacing="0" cellpadding="0">
+                                    <tbody><tr valign="bottom">
+                                        <td style="width: 27%;height:20px;">Số tài khoản</td>
+                                        <td style="width: 73%"><input type="text" name="ckAcctNbrNo" value="" id="ckAcctNbrNo" size="30" readonly=""></td>
+                                    </tr>
+                                
+                                    </tbody></table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+                                    
+                                        XÁC THỰC GIAO DỊCH
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                                    <table style="width: 100%;" cellspacing="0" cellpadding="0">
+                                    <tbody><tr valign="bottom">
+                                        <td style="width: 27%;height:20px;">Mật khẩu đăng nhập</td>
+                                        <td style="width: 73%"><input type="password" name="ckAcctNbrNo" value="" id="ckAcctNbrNo" size="30" readonly=""></td>
+                                    </tr>
+                                
+                                    </tbody></table>
+                                </td>
+                            </tr>
+                            <tr style="text-align:center;">
+                                <input name="button" type="button" class="nut1" id="button" value="Đồng ý">
+                                <input name="button2" type="button" class="nut1" id="button2" value="Hủy">
+                            </tr>
+                    </table>
+                </div>
+        </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>sellcurrentcyforacb laptop</p>
+</div>
+<!--END LAPTOP-->
