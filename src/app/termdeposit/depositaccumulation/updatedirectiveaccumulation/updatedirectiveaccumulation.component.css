@@ -12,6 +12,9 @@
 td{
     font-size: 12px;
 }
+a{
+    font-size: 13px;
+}
 .nut1 {
     BACKGROUND: #dbecf2;
     BORDER-BOTTOM: #98c6d6 1px solid;
@@ -43,20 +46,6 @@ td{
     font-weight: bold;
     color: #0066ff;
     text-decoration: none;
-}
-table.acctSum TH {
-    background-color: #005b90;
-    HEIGHT: 25px;
-    font-family: Arial;
-    font-size: 13px;
-    font-weight: bold;
-    color: #ffffff;
-    text-decoration: none;
-    padding-left: 3px;
-    padding-right: 3px;
-}
-td.acctSum{
-    font-size: 12px;
 }
 .error {
     font-family: Arial;
