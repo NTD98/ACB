@@ -9,6 +9,11 @@ import { FinalizationtermdepositComponent } from './finalizationtermdeposit/fina
 import { ListeddeposittransactionComponent } from './listeddeposittransaction/listeddeposittransaction.component';
 import { DepositaccumulationComponent } from './depositaccumulation/depositaccumulation.component';
 import { LittleangelComponent } from './littleangel/littleangel.component';
+import { UserinfoComponent } from './littleangel/userinfo/userinfo.component';
+import { SeeordeleteautomaticdepositComponent } from './littleangel/seeordeleteautomaticdeposit/seeordeleteautomaticdeposit.component';
+import { SentmoneytoaccountComponent } from './littleangel/sentmoneytoaccount/sentmoneytoaccount.component';
+import { AutomaticdepositComponent } from './littleangel/automaticdeposit/automaticdeposit.component';
+
 const routes = [
   { path:'', component: TermDepositComponent },
   {path:'opentermdeposit',component:OpentermdepositComponent},
@@ -18,9 +23,13 @@ const routes = [
   {path:'depositaccumulation',component:DepositaccumulationComponent},
   {path:'optionalopentermonline',component:OptionalopentermonlineComponent},
   {path:'littleangel',component:LittleangelComponent},
+  {path:'userinfo',component: UserinfoComponent},
+  {path:'sentmoneytoaccount',component: SentmoneytoaccountComponent},
+  {path:'automaticdeposit',component: AutomaticdepositComponent},
+  {path:'seeordeletedeposit',component: SeeordeleteautomaticdepositComponent},
 ];
 @NgModule({
-  declarations: [TermDepositComponent, OpentermdepositComponent, OptionalopentermonlineComponent, UpdatedirectiveComponent, FinalizationtermdepositComponent, ListeddeposittransactionComponent, DepositaccumulationComponent, LittleangelComponent],
+  declarations: [TermDepositComponent, OpentermdepositComponent, OptionalopentermonlineComponent, UpdatedirectiveComponent, FinalizationtermdepositComponent, ListeddeposittransactionComponent, DepositaccumulationComponent, LittleangelComponent, UserinfoComponent, AutomaticdepositComponent, SentmoneytoaccountComponent, SeeordeleteautomaticdepositComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

@@ -1,0 +1,40 @@
+
+
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;">TRA CỨU THÔNG TIN</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <div class="col-xs-12" style="text-align: left;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;" href="#">Nhấp chọn số tài khoản để xem thông tin chi tiết và in sao kê tài khoản</a>
+            </div>
+            <div class="col-xs-12" style="width: 100%">
+                <table class="acctSum" width="100%" cellspacing="1" cellpadding="0" id="table">         
+                    <tbody>
+                        <tr class="evenrowcolor">
+                            <th class="acctSum" style="text-align: center">Số tài khoản</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Số dư</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Ngày đáo hạn</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Sản phẩm</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-xs-12" style="width: 100%">
+                <p>
+                    <sup class="chuthich_num"> 1 </sup> <span class="red_tieude">SỐ DƯ THỰC (CURRENT BALANCE)</span>
+                    <br>
+                      Là số dư có thực tế trên tài khoản tiền gửi của khách hàng
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>sellcurrentcyforacb laptop</p>
+</div>

@@ -1,0 +1,175 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px; text-transform: uppercase">Đăng kí tự động gửi tiền</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+                        Tài khoản tiền gửi thanh toán
+					</td>
+                </tr>
+                
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table style="width:100%" cellspacing="0" cellpadding="0">
+                          <tbody><tr valign="bottom">
+                          	<td style="width:27;height:25px" >Tài khoản</td><td style="width:73%">
+                                <select name="AccountNbrNo" id="AccountNbrNo" style="width:250px;">
+                                <option value="" selected="selected"></option>
+                                <option value="4504727">4504727 - TGTT SINH VIEN KHTN (CN) VND</option>
+                                </select></td>
+                          </tr>
+                          <tr>
+							<td></td>
+							<td height="5"><span class="alert">
+							<br>
+							 </span></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td height="5"><span class="alert">
+							 </span></td>
+						</tr>	
+						
+	              
+                          </tbody></table>
+                          </td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+                        Tài khoản tiền gửi tích lũy
+					</td>
+                </tr>
+                
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table style="width:100%" cellspacing="0" cellpadding="0">
+                          <tbody><tr valign="bottom">
+                          	<td style="width:27;height:25px" >Tài khoản tiền gửi tích lũy</td><td style="width:73%">
+                                <select name="AccountNbrNo" id="AccountNbrNo" style="width:250px;">
+                                <option value="" selected="selected"></option>
+                                <option value="4504727">4504727 - TGTT SINH VIEN KHTN (CN) VND</option>
+                                </select></td>
+                          </tr>
+                          <tr>
+							<td></td>
+							<td height="5"><span class="alert">
+							<br>
+							 </span></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td height="5"><span class="alert">
+							 </span></td>
+						</tr>	
+						
+	              
+                          </tbody></table>
+                          </td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+                        Nhập số tiền
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+					<table style="width: 100%" cellspacing="0" cellpadding="0">
+						<tbody><tr>
+							<td>Số tiền</td>
+							<td><input type="text" name="Amount" value="" size="30" id="Amount"  maxlength="18"> <br>( &gt;= 500.000 VND)</td>
+						</tr>
+						<tr>
+							<td height="7" colspan="2"></td>
+						</tr>
+						<tr>
+							<td style="width: 27%">Số tiền bằng chữ</td>
+							<td style="width: 73%"><textarea name="AmountWord" cols="" rows="" wrap="soft" class="text_sotien" id="AmountWord" readonly=""></textarea></td>
+						</tr>
+						<tr>
+							<td height="7" colspan="2"></td>
+						</tr>
+						<tr>
+							<td height="3" colspan="2"></td>
+						</tr>
+						
+					</tbody></table>
+					</td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+                        Ngày trích
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+					<table style="width: 100%" cellspacing="0" cellpadding="0">
+						<tbody><tr>
+							<td>Ngày trích kỳ đầu tiên</td>
+							<td><input type="text" name="datedk" value="" class="date-picker" size="20" id="TransDate" maxlength="10">&nbsp;dd/mm/yyyy</td>
+						</tr>
+						<tr>
+							<td height="7" colspan="2"></td>
+						</tr>
+						<tr>
+							<td style="width: 27%">Định kỳ</td>
+							<td style="width: 73%">Hàng tháng<input type="hidden" name="glbHoTenKH" value="NGUYEN TIEN DAT"></td>
+						</tr>
+						<tr>
+							<td height="7" colspan="2"></td>
+						</tr>
+						<tr>
+							<td height="3" colspan="2"></td>
+						</tr>
+						
+					</tbody></table>
+					</td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						phương pháp xác thực
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 27%;">Chọn phương pháp xác thực</td>
+                                    <td style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
+                                        <option value="" selected="selected"></option>
+                                        <option value="4504727">4504727</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr style="text-align:center;">
+                    
+                    <input name="button" type="button" class="nut1" id="button" value="Đồng ý">
+                    <input name="button2" type="button" class="nut1" id="button2" value="Hủy">
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>utilities laptop</p>
+</div>
+<!--END LAPTOP-->

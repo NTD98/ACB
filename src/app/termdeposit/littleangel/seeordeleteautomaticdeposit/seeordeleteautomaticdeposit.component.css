@@ -1,0 +1,47 @@
+.white_tieude {
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 20px;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+td{
+    font-size: 12px;
+}
+.nut1 {
+    BACKGROUND: #dbecf2;
+    BORDER-BOTTOM: #98c6d6 1px solid;
+    BORDER-LEFT: #98c6d6 1px solid;
+    BORDER-RIGHT: #98c6d6 1px solid;
+    BORDER-TOP: #98c6d6 1px solid;
+    COLOR: #0071bb;
+    CURSOR: cusor;
+    FONT-FAMILY: Arial,sans-serif;
+    font-size: 12px;
+}
+.text_noidung {
+    width: 205px;
+    height: 60px;
+}
+.copyright {
+    font-family: Arial;
+    font-weight: normal;
+    color: #494949;
+    text-decoration: none;
+}
+.acc_bold {
+    font-family: Arial;
+    font-weight: bold;
+    color: #0066ff;
+    text-decoration: none;
+}
+.error {
+    font-family: Arial;
+    font-weight: bold;
+    color: #c92538;
+    text-decoration: none;
+}
