@@ -1,0 +1,14 @@
+a{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+a.name{
+    font-size: 11px;
+    color: #545454;
+    font-family: 'Tahoma',Helvetica,sans-serif;
+    font-weight: bold;
+}
+a.name:hover{
+    cursor: pointer;
+    color: #0067a1;
+}

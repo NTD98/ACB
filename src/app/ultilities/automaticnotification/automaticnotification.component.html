@@ -1,0 +1,30 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc !important; font-weight:bold;font-size: 13px;">
+                    TIỆN ÍCH
+                / THÔNG BÁO TỰ ĐỘNG</a>
+            </div>
+            <div class="col-xs-6" style="text-align: center;width: 50%;">
+                <div>
+                    <a>
+                        <img src="../../../assets/Bank-icon-64.png" style="border-style: none">
+                    </a>
+                    <br>
+                    <a routerLink='../changeaccountbalance'>
+                        Thay đổi số dư TK
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>smsbanking laptop</p>
+</div>
+<!--END LAPTOP-->

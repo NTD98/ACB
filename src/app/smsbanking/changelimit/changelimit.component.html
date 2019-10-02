@@ -1,0 +1,36 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row" style="text-align: center;">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px; text-transform: uppercase">						SMS BANKING
+                    </a>
+            </div>
+            <table cellpadding="4" cellspacing="0" style="width: 100%;height: 150px;border-right : 1px solid #0066FF;border-left : 1px solid #0066FF;border-bottom : 1px solid #0066FF;border-top : 1px solid #0066FF;">
+                    <tbody><tr style="background-color:#6699FF">
+                        <td style="height: 20px;column-span: 2px;" class="contentbold">Đăng ký dịch vụ SMS Banking</td>
+                    </tr>
+                    <tr>
+                        <td><p style="font-family:tahoma;font-size:12px">
+                        Quý khách chưa Đăng ký dịch vụ thanh toán trên SMS Banking.<br><br>
+                        Vui lòng liên hệ với chi nhánh ACB gần nhất để được hướng dẫn  <b>ký hợp đồng</b>  và<b> cách sử dụng</b> dịch vụ SMS Banking.<br><br>
+                        Rất hân hạnh được phục vụ Quý khách.</p>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+            <div style="text-align: center;width: 100%">
+                <input name="button" type="button" class="nut1" id="button" value="Thôi">
+            </div>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>signuponline laptop</p>
+</div>
+<!--END LAPTOP-->

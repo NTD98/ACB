@@ -1,0 +1,98 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc !important; font-weight:bold;font-size: 13px;text-transform: uppercase;">Dịch vụ thông báo tự động khi thay đổi số dư tài khoản</a>
+            </div>
+            <div style="width: 100%;background-color: #EFF8FA;text-align: center;">
+                <table width="300px"cellspacing="0" cellpadding="0">
+                    <tbody><tr>
+									<td style="column-span: 2px;text-align: center;">&nbsp;</td>
+								</tr>
+										<tr>
+											<td style="width:32%;height:30px;text-align:left;" class="text_bold">Báo khi</td>
+											<td style="width:68%;text-align:left;"><select name="baokhi1" style="width:205px;" id="dsbaokhi">
+                                            <option value="K001">Số dư thay đổi</option>
+                                            </select></td>
+										</tr>
+										<tr>
+											<td style="width:32%;text-align:left;" class="text_bold">Nhóm tài khoản</td>
+											<td style="width:68%;text-align:left;"><select name="acctType" style="width:205px;" id="acctType">
+                                            <option value="" selected="selected"></option>
+                                            <option value="CK">Tiền gửi thanh toán</option>
+                                            <option value="SAV">Tiền gửi tiết kiệm không kỳ hạn</option>
+                                            <option value="TD">Tiết kiệm có kỳ hạn và TG có kỳ hạn</option>
+                                            </select></td>
+										</tr>
+										<tr>
+											<td style="width:32%;height:30px;text-align:left;" class="text_bold">Trên tài khoản</td>
+											<td style="width:68%;text-align:left;"><select name="taikhoan" style="width:205px;" id="dstaikhoan">
+                                            <option value="" selected="selected"></option>
+                                            </select></td>
+										</tr>
+										<tr>
+											<td style="width:32%;height:30px;text-align:left;" class="text_bold">Bằng dịch vụ</td>
+											<td style="width:68%;text-align:left;"><select name="dichvu" style="width:205px;" id="dsdichvu">
+                                            </select></td>
+										</tr>
+										<tr>
+											<td style="width:32%;text-align:left;" class="text_bold"><div id="NgonNguTinNhan" style="display: none;">Ngôn ngữ tin nhắn</div></td>
+											<td style="width:68%;text-align:left;"><div id="NgonNguTinNhan1" style="display: none;"><select name="NgonNguTinNhan" style="width:205px;" id="dsNgonNguTinNhan">
+                                            <option value="VN">Tiếng Việt</option>
+                                            <option value="ENG">Tiếng Anh</option>
+                                            </select></div></td>
+										</tr>
+										<tr>
+											<td style="width:32%;height:30px;text-align:left;" class="text_bold">Gửi đến</td>
+											<td style="width:68%;text-align:left;"><input type="text" name="edtMobile" value="" size="28" id="edtMobile" maxlength="30"></td>
+										</tr>
+										<tr>
+											<td style="width:32%;height:30px;text-align:left;" class="text_bold">Xác nhận lại</td>
+											<td style="width:68%;text-align:left;"><input type="text" name="edtConfirmMobile" value="" size="28" id="edtConfirmMobile" maxlength="30"></td>
+										</tr>
+										
+										<tr>
+											<td style="width:32%;height:30px;text-align:left;" class="text_bold">Chọn phương pháp xác thực</td>
+											<td style="width:68%;text-align:left;"><select name="AuthTyp" id="AuthTyp" style="width:250px;">
+                                            <option value="" selected="selected"></option>
+                                            <option value="SMS">Mật khẩu tĩnh + OTP SMS</option>
+                                            </select></td>
+										</tr>
+                                        
+
+                            </tbody></table>
+                            <table style="width: 100%;">
+                                <tbody>
+                                    <tr>
+                                        <td>
+
+                                       
+                                            <span class="note-red">Lưu ý:&nbsp;
+                                                    Trước khi thay đổi số điện thoại nhận thông báo tự động, Quý khách vui lòng xóa số điện thoại đã đăng ký trong danh sách bên dưới</span>	
+                                                </td>
+                                    </tr>									 
+                                    <tr>
+                                        <td style="column-span: 2px;text-align:center;">
+                                        <input type="hidden" name="dse_nextEventName" value="regAlert" id="dse_nextEventName"> 
+                                            <input name="button" type="button" class="nut1" id="button" value="Đăng ký"> 
+                                            <input name="button2" type="button" class="nut1" id="button2" value="Hủy"></td>
+                    
+                                    </tr>
+                                        <tr>
+                                        <td style="column-span: 2px;text-align:center;">&nbsp;</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>smsbanking laptop</p>
+</div>
+<!--END LAPTOP-->

@@ -1,6 +1,61 @@
 <!--MOBILE-->
 <div class="mobile" *ngIf="loginService.isMobile">
-    <p>utilities mobile</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;">TIỆN ÍCH</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <div class="col-xs-6" style="text-align: center;width: 50%">
+                <div class="item">
+                    <img src="../../assets/Generate-keys-icon-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='changepassword'>
+                        Đổi mật khẩu đăng nhập
+                    </a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/activate-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink="activatedisableaccount">
+                        Kích hoạt TK ngưng hoạt động
+                    </a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/call-icon-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink="automaticnotification">
+                        Thông báo tự động
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-6" style="text-align: center;width: 50%;">
+                <div class="item">
+                    <img src="../../assets/user_edit.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink="changeusername">
+                        Đổi tên truy cập              
+                    </a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/active_button_ok-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink="disableaccountstatus">
+                        Trạng thái kích hoạt TK ngưng hoạt động
+                    </a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/dkonline.jpg" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink="signupctkm">
+                        Đăng ký tham gia CTKM
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!--END MOBILE-->
 

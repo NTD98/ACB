@@ -1,0 +1,64 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px; text-transform: uppercase">Chuyển khoản trong hệ thống ACB</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						THÔNG TIN ĐƠN VỊ CHUYỂN TIỀN 
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+						<table style="width: 100%" cellspacing="0" cellpadding="0">
+							<tbody><tr>
+							<td style="width:50%" class="text_bold">Số tài khoản</td>
+							<td style="width:50%"><select name="TkNo" id="TkNo">
+                                            <option value="" selected="selected"></option>
+                                            <option value="4504727">4504727</option>
+                                            </select>
+								</td>
+                            </tr>
+                            <tr style="height: 10px;">
+
+                            </tr>
+                            <tr>
+                                <td style="width:50%" class="text_bold">Nhập mật khẩu đăng nhập</td>
+                                <td style="width:50%">
+                                    <input type="password" name="Password" value="" size="20">
+                                    
+								</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr style="text-align:center;">
+                    
+                    <input name="button" type="button" class="nut1" id="button" value="Đồng ý">
+                    <input name="button2" type="button" class="nut1" id="button2" value="Hủy">
+                </tr>
+                <tr>
+                    <hr>
+                </tr>
+                <tr>
+                    <td style="height: 20px;text-align: left;" class="acc_bold">Trên đây là những giao dịch đã được hạch toán vào tài khoản của bạn tính từ thời điểm tài khoản chuyển sang trạng thái ngưng hoạt động.Bạn xác nhận đã biết rõ các giao dịch trên và đồng ý kích hoạt TK.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>smsbanking laptop</p>
+</div>
+<!--END LAPTOP-->

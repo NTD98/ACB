@@ -1,0 +1,117 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+        <div class="container">
+                <div class="row">
+                    <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                        <a style="color: #0071bc !important; font-weight:bold;font-size: 13px;text-transform: uppercase;">                               
+						ĐĂNG KÝ THAM GIA CTKM
+					</a>
+                    </div>
+                    <div class="col-xs-12">
+                        <a class="success">
+                            Quý khách vui lòng cập nhật thông tin của Quý khách để ACB có thể liên lạc thông báo kết quả về Chương trình đến Quý khách kịp thời.
+                        </a>
+                    </div>
+                    <table style="width: 100%;">
+                        <tbody>
+                            <tr>
+                                <td style="height: 20px;text-align: left;background-color: #005b90" height="20" class="white_tieude">
+                                        Thông tin khách hàng
+                                    </td>
+                            </tr>
+                            <tr>
+                                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                                            <table style="width: 100%" cellspacing="0" cellpadding="0">
+                                                <tbody><tr>
+                                                    <td>Họ tên khách hàng</td>
+                                                    <td><input type="text" name="Hoten" value="NGUYEN TIEN DAT" size="28" id="Hoten" maxlength="100" disabled="disabled"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="7" colspan="2"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Số CMND/CCCD/Hộ Chiếu</td>
+                                                    <td><input type="text" name="CMND" value="xxxxxx165" size="28" id="CMND" maxlength="30" disabled="disabled"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="7" colspan="2"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Số điện thoại di động</td>
+                                                    <td><input type="text" name="PhoneNbr" value="" size="28" id="PhoneNbr"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="7" colspan="2"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 27%;">Địa chỉ Email</td>
+                                                    <td style="width:73%"><input type="text" name="Email" value="" size="28" id="Email" maxlength="100"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="7" colspan="2"></td>
+                                                </tr>
+                                                
+                                                
+                                            </tbody></table>
+                                            </td>
+                            </tr>
+                            <tr>
+                                 <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                                    <table style="width: 100%" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                    <td style="height: 20px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                                                        <div class="news-item" style="width:100%;">                                            
+                                                            <iframe src="https://online.acb.com.vn/news/index.php/qung-cao-trang-ng-ky-ctkm" frameborder="0" width="100%" scrolling="no" marginheight="0px" marginwidth="0px"> </iframe>
+                                                        </div>
+                                                    </td>
+                                                </tr> 
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                            <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+                                
+                                phương pháp xác thực
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 27%;">Chọn phương pháp xác thực</td>
+                                            <td style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
+                                                <option value="" selected="selected"></option>
+                                                <option value="4504727">4504727</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr style="text-align:center;">
+                            
+                            <input name="button" type="button" class="nut1" id="button" value="Đồng ý">
+                            <input name="button2" type="button" class="nut1" id="button2" value="Hủy">
+                        </tr>
+                        <tr>
+                                <td>
+                                        <span style="color:red">Lưu ý:</span><br>
+                                        Các thông tin này dùng để cung cấp các thông tin cần thiết của CTKM cho Quý khách hàng.<br>Trong trường hợp Quý khách có nhu cầu thay đổi thông tin số điện thoại/ email sử dụng cho các giao dịch khác với Ngân hàng, Quý khách vui lòng thực hiện đăng ký tại Quầy giao dịch gần nhất
+                                    </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>smsbanking laptop</p>
+</div>
+<!--END LAPTOP-->

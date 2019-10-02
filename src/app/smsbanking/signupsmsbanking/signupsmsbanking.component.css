@@ -1,0 +1,18 @@
+.contentbold {
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.nut1 {
+    BACKGROUND: #dbecf2;
+    BORDER-BOTTOM: #98c6d6 1px solid;
+    BORDER-LEFT: #98c6d6 1px solid;
+    BORDER-RIGHT: #98c6d6 1px solid;
+    BORDER-TOP: #98c6d6 1px solid;
+    COLOR: #0071bb;
+    CURSOR: cusor;
+    FONT-FAMILY: Arial,sans-serif;
+    font-size: 12px;
+}

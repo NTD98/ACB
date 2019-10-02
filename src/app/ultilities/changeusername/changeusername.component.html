@@ -1,0 +1,105 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc !important; font-weight:bold;font-size: 13px;text-transform: uppercase;"> THAY ĐỔI TÊN TRUY CẬP </a>
+            </div>
+            <table style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td style="height: 20px;text-align: center;background-color: #005b90" height="20" class="white_tieude">ĐỔI TÊN TRUY CẬP</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+										<td style="width: 45%;height: 30px;text-align: center;" class="text_bold">
+										Tên truy cập cũ</td>
+                                        <td style="width: 55%;text-align: left;">
+                                            <input type="text" name="OldUser" value="" size="25" id="OldUser">
+										</td>
+                                    </tr>
+                                    <tr>
+										<td style="width: 45%;height: 30px;text-align: center;" class="text_bold">
+                                                Tên truy cập mới</td>
+                                        <td style="width: 55%;text-align: left;">
+                                            <input type="text" name="OldUser" value="" size="25" id="OldUser">
+										</td>
+                                    </tr>
+                                    <tr>
+										<td style="width: 45%;height: 30px;text-align: center;" class="text_bold">
+										Xác nhận tên truy cập mới</td>
+                                        <td style="width: 55%;text-align: left;">
+                                            <input type="text" name="OldUser" value="" size="25" id="OldUser">
+										</td>
+                                    </tr>
+                                    <tr>
+										<td style="width: 45%;height: 30px;text-align: center;" class="text_bold">
+										Mật khẩu mới</td>
+                                        <td style="width: 55%;text-align: left;">
+                                            <input type="text" name="OldUser" value="" size="25" id="OldUser">
+										</td>
+                                    </tr>
+                                    <tr>
+										<td style="width: 45%;height: 30px;text-align: center;" class="text_bold">
+										Xác nhận mật khẩu mới</td>
+                                        <td style="width: 55%;text-align: left;">
+                                            <input type="text" name="OldUser" value="" size="25" id="OldUser">
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                            <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+                                
+                                phương pháp xác thực
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 27%;">Chọn phương pháp xác thực</td>
+                                            <td style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
+                                                <option value="" selected="selected"></option>
+                                                <option value="4504727">4504727</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr style="text-align:center;">
+                            
+                            <input name="button" type="button" class="nut1" id="button" value="Đồng ý">
+                            <input name="button2" type="button" class="nut1" id="button2" value="Hủy">
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+				                        <span class="note-red" style="text-decoration: underline;">Lưu ý:</span><br><span class="copyright">
+				                        &nbsp;&nbsp;&nbsp;&nbsp;• Tên đăng nhập có độ dài từ 6 – 20 ký tự từ [a-z], [0-9] và gạch dưới; Không sử dụng khoảng trắng; Không được sử dụng toàn bộ ký tự trùng nhau (ví dụ: AAAAAA, 11111111) hoặc liên tục theo thứ tự trong bảng chữ cái, chữ số (ví dụ: abcdef, 123456). <br>
+				                        &nbsp;&nbsp;&nbsp;&nbsp;• Mật khẩu đăng nhập có độ dài từ 6 đến 20 ký tự. Bao gồm tối thiểu “chữ thường + chữ Hoa + chữ số” (ví dụ: ACBOnline123) hoặc “chữ thường + chữ số + ký tự đặc biệt, trừ ký tự \ &lt; &gt; (ví dụ: @cbonline123). Mật khẩu đăng nhập không được giống với mật khẩu đã sử dụng lần gần nhất. Thời gian hiệu lực của mật khẩu tối đa là 12 tháng.<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;• Để đảm bảo tính an toàn, bảo mật, Quý khách không cung cấp Tên truy cập &amp; Mật khẩu cho bất kỳ ai và dưới bất kỳ hình thức nào (ngoại trừ website/ ứng dụng chính thức của ACB).<br>
+                                        </span>
+                                </p>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>smsbanking laptop</p>
+</div>
+<!--END LAPTOP-->

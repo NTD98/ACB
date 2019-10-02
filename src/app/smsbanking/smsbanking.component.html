@@ -1,6 +1,46 @@
 <!--MOBILE-->
 <div class="mobile" *ngIf="loginService.isMobile">
-    <p>smsbanking mobile</p>
+    <div class="container">
+        <div class="row" >
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;">TIỆN ÍCH</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <div class="col-xs-6" style="text-align: center;width: 50%">
+                <div class="item">
+                    <img src="../../assets/Software_Update_icon-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='changelimit'>
+                        
+							Thay đổi hạn mức
+						
+                    </a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/Generate-keys-icon-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink="changepassword">
+                        
+							Thay đổi mật mã
+						
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-6" style="text-align: center;width: 50%;">
+                <div class="item">
+                    <img src="../../assets/square-icon-business-notepad-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink="signupsmsbanking">
+                        
+							ĐK dịch vụ  SMS Banking
+						            
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!--END MOBILE-->
 
