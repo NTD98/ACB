@@ -17,6 +17,7 @@ import {TransferModule} from './transfer/transfer.module';
 import {UltilitiesModule} from './ultilities/utilities.module';
 import {WesternUnionModule} from './westernunion/westernunion.module';
 import {EWalletModule} from './ewallet/ewallet.module';
+import {BlueDiamondModule} from './bluediamond/bluediamond.module';
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'home',component:HomeComponent},
@@ -35,6 +36,7 @@ const routes: Routes = [
   {path:'ultilities',loadChildren:'./ultilities/utilities.module#UltilitiesModule'},
   {path:'westernunion',loadChildren:'./westernunion/westernunion.module#WesternUnionModule'},
   {path:'ewallet',loadChildren:'./ewallet/ewallet.module#EWalletModule'},
+  {path:'bluediamond',loadChildren:'./bluediamond/bluediamond.module#BlueDiamondModule'},
 ];
 
 @NgModule({

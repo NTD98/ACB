@@ -1,0 +1,91 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;">ĐĂNG KÝ CẤP/HỦY MẬT KHẨU (T-PIN) ĐỂ XÁC THỰC QUA CC 24/7 HOẶC KÊNH PHỤC VỤ TỰ ĐỘNG CC 24/7</a>
+            </div>
+            <table style="width:100%;" cellspacing="0" cellpadding="0">      
+                <tbody>
+                    <tr>
+                        <td style="text-align:left;background-color:#005b90;" class="white_tieude">
+						
+                                ĐĂNG KÝ CẤP/HỦY MẬT KHẨU (T-PIN)
+                            </td>
+                    </tr>
+                    <tr>
+                            <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+					        <table style="width: 100%" cellspacing="0" cellpadding="0">
+						    <tbody><tr>
+							<td style="width:27%;">Chọn loại dịch vụ</td>
+							<td style="width:73%;"><select name="loaiDV" id="loaiDV" style="width:205px;">
+                            <option value="" selected="selected"></option>
+                            <option value="captpin">Cấp TPin</option>
+                            <option value="huytpin">Hủy TPin</option>
+                            </select></td>
+						</tr>
+						<tr>
+							<td style="width:27%;">&nbsp;</td>
+							<td style="width:73%;">&nbsp;</td>
+						</tr>
+						<tr>
+							<td style="width:27%;">Số điện thoại di động</td>
+							<td style="width:73%;">
+									
+										<input type="text" name="sodt" value="" id="sodt">
+									
+							</td>
+						</tr>
+						<tr>
+							<td style="width:27%;">&nbsp;</td>
+							<td style="width:73%;">&nbsp;</td>
+						</tr>
+						<tr>
+							<td style="width:27%;">Chọn phương pháp xác thực</td>
+							<td style="width:73%;">
+							
+								<select name="AuthTyp" id="AuthTyp">
+                                <option value="" selected="selected"></option>
+                                <option value="SMS">Mật khẩu tĩnh + OTP SMS</option>
+                                </select>
+							
+							</td>
+						</tr>
+						
+					</tbody></table>
+					</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 5px; padding-right: 5px;text-align: center;">
+						
+						<input name="button" type="button" class="nut1" id="button" value="Đăng ký">
+					    </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="acctSum" width="100%" cellspacing="1" cellpadding="0" id="table">         
+                                <tbody>
+                                    <tr class="evenrowcolor">
+                                        <th class="acctSum" style="text-align: center">STT</th><div style="width: 1px;background:white;height:100%;"></div>
+                                        <th class="acctSum" style="text-align: center">Ngày</th><div style="width: 1px;background:white;height:100%;"></div>
+                                        <th class="acctSum" style="text-align: center">Loại dịch vụ</th><div style="width: 1px;background:white;height:100%;"></div>
+                                        <th class="acctSum" style="text-align: center">Số điện thoại di động</th><div style="width: 1px;background:white;height:100%;"></div>
+                                        <th class="acctSum" style="text-align: center">Trạng thái</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>signuponline laptop</p>
+</div>
+<!--END LAPTOP-->

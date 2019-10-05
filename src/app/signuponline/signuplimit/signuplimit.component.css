@@ -33,20 +33,15 @@ td{
     color: #494949;
     text-decoration: none;
 }
-.error {
-    font-family: Arial;
-    font-weight: bold;
-    color: #c92538;
-    text-decoration: none;
-}
-.text_bold {
-    font-family: Arial;
-    font-weight: bold;
-    text-decoration: none;
-}
 .acc_bold {
     font-family: Arial;
     font-weight: bold;
     color: #0066ff;
+    text-decoration: none;
+}
+.error {
+    font-family: Arial;
+    font-weight: bold;
+    color: #c92538;
     text-decoration: none;
 }

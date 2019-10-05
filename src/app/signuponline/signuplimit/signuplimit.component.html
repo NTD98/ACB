@@ -1,0 +1,116 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;">ĐĂNG KÝ HẠN MỨC GIAO DỊCH</a>
+            </div>
+           <table style="width:100%;" cellspacing="0" cellpadding="0">      
+                   <tbody><tr>
+			         <td>	                     
+					</td></tr>
+                     <tr>
+                     	<td style="text-align:left;background-color:#005b90;" class="white_tieude">Hạn mức hiện tại </td>
+                      </tr>
+                     <tr>
+					<td>
+					<table style="width:100%;" cellspacing="0" cellpadding="0">
+						<tbody><tr><td>&nbsp;</td></tr>
+						<tr>
+							<td>Phương pháp xác thực</td>
+							<td><select name="AuthTyp_Client" id="AuthTypClient">
+                                <option value="" selected="selected"></option>
+                                <option value="PWD">Mật khẩu tĩnh</option>
+                                <option value="SMS">Mật khẩu tĩnh + OTP SMS</option>
+                                </select> </td>
+						</tr>
+							<tr><td>&nbsp;</td></tr>	
+						<tr>
+							<td>Hạn mức / giao dịch</td>
+							<td><input type="text" name="TradingLimit_Curr" value="" size="30" id="TradingLimit"  maxlength="18" disabled=""> <br></td>
+						</tr>
+							<tr><td>&nbsp;</td></tr>
+						<tr>
+							<td>Hạn mức / ngày</td>
+							<td><input type="text" name="DailyLimit_Curr" value="" size="30" id="DailyLimit"  maxlength="18" disabled=""> </td>
+						</tr>
+							<tr><td>&nbsp;</td></tr>
+						<tr>
+							<td>Hạn mức tin cậy / giao dịch</td>
+							<td><input type="text" name="HanMucTCGD_Curr" value="" size="30" id="HanMucTCGD"  maxlength="18" disabled=""> </td>
+						</tr>
+							<tr><td>&nbsp;</td></tr>
+						<tr>
+							<td>Hạn mức tin cậy / ngày</td>
+							<td><input type="text" name="HanMucTCN_Curr" value="" size="30" id="HanMucTCN"  maxlength="18" disabled=""> </td>
+						</tr>
+						<tr><td>&nbsp;</td></tr>
+					</tbody></table>
+					
+					</td>
+				</tr>
+				
+				<tr>
+						<td style="text-align:left;background-color:#005b90;height: 20px;" class="white_tieude">Hạn mức mới</td>
+				</tr>
+                   <tr>
+					<td>
+					<table style="width:100%;" cellspacing="0" cellpadding="0">	
+						<tbody><tr><td>&nbsp;</td></tr>	
+						<tr>
+							<td style="width:37%;">Hạn mức / giao dịch</td>
+							<td style="width:63%;"><input type="text" name="TradingLimit" value="" size="30" id="TradingLimit"  maxlength="18"></td>
+						</tr>
+						<tr><td>&nbsp;</td></tr>
+						<tr>
+							<td style="width:37%;">Hạn mức / ngày</td>
+							<td style="width:63%;"><input type="text" name="DailyLimit" value="" size="30" id="DailyLimit"  maxlength="18"></td>
+						</tr>
+						<tr><td>&nbsp;</td></tr>
+						<tr>
+							<td style="width:37%;">Hạn mức tin cậy / giao dịch</td>
+							<td style="width:63%;"><input type="text" name="HanMucTCGD" value="" size="30" id="HanMucTCGD"  maxlength="18"></td>
+						</tr>
+						<tr><td>&nbsp;</td></tr>
+						<tr>
+							<td style="width:37%;">Hạn mức tin cậy / ngày</td>
+							<td style="width:63%;"><input type="text" name="HanMucTCN" value="" size="30" id="HanMucTCN"  maxlength="18"></td>
+						</tr>
+						<tr><td>&nbsp;</td></tr>
+					</tbody></table>
+					
+					</td>
+				</tr>
+				 <tr>
+                        <td><table style="width:100%;" cellspacing="0" cellpadding="0">
+                          <tbody><tr>
+                            <td style="width:37%;">Nhập mật khẩu đăng nhập</td>
+                            <td style="width:63%;"><input type="password" name="Password" value="" size="30"></td>
+                          </tr>
+                          <tr><td>&nbsp;</td></tr>
+                        </tbody></table></td>
+                  </tr>  
+				  <tr>
+                     <td><p> <span class="note-red">Lưu ý :</span></p>
+                       <p><span class="copyright">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Hạn mức mới phải nhỏ hơn Hạn mức hiện tại.</span></p>
+					   <p><span class="copyright">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Hạn mức này không áp dụng cho giao dịch chuyển khoản giữa các tài khoản của  cùng chủ sở hữu trong hệ thống ACB.</span></p>
+                        </td>
+                   </tr>
+                   <tr>
+                    <td style="text-align: center;column-span: 2px;">
+                        <input type="hidden" name="dse_nextEventName" value="ok" id="dse_nextEventName"> <input name="button" type="button" class="nut1 button-blue" id="button" value="Đồng ý">
+                        <input name="button2" type="button" class="nut1 button-white" id="button2" value="Hủy">
+					</td>
+				</tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>signuponline laptop</p>
+</div>
+<!--END LAPTOP-->
