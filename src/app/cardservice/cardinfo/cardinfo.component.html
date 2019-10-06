@@ -1,0 +1,62 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;">THƯỜNG TRUY CẬP</a>
+            </div>
+            <div class="col-xs-12" style="width: 100%">
+                <table class="acctSum" width="100%" cellspacing="1" cellpadding="0" id="table">         
+                    <tbody>
+                        <tr class="evenrowcolor">
+                            <th class="acctSum" style="text-align: center">Số thẻ</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Loại thẻ</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Ngày lập<br>bảng TBGD</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Xem bảng<br>TBGD</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Giao dịch trong<br>40 ngày gần nhất</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Chuyển sang<br>ít truy cập</th>
+                        </tr>
+                        <tr class="oddrowcolor">
+                            <td class="acctSum" style="text-align: center" width="10%">4504727</td>
+                            <td></td>
+                            <td class="acctSum" style="text-align: center" width="30%">ACB2GO</td>
+                            <td></td>
+                            <td class="acctSum" style="text-align: center" width="20%">16</td>
+                            <td></td>
+                            <td class="acctSum" style="text-align: center" width="10%">Xem</td>
+                            <td></td>
+                            <td class="acctSum" style="text-align: center" width="20%">Xem</td>
+                            <td></td>
+                            <td class="acctSum" style="text-align: center" width="10%">Xem</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table cellpadding="4" cellspacing="0" style="border-right : 1px solid #0066FF;border-left : 1px solid #0066FF;border-bottom : 1px solid #0066FF;border-top : 1px solid #0066FF;width: 340px;height: 100px;">
+                    <tbody>
+                        <tr style="background-color:#6699FF">
+                        <td colspan="4" height="20" class="contentbold"><img src="">Bảng ghi chú</td>
+                            </tr>
+                            <tr>
+                                <td>
+                            <ul style="padding-left: 15px;">
+                            <li>
+                                <a style="color:#ff0000"> * </a><a style="font-family:tahoma;font-size:12px"><b>CR</b>: thể hiện số dư CÓ của tài khoản thẻ</a>
+                            </li>
+                            <li><a style="font-family:tahoma;font-size:12px">Số dư khả dụng: hạn mức có thể tiêu dùng</a>
+                            </li>
+                        </ul>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>ewallet laptop</p>
+</div>
+<!--END LAPTOP-->

@@ -1,0 +1,66 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;text-transform: uppercase">Thông tin Cashback (thẻ Signature)</a>
+            </div>
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;text-transform: uppercase">			                Danh sách thẻ Signature
+                    </a>
+            </div>
+            <div class="col-xs-12" style="width: 100%">
+                <table class="acctSum" width="100%" cellspacing="1" cellpadding="0" id="table">         
+                    <tbody>
+                        <tr class="evenrowcolor">
+                            <th class="acctSum" style="text-align: center">Số thẻ</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Họ tên</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Doanh số tích lũy</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Hoàn tích lũy hiện tại</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Tổng số tiền khách hàng đã đổi</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Hoàn tích lũy còn lại</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;text-transform: uppercase">			                Yêu cầu hoàn tiền
+                    </a>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Số thẻ <input disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Số tiền muốn đổi <input><input input name="button" type="button" class="nut1 button-blue" id="button" value="Hoàn tiền"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;text-transform: uppercase">
+                        Lịch sử hoàn tiền
+                    </a>
+            </div>
+            <div class="col-xs-12" style="width: 100%">
+                <table class="acctSum" width="100%" cellspacing="1" cellpadding="0" id="table">         
+                    <tbody>
+                        <tr class="evenrowcolor">
+                            <th class="acctSum" style="text-align: center">STT</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Số thẻ</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Số tiền khách hàng đã đổi</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Ngày thực hiện</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">User thực hiện</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>ewallet laptop</p>
+</div>
+<!--END LAPTOP-->

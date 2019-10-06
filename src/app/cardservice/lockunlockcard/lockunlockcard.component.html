@@ -1,0 +1,42 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;text-transform: uppercase">Thông tin Cashback (thẻ Signature)</a>
+            </div>
+            <div class="col-xs-12" style="width: 100%">
+                <table class="acctSum" width="100%" cellspacing="1" cellpadding="0" id="table">         
+                    <tbody>
+                        <tr class="evenrowcolor">
+                            <th class="acctSum" style="text-align: center">Số thẻ</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Tên chủ thẻ</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Loại thẻ</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Tình trạng thẻ</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Đề nghị</th>
+                        </tr>
+                        <tr class="oddrowcolor">
+                            <td class="acctSum" style="text-align: center" width="10%">4504727</td>
+                            <td></td>
+                            <td class="acctSum" style="text-align: center" width="40%">NGUYEN TIEN DAT</td>
+                            <td></td>
+                            <td class="acctSum" style="text-align: center" width="30%">ACB2GO</td>
+                            <td></td>
+                            <td class="acctSum" style="text-align: center" width="10%">Mở</td>
+                            <td></td>
+                            <td class="acctSum" style="text-align: center" width="10%"><a href="#">Khóa thẻ</a></td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>ewallet laptop</p>
+</div>
+<!--END LAPTOP-->
