@@ -1,0 +1,182 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;">TÀI KHOẢN THỤ HƯỞNG CHO THANH TOÁN HÓA ĐƠN</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <table style="width:100%;" cellspacing="0" cellpadding="0">      
+                <tbody>
+                    <tr>
+                        <td style="text-align:center;background-color:#005b90;" class="white_tieude">
+						
+                            ĐĂNG KÝ TÀI KHOẢN THỤ HƯỞNG
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <div class="col-xs-12" style="width: 100%">
+                <table style="width: 100%">
+                    <tr>
+                        <td style="width:100%;background-color: #EFF8FA;text-align: center;padding-left: 0px; padding-right: 0px; padding-top: 15px; padding-bottom: 15px;">
+							<table style="width:300px;" cellspacing="0" cellpadding="0">
+								
+								<tbody>
+                                <tr>
+									<td style="width:40%;height:30px;text-align:left;">Loại thanh toán
+									</td>
+                                    <td style="width:60%;text-align:left;">
+                                        <select name="nganhang" style="width:205px;" id="dsnganhang">
+                                                <option value="INET" selected="selected">Internet</option>
+                                        </select>
+                                        <span><a href="#">Hướng dẫn đăng ký</a></span>
+                                    </td>
+								</tr>
+								<tr>
+									<td style="width:40%;height:30px;text-align:left;">Đơn vị cung cấp
+									</td>
+                                    <td style="width:60%;text-align:left;">
+                                        <select name="nganhang" style="width:205px;" id="dsnganhang">
+                                        </select>                                     
+                                    </td>
+                                </tr>
+                                <tr>
+									<td style="width:40%;height:30px;text-align:left;">Tên đơn vị thụ hưởng
+									</td>
+									<td style="width:60%;text-align:left;"><input type="text" name="AccountNbr" value="" size="28" id="AccountNbr" maxlength="30"></td>
+                                </tr>
+                                <tr>
+									<td style="width:40%;height:30px;text-align:left;">Tài khoản thụ hưởng
+									</td>
+									<td style="width:60%;text-align:left;"><input type="text" name="AccountNbr" value="" size="28" id="AccountNbr" maxlength="30"></td>
+                                </tr>
+                                <tr>
+									<td style="width:40%;height:30px;text-align:left;">Tài khoản thụ hưởng
+									</td>
+									<td style="width:60%;text-align:left;"><input type="text" name="AccountNbr" value="" size="28" id="AccountNbr" maxlength="30"></td>
+								</tr>
+								<tr>
+									<td style="width:40%;height:30px;text-align:left;">Tỉnh / Thành phố</td>
+									<td style="width:60%;text-align:left;"><select name="tinh" style="width:205px;" id="dsTinh">
+<option value="...">...</option>
+<option value="74">An Giang</option>
+<option value="69">Ba Ria-Vung Tau</option>
+<option value="15">Bac Can</option>
+<option value="26">Bac Giang</option>
+<option value="84">Bac Lieu</option>
+<option value="27">Bac Ninh</option>
+<option value="77">Ben Tre</option>
+<option value="54">Binh Dinh</option>
+<option value="65">Binh Duong</option>
+<option value="66">Binh Phuoc</option>
+<option value="58">Binh Thuan</option>
+<option value="85">Ca Mau</option>
+<option value="80">Can Tho</option>
+<option value="13">Cao Bang</option>
+<option value="51">Da Nang</option>
+<option value="62">Dac Lac</option>
+<option value="57">Dak Nong</option>
+<option value="19">Dien Bien</option>
+<option value="68">Dong Nai</option>
+<option value="72">Dong Thap</option>
+<option value="60">Gia Lai</option>
+<option value="12">Ha Giang</option>
+<option value="32">Ha Nam</option>
+<option value="10">Ha Noi</option>
+<option value="30">Ha Tay</option>
+<option value="38">Ha Tinh</option>
+<option value="24">Hai Duong</option>
+<option value="23">Hai Phong</option>
+<option value="64">Hau Giang</option>
+<option value="50">Ho Chi Minh</option>
+<option value="31">Hoa Binh</option>
+<option value="25">Hung Yen</option>
+<option value="680">Khac</option>
+<option value="56">Khanh Hoa</option>
+<option value="82">Kien Giang</option>
+<option value="61">Kon Tum</option>
+<option value="22">Lai Chau</option>
+<option value="63">Lam Dong</option>
+<option value="14">Lang Son</option>
+<option value="18">Lao Cai</option>
+<option value="70">Long An</option>
+<option value="33">Nam Dinh</option>
+<option value="37">Nghe An</option>
+<option value="34">Ninh Binh</option>
+<option value="59">Ninh Thuan</option>
+<option value="28">Phu Tho</option>
+<option value="55">Phu Yen</option>
+<option value="39">Quang Binh</option>
+<option value="52">Quang Nam</option>
+<option value="53">Quang Ngai</option>
+<option value="21">Quang Ninh</option>
+<option value="40">Quang Tri</option>
+<option value="81">Soc Trang</option>
+<option value="20">Son La</option>
+<option value="67">Tay Ninh</option>
+<option value="35">Thai Binh</option>
+<option value="16">Thai Nguyen</option>
+<option value="36">Thanh Hoa</option>
+<option value="41">Thua Thien Hue</option>
+<option value="76">Tien Giang</option>
+<option value="79">Tra Vinh</option>
+<option value="11">Tuyen Quang</option>
+<option value="78">Vinh Long</option>
+<option value="29">Vinh Phuc</option>
+<option value="17">Yen Bai</option>
+</select></td>
+								</tr>
+								<tr>
+									<td style="width:40%;height:30px;text-align:left;">Tại ngân hàng
+									</td>
+                                    <td style="width:60%;text-align:left;">
+                                        <select name="nganhang" style="width:205px;" id="dsnganhang">
+                                        </select>
+                                    </td>
+								</tr>
+								<tr>
+									<td style="width:40%;height:30px;text-align:left;">Chi nhánh
+									</td>
+									<td style="width:60%;text-align:left;"><select name="chinhanh" style="width:205px;" id="dsCN">
+</select></td>
+								</tr>
+								<tr>
+									<td height="15" colspan="2"></td>
+								</tr>
+								
+
+							</tbody></table>
+							</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;column-span: 2px;"><span style="padding-left: 0px; padding-right: 0px;"> <input type="hidden" name="dse_nextEventName" value="byDate" id="chooseByDate"> <input type="button" value="Đăng ký" class="nut1"> </span></td>
+                    </tr>
+                </table>
+                <div class="col-xs-12" style="width: 100%">
+                    <table class="acctSum" width="100%" cellspacing="1" cellpadding="0" id="table">         
+                        <tbody>
+                            <tr class="evenrowcolor">
+                                <th class="acctSum" style="text-align: center">Loại thanh toán</th><div style="width: 1px;background:white;height:100%;"></div>
+                                <th class="acctSum" style="text-align: center">Đơn vị cung cấp</th><div style="width: 1px;background:white;height:100%;"></div>
+                                <th class="acctSum" style="text-align: center">Mã dịch vụ</th><div style="width: 1px;background:white;height:100%;"></div>
+                                <th class="acctSum" style="text-align: center">Tên đơn vị hưởng</th><div style="width: 1px;background:white;height:100%;"></div>
+                                <th class="acctSum" style="text-align: center">Trạng thái</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>onlinetransaction laptop</p>
+</div>
+<!--END LAPTOP-->

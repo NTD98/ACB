@@ -1,0 +1,68 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;">TÀI KHOẢN THỤ HƯỞNG TRONG HỆ THỐNG ACB</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <table style="width:100%;" cellspacing="0" cellpadding="0">      
+                <tbody>
+                    <tr>
+                        <td style="text-align:center;background-color:#005b90;" class="white_tieude">
+						
+                            ĐĂNG KÝ TÀI KHOẢN THỤ HƯỞNG
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <table style="width: 100%;margin-top: 20px;margin-bottom: 20px;">
+                <tbody>
+                    <tr>
+                        
+                        <td style="width: 40%;text-align: left">Số tài khoản thụ hưởng
+                        </td>
+                        <td style="width: 60%;text-align: left"><input type="text" name="AccountNbr" value="" size="20" id="AccountNbr" maxlength="20">
+                        </td>
+                    
+                    </tr>
+                    <tr style="height: 30px;"></tr>
+                    <tr style="text-align: left;">
+                    <td style="height: 30px;"></td>
+                    <td>
+                        <input name="button" type="button" class="nut1" id="button" value="Đăng ký">
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col-xs-12" style="width: 100%">
+                <table class="acctSum" width="100%" cellspacing="1" cellpadding="0" id="table">         
+                    <tbody>
+                        <tr class="evenrowcolor">
+                            <th class="acctSum" style="text-align: center">Tên đơn vị thụ hưởng</th><div style="width: 1px;background:white;height:100%;"></div>
+                            <th class="acctSum" style="text-align: center">Số tài khoản</th><div style="width: 1px;background:white;height:100%;"></div>
+                            
+                            <th class="acctSum" style="text-align: center">Xóa</th>
+                        </tr>
+                        <tr class="oddrowcolor">
+                            <td class="acctSum" style="text-align: center" width="50%%">CTY CP DV DI DONG TRUC TUYEN</td><div></div>
+                            <td class="acctSum" style="text-align: right" width="30%">88788</td><div></div>
+                            <td class="acctSum" style="text-align: center" width="20%"><a href="#">Xóa</a></td><div></div>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>onlinetransaction laptop</p>
+</div>
+<!--END LAPTOP-->

@@ -1,11 +1,44 @@
 <!--MOBILE-->
 <div class="mobile" *ngIf="loginService.isMobile">
-    <p>signupbeneficiaryaccount mobile</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;">TRA CỨU THÔNG TIN</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <div class="col-xs-6" style="text-align: center;width: 50%">
+                <div class="item">
+                    <img src="../../assets/earning-statements-icon.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='beneficiaryaccountinacb'>TK thụ hưởng trong ACB</a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/Invoice-icon-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink="beneficiaryaccountintthd">TK thụ hưởng trong TTHĐ</a>
+                </div>
+            </div>
+            <div class="col-xs-6" style="text-align: center;width: 50%;">
+                <div class="item">
+                    <img src="../../assets/Money-icon1-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='beneficiaryaccountoutacb'>TK thụ hưởng ngoài ACB</a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/credit-card-icon1-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='beneficiarycard'>Thẻ thụ hưởng</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!--END MOBILE-->
 
 <!--LAPTOP-->
 <div class="laptop" *ngIf="!loginService.isMobile">
-    <p>signupbeneficiaryaccount laptop</p>
+    <p>searchinfo laptop</p>
 </div>
 <!--END LAPTOP-->

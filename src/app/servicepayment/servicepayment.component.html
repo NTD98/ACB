@@ -1,11 +1,75 @@
 <!--MOBILE-->
 <div class="mobile" *ngIf="loginService.isMobile">
-    <p>servicepayment mobile</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;">TRA CỨU THÔNG TIN</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <div class="col-xs-6" style="text-align: center;width: 50%">
+                <div class="item">
+                    <img src="../../assets/top-up4.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='rechargedttd'>Nạp tiền ĐTDĐ trả trước</a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/Phone-HTC-Dash-icon-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='rechargedttdafter'>Thanh toán cước ĐTDĐ trả sau</a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/telefono-icon.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='paydtcd'>Thanh toán cước ĐTCĐ</a>
+                </div><br>
+                <div class="item">
+                    <img src="../../assets/Invoice-icon-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='paybill'>Thanh toán hóa đơn</a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/train.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='paytrainticket'>Thanh toán vé tàu lửa</a>
+                </div>
+                
+            </div>
+            <div class="col-xs-6" style="text-align: center;width: 50%;">
+                <div class="item">
+                    <img src="../../assets/game.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='rechargegamecard'>Nạp thẻ game</a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/network-icon.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='payadsl'>Thanh toán cước Internet ADSL </a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/television-08-icon.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='paytv'>Thanh toán cước truyền hình</a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/air-tickets-icon.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='payplaneticket'>Thanh toán vé máy bay</a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/icon_tan_cang.jpg" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='payportsg'>Thanh toán DV Tân Cảng Sài Gòn</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!--END MOBILE-->
 
 <!--LAPTOP-->
 <div class="laptop" *ngIf="!loginService.isMobile">
-    <p>servicepayment laptop</p>
+    <p>searchinfo laptop</p>
 </div>
 <!--END LAPTOP-->
