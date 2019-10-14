@@ -1,0 +1,81 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;text-transform: uppercase;;">ĐK TRÍCH TIỀN TỰ ĐỘNG TK ĐẦU TƯ TRỰC TUYẾN</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <table style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td style="text-align:center;background-color:#005b90;" class="white_tieude">					
+                                TÀI KHOẢN TIỀN GỬI THANH TOÁN
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody><tr>
+							<td style="width:27%;text-align:left;padding-right: 5px">Số tài khoản trích</td>
+							<td style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
+                                <option value="...">...</option>
+                                <option value="4504727">4504727</option>
+                                </select></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><span class="alert">
+							&nbsp; </span></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><span class="alert">
+							 </span></td>
+						</tr>
+						<tr>
+							<td style="width:27%;text-align:left;padding-right: 5px">Số tiền giữ lại tối thiểu</td>
+							<td style="width:73%"> <input type="text" name="sotiengiulai" value="" size="30" onkeypress="return isNumberKey(event);" onchange="this.value = changeAmount(this.value);"> &nbsp;(&nbsp;&gt;=1.000.000 VND)</td>
+						</tr>						
+					</tbody>
+            </table>
+            <table style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td style="text-align:center;background-color:#005b90;" class="white_tieude">					
+                                TÀI KHOẢN TIỀN GỬI THANH TOÁN
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody><tr>
+							<td style="width:27%;text-align:left;padding-right: 5px">Số tài khoản nhận tiền</td>
+							<td style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
+                                <option value="...">...</option>
+                                <option value="4504727">4504727</option>
+                                </select></td>
+                        </tr>
+                    </tbody>
+                </table>
+            <table style="width: 100%;">
+                <tbody>
+                    <tr style="text-align:center;">
+                    
+                    <input name="button" type="button" class="nut1" id="button" value="Đồng ý">
+                    <input name="button2" type="button" class="nut1" id="button2" value="Hủy">
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>onlineloan laptop</p>
+</div>
+<!--END LAPTOP-->

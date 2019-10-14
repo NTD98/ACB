@@ -1,0 +1,15 @@
+.white_tieude{
+    height: 20px;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+td{
+    font-size: 12px;
+}
+.InputCbo1 {
+    width: 150px;
+}
