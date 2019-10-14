@@ -1,6 +1,95 @@
 <!--MOBILE-->
 <div class="mobile" *ngIf="loginService.isMobile">
-    <p>sellcurrentcyforacb mobile</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;">Giao dịch thanh toán dịch vụ xếp dỡ hàng Tân Cảng</a>
+            </div>
+            <table style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td style="text-align:center;background-color:#005b90;" class="white_tieude">					
+                                THANH TOÁN DỊCH VỤ TÂN CẢNG SÀI GÒN
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style="width:100%;" cellspacing="0" cellpadding="0">      
+                <tbody>
+                   
+                    <tr>
+                        <td style="width:40%;height:30px;text-align:left;"> Nhà cung cấp dịch vụ
+                        </td>
+                        <td style="width:60%;text-align:left;">
+                            <select name="nganhang" style="width:205px;" id="dsnganhang">
+                                    
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:40%;height:30px;text-align:left;">Tại ngân hàng
+                        </td>
+                        <td style="width:60%;text-align:left;">
+                            <select name="nganhang" style="width:205px;" id="dsnganhang">
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:40%;height:30px;text-align:left;">Mã đơn hàng
+                        </td>
+                        <td style="width:60%;text-align:left;"><input type="text" name="AccountNbr" value="" size="28" id="AccountNbr" maxlength="30"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:40%;height:30px;text-align:left;">Nhập lại mã đơn hàng
+                        </td>
+                        <td style="width:60%;text-align:left;"><input type="text" name="AccountNbr" value="" size="28" id="AccountNbr" maxlength="30"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:40%;height:30px;text-align:left;">Nội dung
+                        </td>
+                        <td style="width:60%;text-align:left;"><textarea name="" id="" cols="30" rows="5"></textarea></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						phương pháp xác thực
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 27%;">Chọn phương pháp xác thực</td>
+                                    <td style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
+                                        <option value="" selected="selected"></option>
+                                        <option value="4504727">4504727</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                     <td><p> <span class="note-red">Lưu ý:</span></p>
+                       <p><span class="copyright">- Thời gian xử lý giao dịch phụ thuộc vào nhà cung cấp dịch vụ. Chi tiết tham khảo</span> <a target="_blank" href="/acbib/trogiup/DKDK_ThoigianGD_10_2015.pdf">Điều kiện điều khoản</a></p>
+                        </td>
+                   </tr>
+                <tr style="text-align:center;">
+                    
+                    <input name="button" type="button" class="nut1" id="button" value="Đồng ý">
+                    <input name="button2" type="button" class="nut1" id="button2" value="Hủy">
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 <!--END MOBILE-->
 
