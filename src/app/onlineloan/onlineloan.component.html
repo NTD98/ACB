@@ -1,11 +1,44 @@
 <!--MOBILE-->
 <div class="mobile" *ngIf="loginService.isMobile">
-    <p>onlineloan mobile</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px;">VAY TRỰC TUYẾN</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <div class="col-xs-6" style="text-align: center;width: 50%">
+                <div class="item">
+                    <img src="../../assets/payment-icon-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='paydebt'>Thực hiện trả nợ vay</a>
+                </div><br>
+                <div class="item">
+                    <img src="../../assets/sales-report-icon-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='listloantransaction'>Liệt kê giao dịch vay</a>
+                </div>
+            </div>
+            <div class="col-xs-6" style="text-align: center;width: 50%;">
+                <div class="item">
+                    <img src="../../assets/Emblem-Money-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='signuppaydebt'>Đăng ký trả nợ vay định kỳ</a>
+                </div>
+                <div class="item">
+                    <img src="../../assets/Money2-64.png" width="64px" style="border-style: none">
+                    <br>
+                    <a class="name" routerLink='liquidatedebtaccount'>Thanh lý TK vay</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!--END MOBILE-->
 
 <!--LAPTOP-->
 <div class="laptop" *ngIf="!loginService.isMobile">
-    <p>onlineloan laptop</p>
+    <p>searchinfo laptop</p>
 </div>
 <!--END LAPTOP-->

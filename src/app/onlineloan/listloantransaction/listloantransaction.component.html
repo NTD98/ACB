@@ -1,0 +1,85 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+        <div class="container">
+                <div class="row">
+                    <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                        <a style="color: #0071bc; font-weight:bold;font-size: 13px; text-transform: uppercase">LIỆT KÊ GIAO DỊCH TIỀN GỬI
+                            </a>
+                    </div>
+                    <div class="col-xs-12" style="text-align: right;width: 100%;">
+                        <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+                    </div>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="background: #005b90;text-align: center;height: 20px;" class="white_tieude">
+                                
+                                    CHỌN THỜI GIAN GIAO DỊCH
+                            </td>
+                        </tr>
+                        <tr>
+                                <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                                    <table style="width: 100%">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 100%;background-color:#EFF8FA;text-align:center;">
+                                                    <table style="width: 300px;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="height:25px;text-align:center;" class="text_bold">
+                                                                    <input type="hidden" name="dse_nextEventName" value="byDate" id="chooseByDate">
+                                                                    Theo ngày
+                                                                </td>
+                                                            </tr>
+                                                            <table style="width: 100%;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="width:65%;text-align:right;">Từ ngày
+                                                                            <input style="width:50%;" type="text" name="FromDate" value="24/08/2019" size="20" class="text_day" id="FromDate" maxlength="10">
+                                                                        </td>
+                                                                        <td style="width:65%;text-align:left;">dd/mm/yyyy</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width:65%;text-align:right;">Đến ngày
+                                                                            <input style="width:50%;" type="text" name="FromDate" value="24/08/2019" size="20" class="text_day" id="FromDate" maxlength="10">
+                                                                        </td>
+                                                                        <td style="width:65%;text-align:left;">dd/mm/yyyy</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <tr style="text-align:center;">
+                                                                <input name="button2" type="button" class="nut1" id="button2" value="Xem">
+                                                            </tr>
+                                                            <tr>
+                                                                <table class="acctSum" width="100%" cellspacing="1" cellpadding="0" id="table">         
+                                                                    <tbody>
+                                                                        <tr class="evenrowcolor">
+                                                                            <th class="acctSum" style="text-align: center">Ngày</th><div style="width: 1px;background:white;height:100%;"></div>
+                                                                            <th class="acctSum" style="text-align: center">TK TG CKH</th><div style="width: 1px;background:white;height:100%;"></div>
+                                                                            <th class="acctSum" style="text-align: center">TK TGTT</th><div style="width: 1px;background:white;height:100%;"></div>
+                                                                            <th class="acctSum" style="text-align: center">TK Vay</th><div style="width: 1px;background:white;height:100%;"></div>
+                                                                            <th class="acctSum" style="text-align: center">Số tiền</th><div style="width: 1px;background:white;height:100%;"></div>
+                                                                            <th class="acctSum" style="text-align: center">Trạng thái</th><div style="width: 1px;background:white;height:100%;"></div>
+                                                                            <th class="acctSum" style="text-align: center">Xem hợp đồng</th>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>sellcurrentcyforacb laptop</p>
+</div>
+<!--END LAPTOP-->
