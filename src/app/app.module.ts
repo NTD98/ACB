@@ -12,6 +12,7 @@ import { FooterComponent } from './_template/footer/footer.component';
 import { LoginService } from '../app/module/login/login.service';
 import { HomeComponent } from './module/home/home.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

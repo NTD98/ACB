@@ -1,0 +1,238 @@
+<!--MOBILE-->
+<div class="mobile" *ngIf="loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px; text-transform: uppercase">LIỆT KÊ GIAO DỊCH BÁN NGOẠI TỆ
+                    </a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="background: #005b90;text-align: center;height: 20px;" class="white_tieude">
+                        
+                            CHỌN THỜI GIAN GIAO DỊCH
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;background-color: #FFFFFF;;height: 27px;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+					<table style="width: 100%;" cellspacing="0" cellpadding="0">
+						<tbody><tr>
+                          	<td style="width: 27%;height:30px">Tên khách hàng</td><td style="width: 73%;"><input type="text" name="glbHoTen" value="NGUYEN TIEN DAT" size="35" disabled="disabled"></td>
+                        </tr>
+                        <tr>
+                          	<td style="width: 27%;height:30px">Số chứng minh nhân dân</td><td style="width: 73%;"><input type="text" name="IdNbr" value="XXXXXX165" disabled="disabled"></td>
+                        </tr>
+                        <tr>
+                          	<td style="width: 27%;height:30px">Tài khoản liên kết</td><td style="width: 73%;"><select name="AcctNbr" id="acctNbrList">
+                                <option value="" selected="selected"></option>
+                                </select></td>
+                        </tr>
+                        	
+                        <tr>
+                          	<td style="width: 27%;height:30px">Số điện thoại đăng ký</td><td style="width: 73%;"><input type="text" name="PhoneNbr" value="0969926509" size="28" id="PhoneNbr" maxlength="30" disabled="disabled"></td>
+                        </tr>
+                       
+                        <tr>
+	                        <td colspan="2">
+	                        <span class="note-red">Lưu ý:</span><br>
+	                          <span class="copyright">- Số điện thoại đăng ký là số điện thoại nhận OTP SMS hoặc số điện thoại nhận mật khẩu</span><br>
+	                          <span class="copyright">- Số điện thoại đăng ký là tài khoản ví MoMo
+	                       </span></td>
+                      </tr>
+                        <!--  <tr>
+                          	<td style="width: 27%;height:30px">Email</td><td style="width: 73%;"><input type="text"   name="Email" value="" size="28" id="Email" maxlength="30" /></td>
+                        </tr>-->				
+					</tbody></table>
+					</td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: center;height: 20px;" class="white_tieude">
+                        
+                        ĐIỀU KHOẢN & ĐIỀU KIỆN
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;background-color: #FFFFFF;;height: 27px;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+					<table style="width: 100%;" cellspacing="0" cellpadding="0">
+						<tbody><tr>
+							<td>
+								<textarea rows="20" readonly="readonly" style="width:98% !important; font-size:12px !important;color:#636464;">ĐIỀU KHOẢN VÀ ĐIỀU KIỆN SỬ DỤNG DỊCH VỤ VÍ ĐIỆN TỬ MOMO
+
+                                    Vui lòng đọc những Điều Khoản và Điều Kiện này trước khi sử dụng Dịch vụ.
+                                    Những Điều Khoản và Điều Kiện này quy định việc thực hiện giao dịch, quyền và nghĩa vụ của Người Sử Dụng (Khách hàng), khi sử dụng Dịch Vụ do Công ty Cổ phần Dịch vụ di động trực tuyến  phối hợp với Ngân hàng TMCP Á Châu cung cấp.
+
+                                    Điều 1: Giải thích từ ngữ
+                                    Các từ viết tắt và các thuật ngữ sử dụng trong Điều Khoản và Điều Kiện này được hiểu như sau:
+                                    &nbsp;&nbsp;&nbsp;-	Ngân hàng TMCP Á Châu (ACB): là trung gian thanh toán giữa Khách hàng và Công ty Cổ phần dịch vụ di động trực tuyến (M-Service) liên quan đên các giao dịch nạp/rút tiền từ tài khoản thanh toán (TKTT) của khách hàng tại ACB với tài khoản ví điện tử Momo.
+                                    &nbsp;&nbsp;&nbsp;-	Công ty Cổ phần Dịch vụ di động trực tuyến (M-Service): là một công ty cổ phần Việt Nam được thành lập hợp lệ và hoạt động theo Pháp Luật của nước Cộng Hòa Xã Hội Chủ Nghĩa Việt Nam, có Giấy Chứng Nhận Đăng Ký Doanh Nghiệp Số 0305289153 và có trụ sở đăng ký tại 40 Hoàng Việt, Phường 4, Quận Tân Bình, Thành Phố Hồ Chí Minh, số điện thoại (08) 39911199
+                                    &nbsp;&nbsp;&nbsp;-	Khách hàng: là cá nhân có tài khoản thanh toán (TKTT) VND mở tại ACB
+                                    &nbsp;&nbsp;&nbsp;-	Ví điện tử Momo: là tài khoản trên điện thoại di động được cung cấp bởi  M-Service do khách hàng chủ động đăng ký và sử dụng các dịch vụ do M-Serivice cung cấp.
+                                    &nbsp;&nbsp;&nbsp;-	Giao dịch: là các giao dịch khách hàng thực hiện nạp tiền/ rút tiền từ TKTT tại ACB vào tài khoản ví điện tử Momo hoặc ngược lại để sử dụng các dịch vụ do M-Service cung cấp.
+
+                                    Điều 2: Đăng ký và sử dụng dịch vụ
+                                    &nbsp;&nbsp;&nbsp;-	Điều kiện đăng ký:
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Khách hàng có TKTT VND tại ACB và có đăng ký dịch vụ ACB Online.
+                                    &nbsp;&nbsp;&nbsp;-	Sử dụng dịch vụ:
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Đăng ký liên kết hoặc hủy liên kết TKTT tại ACB với ví điện tử Momo: khách hàng thực hiện trên ACB Online.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Nạp tiền từ TKTT tại ACB vào ví điện tử Momo: khách hàng thực hiện trên ACB Online hoặc ứng dụng (Application - App) của M-Service.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Rút tiền từ ví điện tử Momo chuyển vào TKTT tại ACB: khách hàng thực hiện trên App của M-Service.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Một (01) TKTT chỉ được liên kết với một (01) ví Momo.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Một (01) khách hàng đăng ký liên kết tối đa ba (03) ví điện tử Momo.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ TKTT và ví điện tử Momo phải cùng chủ (cùng CMND).
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Đồng ý ủy quyền cho M-Service được đề nghị ACB trích tiền từ tài khoản thanh toán của khách hàng. ACB thực hiện đúng yêu cầu từ M-Service và M-Service hoàn toàn chịu trách nhiệm với khách hàng về việc đề nghị ACB thực hiện trích tiền từ tài khoản khách hàng.
+
+                                    Điều 3: Hạn mức giao dịch:
+                                    &nbsp;&nbsp;&nbsp;-	Hạn mức tối thiểu: 10.000 đồng/lần.
+                                    &nbsp;&nbsp;&nbsp;-	Hạn mức nạp tiền từ TKTT tại ACB vào ví điện tử Momo tối đa: 20.000.000 đồng/ ngày/ tài khoản, hạn mức này được tính trong hạn mức chuyển khoản, chuyển tiền trên ACB Online.
+                                    &nbsp;&nbsp;&nbsp;-	Hạn mức rút tiền từ ví điện tử Momo chuyển vào TKTT tại ACB tối đa: 20.000.000 đồng/ ngày.
+
+                                    Điều 4: Phí giao dịch theo quy định của ACB trong từng thời kỳ.
+
+                                    Điều 5: Quyền và nghĩa vụ của ACB:
+                                    &nbsp;&nbsp;&nbsp;-	Quyền của ACB:
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Từ chối thực thi các chỉ thị ACB Online nếu ACB phát hiện chỉ thị đó, vào thời điểm ACB xử lý, có nội dung không hợp pháp, không hợp lệ hay không có đủ cơ sở để thực hiện xử lý hay ACB phát hiện, nghi ngờ chỉ thị bị lỗi hay phát hiện, nghi ngờ việc thực thi chỉ thị ACB Online đó sẽ vi phạm pháp luật hay không hợp lệ hay số tiền trên chỉ thi ACB Online (nếu có) và tổng số tiền của các lệnh giao dịch trong ngày (gồm các lệnh giao dịch đã thực hiện trong ngày và lệnh đang thực hiện) lớn hơn hạn mức. Trong trường hợp cần thiết, ACB được quyền yêu cầu khách hàng cung cấp các văn bản cần thiết để ACB có đủ cơ sở thực thi chỉ thị ACB Online và không chịu trách nhiệm về sự chậm trễ trong việc thực thi chỉ thị này.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Không chịu trách nhiệm về bất kỳ thiệt hại nào phát sinh bởi việc không thể hủy bỏ, sửa đổi, chậm thực thi các chỉ thị ACB Online khi các chỉ thị này đã được ACB thực thi.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Không chịu trách nhiệm về mọi tranh chấp (nếu có) giữa khách hàng và M-Service theo chỉ thị ACB Online của khách hàng, không phụ thuộc vào quan hệ hoặc tranh chấp giữa khách hàng và M-Servive.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Không chịu trách nhiệm nếu khách hàng sử dụng phần cứng xác thực, thiết bị, phần mềm, tài liệu hay tuân theo các chỉ dẫn liên quan đến dịch vụ ACB Online không do ACB cung cấp hay thậm chí sử dụng dịch vụ ACB Online mạo danh của ACB. ACB không chịu trách nhiệm về bất kỳ thiệt hại nào xảy ra do khách hàng để lộ tên truy cập, mật khẩu, ma trận lưới ngẫu nhiên, khóa bí mật tạo chữ ký điện tử (nếu có) vì bất cứ lý do gì.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Quyết định chọn tổ chức cung cấp dịch vụ chứng thực chữ ký điện tử, thiết bị bảo mật (Token, ma trận lưới ngẫu nhiên), thời gian hiệu lực của: chứng thư điện tử, thiết bị bảo mật (Token, ma trận lưới ngẫu nhiên) cấp cho khách hàng; quyết định định dạng tên truy cập và mật khẩu. Quyết định chỉ thị ACB Online nào do ACB độc lập xử lý và chỉ thị ACB Online nào cần đến bên thứ ba để hoàn tất xử lý.
+                                    &nbsp;&nbsp;&nbsp;-  Nghĩa vụ của ACB:
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Thực thi các chỉ thị ACB Online nhận được qua hệ thống ACB Online theo đúng chỉ thị của khách hàng.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Đảm bảo các thông tin về lệnh giao dịch do khách hàng đã cung cấp và nhận lại từ hệ thống ACB Online sẽ đầy đủ các chi tiết cần thiết và đủ tính pháp lý để khách hàng có thể sử dụng với các bên thứ ba.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Cung cấp dịch vụ ACB Online trong phạm vi khách hàng đăng ký sử dụng và thoả thuận với ACB. 
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Không trái với các quy định trong bản điều khoản điều kiện này, ACB sẽ cung cấp tính năng mới, phiên bản mới nhất của dịch vụ ACB Online cho khách hàng khi ACB nâng cấp hoặc chỉnh sửa dịch vụ này.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Trong trường hợp để bảo vệ khách hàng hay theo yêu cầu của cơ quan Nhà nước có thẩm quyền, quy định của pháp luật hay ACB nghi ngờ khách hàng vi phạm pháp luật, vi phạm quy định này hay các nghĩa vụ khác trong các quan hệ khác với ACB, ACB sẽ tạm ngưng cung cấp một số tính năng hay toàn bộ dịch vụ ACB Online ngay khi lý do trên phát sinh hay khóa quyền sử dụng dịch vụ ACB Online hay khóa quyền sử dụng OTP Token, tên truy cập, mật khẩu, chứng thư điện tử (nếu có) liên quan đến dịch vụ. Ngay sau đó, ACB sẽ cố gắng liên hệ với khách hàng bằng điện thoại, email hay địa chỉ thư tín quy định trong bản điều khoản điều kiện này hay hình thức khác phù hợp để thông báo về vấn đề này.
+
+                                    Điều 6: Quyền và nghĩa vụ của khách hàng
+                                    &nbsp;&nbsp;&nbsp;-	Quyền của khách hàng:
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Sử dụng dịch vụ trong phạm vi đã thỏa thuận với ACB.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Thực thi các quyền của khách hàng quy định tại các phần khác của bản điều khoản điều kiện này.
+                                    &nbsp;&nbsp;&nbsp;-	 Nghĩa vụ của khách hàng:
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Bảo vệ mật khẩu, tên truy cập, chứng thư điện tử và khóa bí mật tạo chữ ký điện tử, thiết bị bảo mật (Điện thoại di động, Token, ma trận lưới ngẫu nhiên). Một trong những biện pháp bảo vệ có thể: Không đưa các thông tin này cho người khác; ghi nhớ tên truy cập, mật khẩu; không đặt mật khẩu trùng với các thông tin dễ đoán; thường xuyên đổi mật khẩu. Không cho phép trình duyệt lưu tên truy cập, mật khẩu; Không để người khác sử dụng trình duyệt Web khi chưa thoát khỏi màn hình dịch vụ ACB Online.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Chịu trách nhiệm vô điều kiện với các chỉ thị ACB Online được lập bởi tên truy cập, mật khẩu của khách hàng về việc chuyển tiền/rút tiền từ tài khoản ACB qua ví điện tử Momo và ngược lại; chịu trách nhiệm về mọi thiệt hại xảy ra do tên truy cập, mật khẩu, khóa bí mật tạo chữ ký điện tử/ thiết bị bảo mật (điện thoại di động/ Token/ Ma trận...) bị lộ, bị đánh cắp, bị lợi dụng vì bất cứ lý do gì, kể cả khi bản điều khoản điều kiện này hết hiệu lực.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Thông báo ngay cho ACB nếu khách hàng, bằng cách nào đó, biết được có chỉ thị ACB Online đang, đã hay sẽ được thực hiện một cách bất hợp pháp trên tài khoản thanh toán hay tài khoản loại khác của khách hàng mở tại ACB qua ví Momo.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Sử dụng các biện pháp được cho là hợp lý để giảm thiệt hại cho mình khi có bất kỳ sự cố nào xảy ra liên quan trực tiếp hay gián tiếp đến việc khách hàng sử dụng dịch vụ ACB Online nhưng không được gây thiệt hại cho ACB dưới mọi hình thức.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Kiểm tra tính hợp lý, hợp lệ các thông tin của bên thứ ba cung cấp trên màn hình dịch vụ ACB Online  trước khi sử dụng. Đọc, hiểu, tuân thủ và ràng buộc bởi các quy định liên quan đến chỉ thị ACB Online trước khi sử dụng.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Kiểm tra các thông tin dưới bất kỳ hình thức nào, nhận được từ bất kỳ nguồn nào liên quan đến dịch vụ ACB Online trước khi sử dụng, kể cả địa chỉ Website để truy cập dịch vụ ACB Online.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+  Thường xuyên kiểm tra trạng thái thực hiện chỉ thị ACB Online của mình và thông báo ngay cho Trung tâm Dịch vụ Khách hàng ACB &nbsp;&nbsp;&nbsp;- 1900 54 54 86 – (08) 38 247 247  nếu chỉ thị không được ACB xử lý sau một khoảng thời gian hợp lý theo thông lệ của ngành Ngân hàng.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+  Thực hiện đúng các quy định của pháp luật và ACB về việc mở, sử dụng tài khoản và chuyển khoản, chuyển tiền.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+  Hợp tác và cung cấp chính xác tất cả thông tin liên quan đến việc sử dụng dịch vụ ACB Online khi ACB có yêu cầu.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Đảm bảo các thông tin liên quan đến khách hàng được cung cấp trong và theo bản điều khoản điều kiện này là chính xác, đầy đủ cũng như cập nhật ngay các thông tin này khi thay đổi.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Tuân theo các thủ tục đăng ký, chỉ dẫn liên quan đến dịch vụ ACB Online của ACB hay đơn vị, cá nhân được ủy quyền.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Chấp nhận vô điều kiện để ACB lấy lại tiền đã chuyển nhầm, chuyển thừa vào tài khoản của khách hàng do lỗi của hệ thống ACB Online hay do lỗi trong lệnh giao dịch hay do lỗi của khách hàng khác trong quá trình lập lệnh giao dịch cho mình.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Không sử dụng hình ảnh, logo, thương hiệu của ACB hay có liên quan đến dịch vụ ACB Online khi chưa được sự đồng ý của ACB.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Có đủ tiền trên tài khoản hạch toán khi các chỉ thị ACB Online được ACB xử lý.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Đảm bảo chứng thư điện tử của mình còn hiệu lực khi lập chỉ thị ACB Online.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Thực thi các nghĩa vụ của khách hàng quy định tại các phần khác của bản điều khoản điều kiện này.
+
+                                    Điều 7: Thiết bị và chương trình máy tính
+                                    &nbsp;&nbsp;&nbsp;-	Dịch vụ ACB Online được cung cấp đến khách hàng qua Internet  và khách hàng có thể truy cập dịch vụ qua các trình duyệt Web hoặc ứng dụng (Application - App). ACB  không chịu trách nhiệm về việc máy tính hay thiết bị truy cập dịch vụ ACB Online của khách hàng bị hư hỏng, mất dữ liệu, chương trình máy tính bị xóa hay chạy không ổn định, cũng như bản quyền, sở hữu trí tuệ sử dụng các thiết bị, chương trình máy tính này.
+
+                                    Điều 8: Bảo mật thông tin
+                                    &nbsp;&nbsp;&nbsp;-	Khách hàng cam kết không được cung cấp thông tin của ACB liên quan đến việc cung cấp dịch vụ ACB Online theo quy định này và những thông tin về dịch vụ ACB Online cho bất kỳ bên thứ ba nào khác trừ trường hợp cung cấp thông tin cho cơ quan Nhà nước có thẩm quyền theo quy định của pháp luật hay được sự đồng ý của ACB.
+                                    &nbsp;&nbsp;&nbsp;- ACB được phép cung cấp các thông tin của khách hàng cho M-Service liên quan đến các giao dịch chuyển tiền vào ví Momo từ tài khoản thanh toán của khách hàng.
+                                    &nbsp;&nbsp;&nbsp;-	ACB chỉ cung cấp các thông tin liên quan đến khách hàng, thông tin về giao dịch của khách hàng cho bên thứ ba khi được sự cho phép của khách hàng hoặc theo yêu cầu của các cơ quan Nhà nước có thẩm quyền, theo quy định của pháp luật hay cung cấp cho nhân viên của ACB, bên thứ ba khi các nhân viên này, bên thứ ba cần phải biết thông tin để thực thi chỉ thị ACB Online của khách hàng hay giải quyết các tranh chấp (nếu có) giữa khách hàng và ACB liên quan đến việc thực hiện bản điều khoản điều kiện này.
+                                    &nbsp;&nbsp;&nbsp;-	Các bên phải chịu mọi trách nhiệm trước pháp luật khi vi phạm quy định bảo mật thông tin.
+                                    &nbsp;&nbsp;&nbsp;-	Điều khoản này vẫn còn hiệu lực sau khi quy định này chấm dứt.
+
+                                    Điều 9:  Rủi ro và xử lý rủi ro
+                                    &nbsp;&nbsp;&nbsp;-	ACB được miễn trừ trách nhiệm pháp lý thực hiện các nghĩa vụ trong bản điều khoản điều kiện này vì các lý do gây ra bởi khách hàng, hay bởi sự kiện nằm ngoài tầm kiểm soát, phòng ngừa và dự kiến của ACB. Sự kiện nằm ngoài tầm kiểm soát, phòng ngừa và dự kiến của ACB có thể là sự cố cản trở ACB thực hiện nghĩa vụ hợp lý của mình bao gồm và không giới hạn bởi sét đánh, hỏa hoạn, lũ lụt, bãi công, đình công, chiến tranh, thông tin do ACB gửi không tới được khách hàng hoặc do bên thứ ba không tham gia quy định gây nên, những sự cố về điện, sự cố về  truyền thông, sự cố về hệ thống thanh toán liên ngân hàng hay hệ thống của bên thứ ba có liên quan đến việc ACB xử lý chỉ thị ACB Online của khách hàng, sự cố về hệ thống thông tin, hệ thống ACB Online bị tin tặc tấn công hay do các nguyên nhân trên nên không hoạt động hay có hoạt động nhưng khách hàng không sử dụng được hay khách hàng sử dụng được nhưng các chỉ thị ACB Online bị lỗi, thay đổi khi ACB nhận được, các sự cố hợp lý không thể tránh khỏi hay do nguyên nhân gây nên bởi luật pháp, quyết định của các cơ quan Nhà nước có thẩm quyền.
+                                    &nbsp;&nbsp;&nbsp;-	ACB không chịu bất cứ trách nhiệm nào khi sự cố xảy ra do nguyên nhân kỹ thuật thuộc trang thiết bị của khách hàng hoặc do lỗi vô ý, cố ý của khách hàng gây ra hoặc do các rủi ro xảy ra với việc sử dụng dịch vụ ACB Online của khách hàng 
+                                    &nbsp;&nbsp;&nbsp;-	Khách hàng miễn trừ cho ACB mọi trách nhiệm pháp lý và thiệt hại xảy ra do số lượng chỉ thị ACB Online mà ACB nhận được vượt quá năng lực xử lý của ACB tại thời điểm phải xử lý theo quy định trong bản điều khoản điều kiện này dẫn đến ACB không thể hay thực thi chậm các chỉ thị ACB Online này.
+                                    &nbsp;&nbsp;&nbsp;-	Khách hàng đồng ý để ACB/nhân viên được ACB chỉ định hỗ trợ trực tiếp trên máy tính của khách hàng thông qua (các) chương trình hỗ trợ khách hàng được ACB chấp thuận. Khách hàng đồng ý cung cấp cho nhân viên ACB các thông tin cần thiết để phục vụ cho việc hỗ trợ khách hàng. Khách hàng phải chịu trách nhiệm bảo mật mọi thông tin về tên truy cập, mật khẩu, chữ ký điện tử, chứng thư điện tử của giao dịch ACB Online; mọi thông tin và dữ liệu trên máy tính của khách hàng  kể cả khi có nhân viên ACB thực hiện hỗ trợ trên máy tính của khách hàng. Khách hàng chịu mọi trách nhiệm, thiệt hại nếu các thông tin này bị lộ vì bất kỳ lý do gì. ACB/nhân viên ACB không chịu trách nhiệm (kể cả thiệt hại) xảy ra do khách hàng để lộ các thông tin này vì bất kỳ lý do gì. Khách hàng phải chịu mọi trách nhiệm, thiệt hại (kể cả đối với bên thứ ba có liên quan) đối với tất cả các giao dịch phát sinh kể cả khi có sự hỗ trợ của nhân viên ACB.
+
+                                    Điều 10: Sửa đổi quy định
+                                    &nbsp;&nbsp;&nbsp;-	Khi ACB cung cấp tính năng mới hay sửa đổi các tính năng hiện tại của dịch vụ ACB Online, việc khách hàng chấp nhận hay từ chối sử dụng tính năng này không ảnh hưởng đến tính pháp lý và hiệu lực các bản điều khoản điều kiện này và các bên vẫn tiếp tục bị ràng buộc về quyền và trách nhiệm theo bản điều khoản điều kiện này. Trong trường hợp các tính năng có kèm quy định sử dụng và khách hàng sử dụng các tính năng này, khách hàng được xem như đã đồng ý với các quy định kèm theo đó và tiếp tục bị ràng buộc bởi các điều khoản nêu trong bản điều khoản điều kiện này.
+                                    &nbsp;&nbsp;&nbsp;-	ACB có thể sửa đổi, thêm, bớt các điều khoản trong bản điều khoản điều kiện này bằng cách đưa ra các phần sửa đổi này trên Website của ACB hay màn hình dịch vụ ACB Online. Nếu khách hàng không đồng ý với các điều khoản này, khách hàng có thể chọn chấm dứt dịch vụ; việc khách hàng tiếp tục sử dụng dịch vụ ACB Online xem như khách hàng đồng ý với các sửa đổi đó và tiếp tục bị ràng buộc bởi các điều khoản nêu trong bản điều khoản điều kiện này.
+                                    &nbsp;&nbsp;&nbsp;-	Các sửa đổi, bổ sung theo từng thời điểm đối với bản điều khoản điều kiện này được ACB và khách hàng chấp thuận, là một phần của hợp đồng. Các bên có trách nhiệm tuân theo các sửa đổi, bổ sung đó.
+
+                                    Điều 11: Các điều khoản khác
+                                    &nbsp;&nbsp;&nbsp;-	Thông tin truy vấn trên ACB Online chỉ có giá trị tham khảo.	
+                                    &nbsp;&nbsp;&nbsp;-	Ngày và giờ quy định trong bản điều khoản điều kiện này theo ngày giờ dương lịch Việt nam.
+                                    &nbsp;&nbsp;&nbsp;-	Trong trường hợp bất kỳ điều khoản nào hay một phần của điều khoản nào bị vô hiệu bởi pháp luật cũng sẽ không ảnh hưởng đến hiệu lực của các phần khác của bản điều khoản điều kiện này.
+                                    &nbsp;&nbsp;&nbsp;-	Mọi bất đồng trong quá trình thực hiện bản điều khoản điều kiện này được hai bên thương lượng trên tinh thần hợp tác và cùng có lợi. Trong trường hợp có tranh chấp phát sinh không thể giải quyết được thông qua thương lượng, thì tranh chấp đó sẽ được đưa ra Tòa án Nhân dân có thẩm quyền của Việt nam để giải quyết.
+                                    &nbsp;&nbsp;&nbsp;-	ACB được quyền chủ động từ chối, tạm ngưng hoặc chấm dứt cung cấp dịch vụ trong trường hợp ACB nhận thấy khách hàng vi phạm các quy định về tính bảo mật và rủi ro của ACB.
+                                    &nbsp;&nbsp;&nbsp;-	Trong trường hợp bản điều khoản điều kiện này/ màn hình dịch vụ ACB Online được lập hay thể hiện dưới nhiều thứ tiếng thì chỉ có bản tiếng Việt có giá trị pháp lý, các bản dịch dưới các ngôn ngữ khác tiếng Việt chỉ có giá trị tham khảo.
+                                    &nbsp;&nbsp;&nbsp;-	Các vấn đề không được quy định trong bản điều khoản điều kiện này sẽ được thực hiện theo quy định Điều Kiện và Điều Khoản sử dụng dịch vụ ngân hàng điện tử - ACB Online / theo các quy định của pháp luật.
+                                    </textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" name="acceptTerms" id="acceptTerms">
+								&nbsp;Tôi đồng ý ủy quyền cho M-Service được đề nghị ACB trích tiền từ tài khoản thanh toán của khách hàng. ACB thực hiện đúng yêu cầu từ M-Service và M-Service hoàn toàn chịu trách nhiệm với khách hàng về việc đề nghị ACB thực hiện trích tiền từ tài khoản khách hàng.
+							</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+                                
+                                phương pháp xác thực
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 27%;">Chọn phương pháp xác thực</td>
+                                            <td style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
+                                                <option value="" selected="selected"></option>
+                                                <option value="4504727">Mật khẩu tĩnh + OTP SMS</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        
+                        <tr style="text-align:center;">
+                            
+                            <input name="button" type="button" class="nut1" id="button" value="Đồng ý">
+                            <input name="button2" type="button" class="nut1" id="button2" value="Hủy">
+                        </tr>
+                        
+					</tbody></table>					
+					</td>
+                </tr>
+                <tr style="margin-top: 10px;">
+                    <td style="background: #005b90;text-align: center;height: 20px;margin-top: 10px;" class="white_tieude">
+                        
+                        DANH SÁCH VÍ ĐÃ ĐĂNG KÝ
+                    </td>
+                </tr>
+                <tr>
+                    <div class="col-xs-12" style="width: 100%;margin-top: 3px;">
+                        <table class="acctSum" width="100%" cellspacing="1" cellpadding="0" id="table">         
+                            <tbody>
+                                <tr class="evenrowcolor">
+                                    <th class="acctSum" style="text-align: center">Tên khách hàng</th><div style="width: 1px;background:white;height:100%;"></div>
+                                    <th class="acctSum" style="text-align: center">Số CMND</th><div style="width: 1px;background:white;height:100%;"></div>
+                                    <th class="acctSum" style="text-align: center">Số tài khoản</th><div style="width: 1px;background:white;height:100%;"></div>
+                                    <th class="acctSum" style="text-align: center">Tài khoản ví</th><div style="width: 1px;background:white;height:100%;"></div>
+                                    <th class="acctSum" style="text-align: center">Hủy</th>
+                                </tr>
+                                <tr class="oddrowcolor">
+                                    <td class="acctSum" style="text-align: center" width="25%">NGUYEN TIEN DAT</td><div></div>
+                                    <td class="acctSum" style="text-align: center" width="25%">XXXXXX165</td><div></div>
+                                    <td class="acctSum" style="text-align: center" width="20%">4504727</td><div></div>
+                                    <td class="acctSum" style="text-align: left" width="20%">0969926509</td><td></td>
+                                    <td class="acctSum" style="text-align: left" width="10%">Xóa</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!--END MOBILE-->
+
+<!--LAPTOP-->
+<div class="laptop" *ngIf="!loginService.isMobile">
+    <p>ewallet laptop</p>
+</div>
+<!--END LAPTOP-->
