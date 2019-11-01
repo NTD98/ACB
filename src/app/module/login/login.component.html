@@ -11,18 +11,18 @@
                 <div class="box_login_in">
                     <a>Tên đăng nhập</a>
                     <br>
-                    <input type="text" name="UserName" value="" class="text_medium">
+                    <input [(ngModel)]="this.username" type="text" name="UserName" value="" class="text_medium">
                     <br>
                     <a>Mật khẩu</a>
                     <br>
-                    <input type="password" name="PassWord" value="" class="text_medium">
+                    <input [(ngModel)]="this.password" type="password" name="PassWord" value="" class="text_medium">
                     <br>
                     <a>Mã xác thực</a>
                     <br>
                     <input type="text" style="height: 18px; border:1;" name="SecurityCode" value="" class="input_text txt_verify">
                     <img src="https://online.acb.com.vn/acbib/Captcha.jpg" class="img_verify">
                     <br>
-                    <input (click)="login()" [routerLink]="'./home'" name="button" type="button" style="width:85px;" class="nut1" value="Đăng nhập">
+                    <input (click)="login()" name="button" type="button" style="width:85px;" class="nut1" value="Đăng nhập">
                 </div>
             </form>
         </div>
