@@ -12,6 +12,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { LoginService } from '../app/module/login/login.service';
 import { HomeComponent } from './module/home/home.component';
+import { TransfersuccessComponent } from './module/transfersuccess/transfersuccess.component';
+import { PayservicesuccessComponent } from './module/payservicesuccess/payservicesuccess.component';
+import { NotifyComponent } from './module/notify/notify.component';
 
 
 @NgModule({
@@ -21,6 +24,9 @@ import { HomeComponent } from './module/home/home.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
+    TransfersuccessComponent,
+    PayservicesuccessComponent,
+    NotifyComponent,
 
   ],
   imports: [

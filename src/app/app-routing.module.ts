@@ -18,9 +18,16 @@ import {UltilitiesModule} from './ultilities/utilities.module';
 import {WesternUnionModule} from './westernunion/westernunion.module';
 import {EWalletModule} from './ewallet/ewallet.module';
 import {BlueDiamondModule} from './bluediamond/bluediamond.module';
+import {TransfersuccessComponent} from './module/transfersuccess/transfersuccess.component';
+import {PayservicesuccessComponent } from './module/payservicesuccess/payservicesuccess.component';
+import {NotifyComponent} from './module/notify/notify.component';
+import { from } from 'rxjs';
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'home',component:HomeComponent},
+  {path:'transfersuccess',component:TransfersuccessComponent},
+  {path:'paysersuccess',component:PayservicesuccessComponent},
+  {path:'notify',component:NotifyComponent},
   {path:'searchinformation',loadChildren:'./searchinformation/searchinformation.module#SearchInformationModule'},
   {path:'cardservice',loadChildren:'./cardservice/cardservice.module#CardServiceModule'},
   {path:'onlineinvestmentdeposit',loadChildren:'./onlineinvestmentdeposit/onlineinvestmentdeposit.module#OnlineInvestmentDepositModule'},
