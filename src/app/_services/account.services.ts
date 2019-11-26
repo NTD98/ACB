@@ -17,7 +17,7 @@ export class AccountService {
     }
 
     getAccount(id:number){
-        let data = this.http.get<any>('http://localhost:5000/api/BankAccount/3');
+        let data = this.http.get<any>('http://localhost:5000/api/BankAccount/'+id);
         return data;
     }
     getData(){

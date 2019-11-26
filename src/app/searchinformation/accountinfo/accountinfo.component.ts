@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {LoginService} from '../../module/login/login.service';
 import {AccountService} from '../../_services/account.services';
 import { map } from 'rxjs/operators';
+import { AuthenticationService } from '../../_services/authentication.service';
 @Component({
   selector: 'app-accountinfo',
   templateUrl: './accountinfo.component.html',
@@ -10,8 +11,10 @@ import { map } from 'rxjs/operators';
 export class AccountinfoComponent implements OnInit {
   account:object;
   isload=false;
-  constructor(private loginService:LoginService,private accountservice:AccountService) { 
-      this.accountservice.getAccount(1);
+  constructor(private loginService:LoginService,private accountservice:AccountService,
+              private authenticationService: AuthenticationService) { 
+      let currentUser = this.authenticationService.currentUserValue;
+      this.accountservice.getAccount(currentUser.id);
   }
 
   ngOnInit() {
