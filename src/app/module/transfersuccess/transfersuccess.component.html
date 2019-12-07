@@ -12,7 +12,7 @@
                 <a style="color: red;font-size: 12px;">Quý khách vui lòng kiểm tra lại các thông tin giao dịch bên dưới. Giao dịch này sẽ được ACB Online xử lý ngay khi Quý khách ký xác nhận.</a>
             </div>
             <table style="width: 100%;">
-                <tr>
+                <tr >
                     <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
 						
 						THÔNG TIN ĐƠN VỊ CHUYỂN TIỀN 
@@ -22,10 +22,10 @@
                     <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
                         <table>
                             <tbody>
-                                <tr>
+                                <tr *ngIf="this.accountService.getData()">
                                     <td style="width: 27%;">Tài khoản trích tiền</td>
                                     <td style="width:73%">
-                                        <a style="font-weight: bold;">4504727 – TGTT SINH VIEN KHTN (CN) VND</a>
+                                        <a style="font-weight: bold;">{{this.accountService.getData()['accountNumber']}} – TGTT SINH VIEN KHTN (CN) VND</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -34,10 +34,12 @@
                                         <a style="font-weight: bold;">Trong hệ thống ACB</a>
                                     </td>
                                 </tr>
+                                
                             </tbody>
                         </table>
                     </td>
                 </tr>
+                
                 <tr>
                     <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
 						
@@ -51,13 +53,13 @@
                                     <tr>
                                         <td style="width: 27%;">Tên đơn vị thụ hưởng</td>
                                         <td style="width:73%">
-                                            <a style="font-weight: bold;">CTY CP DV DI DONG TRUC TUYEN</a>
+                                            <a style="font-weight: bold;">{{this.accountService.getAccReName()}}</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="width: 27%;">Tài khoản thụ hưởng</td>
                                         <td style="width:73%">
-                                            <a style="font-weight: bold;">88788</a>
+                                            <a style="font-weight: bold;">{{this.accountService.acc}}</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -78,7 +80,7 @@
                                 <tr>
                                     <td style="width: 27%;">Số tiền</td>
                                     <td style="width:73%">
-                                        <a style="font-weight: bold;">100.000 VND</a>
+                                        <a style="font-weight: bold;">{{this.accountService.moneytransfer}}</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -102,7 +104,7 @@
                                 <tr>
                                     <td style="width: 27%;">Nội dung giao dịch</td>
                                     <td style="width:73%">
-                                        <a style="font-weight: bold;">NGUYEN TIEN DAT 12</a>
+                                        <a style="font-weight: bold;">{{this.accountService.transfertext}}</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -153,7 +155,7 @@
                 </tr>
                 <tr style="text-align:center;">
                     
-                    <input name="button" type="button" class="nut1" id="button" value="Xác nhận" routerLink='../notify'>
+                    <input (click)="transfer()" name="button" type="button" class="nut1" id="button" value="Xác nhận" routerLink='../notify'>
                     <input name="button2" type="button" class="nut1" id="button2" value="Quay lại" >
                     <input name="button2" type="button" class="nut1" id="button2" value="Hủy giao dịch">
                 </tr>

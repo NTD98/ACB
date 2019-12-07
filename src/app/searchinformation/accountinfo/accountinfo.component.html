@@ -27,11 +27,11 @@
                             <th class="acctSum" style="text-align: center">Ngày đáo hạn</th><div style="width: 1px;background:white;height:100%;"></div>
                             <th class="acctSum" style="text-align: center">Sản phẩm</th>
                         </tr>
-                        <tr class="oddrowcolor" *ngIf="account">
-                            <td class="acctSum" style="text-align: center" width="15%"><a href="#" class="acc_bold">{{account.accountNumber}}</a></td><div></div>
-                            <td class="acctSum" style="text-align: right" width="28%"><span class="text_bold">{{account.realBalance}}</span> (VND) <sup class="chuthich_num" style="color: red"> 1</sup><br><span class="text_bold">{{account.availableBalance}}</span> (VND) <sup class="chuthich_num" style="color: red"> 2</sup></td><div></div>
+                        <tr class="oddrowcolor" *ngIf="this.accountservice.getData()!=null">
+                            <td class="acctSum" style="text-align: center" width="15%"><a href="#" class="acc_bold">{{this.accountservice.getData()['accountNumber']}}</a></td><div></div>
+                            <td class="acctSum" style="text-align: right" width="28%"><span class="text_bold">{{this.accountservice.getData()['realBalance']}}</span> (VND) <sup class="chuthich_num" style="color: red"> 1</sup><br><span class="text_bold">{{this.accountservice.getData()['availableBalance']}}</span> (VND) <sup class="chuthich_num" style="color: red"> 2</sup></td><div></div>
                             <td class="acctSum" style="text-align: center" width="20%">&nbsp;</td><div></div>
-                            <td class="acctSum" style="text-align: left" width="37%">TGTT {{account.accountType}} KHTN (CN) VND</td>
+                            <td class="acctSum" style="text-align: left" width="37%">TGTT {{this.accountservice.getData()['accountType']}} KHTN (CN) VND</td>
                         </tr>
                     </tbody>
                 </table>

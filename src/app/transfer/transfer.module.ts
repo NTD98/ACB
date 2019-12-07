@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TransferComponent } from './transfer.component'
+import { TransferComponent } from './transfer.component';
+import {FormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TransferInACBComponent } from './transferinacb/transferinacb.component';
 import { TransferOutACBComponent } from './transferoutacb/transferoutacb.component';
@@ -20,6 +21,7 @@ const routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    FormsModule,
   ],
   
 })
