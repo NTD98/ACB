@@ -57,6 +57,7 @@ namespace myMicroservice.Controllers
             return Ok(new
             {
                 Id = user.AccountID,
+                AccountNumber= user.AccountNumber,
                 Token = user.Token
             });
         }
@@ -64,19 +65,39 @@ namespace myMicroservice.Controllers
         [HttpGet("{id}", Name = "GetAC")]
         public IActionResult GetAccount(int id)
         {
-            try
+            if (id > 1000)
             {
-                var account = _accountRepository.GetAccountByName(id);
-                return new OkObjectResult(account);
+                return GetAccountByAccNum(id);
             }
-            catch (Exception ex)
+            else
             {
-                return BadRequest(new { message = ex.Message });
+                try
+                {
+                    var account = _accountRepository.GetAccountByName(id);
+                    return new OkObjectResult(account);
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(new { message = ex.Message });
+                }
             }
             
         }
-
+        [HttpGet]
+        public IActionResult GetAccountByAccNum(int accnum)
+        {
+            try
+            {
+                var account = _accountRepository.GetAccountByAccNum(accnum);
+                return new OkObjectResult(account);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
         // POST: api/Account
+        [AllowAnonymous]
         [HttpPost]
         public IActionResult Create([FromBody] AccountDto accountDto)
         {
@@ -110,7 +131,7 @@ namespace myMicroservice.Controllers
                 {
                     using (var scope = new TransactionScope())
                     {
-                        _accountRepository.UpdateAccount(user, accountDto.Password);
+                        _accountRepository.UpdateAccount(id, accountDto.Password);
                         scope.Complete();
                         return new OkResult();
                     }

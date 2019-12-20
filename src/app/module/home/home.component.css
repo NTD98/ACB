@@ -17,3 +17,7 @@ a:hover{
     text-align: center;
     width: 90%;
 }
+.col-xs-6{
+    margin-left: auto;
+    margin-right: auto;
+}

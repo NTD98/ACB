@@ -51,6 +51,51 @@
 
 <!--LAPTOP-->
 <div class="laptop" *ngIf="!loginService.isMobile">
-    <p>transfer laptop</p>
+    <div class="">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc !important; font-weight:bold;font-size: 13px;">CHUYỂN KHOẢN, CHUYỂN TIỀN</a>
+            </div>
+            <div class="col-xs-6" style="text-align: center;width: 50%;">
+                <div>
+                    <a>
+                        <img src="../../assets/infundtrans.png" style="border-style: none">
+                    </a>
+                    <br>
+                    <a routerLink='./transferinacb'>Chuyển khoản trong ACB</a>
+                </div>
+                <div>
+                    <a>
+                        <img src="../../assets/Money-icon-64.png" style="border-style: none">
+                    </a>
+                    <br>
+                    <a routerLink='transfertocardacb'>Chuyển tiền vào thẻ ACB</a>
+                </div>
+                <div>
+                    <a>
+                        <img src="../../assets/folder-identity-icon-64.png" style="border-style: none">
+                    </a>
+                    <br>
+                    <a routerLink='./transferbycmnd'>Chuyển tiền nhận bằng CMND/ Passport</a>
+                </div>
+            </div>
+            <div class="col-xs-6" style="text-align: center;width: 50%;">
+                <div>
+                    <a>
+                        <img src="../../assets/wire-transfer-icon-64.png" style="border-style: none">
+                    </a>
+                    <br>
+                    <a routerLink='transferoutacb'>Chuyển khoản ngoài ACB</a>
+                </div>
+                <div>
+                    <a>
+                        <img src="../../assets/fast_transfer-64.png" style="border-style: none">
+                    </a>
+                    <br>
+                    <a routerLink='./fasttransferoutacb'>Chuyển tiền NHANH ngoài ACB</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!--END LAPTOP-->

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LoginService} from '../login/login.service';
 import { AccountService} from '../../_services/account.services';
 let accreceive:object;
 @Component({
@@ -8,7 +9,7 @@ let accreceive:object;
 })
 export class TransfersuccessComponent implements OnInit {
 
-  constructor(private accountService:AccountService) { }
+  constructor(private accountService:AccountService,private loginService:LoginService) { }
   setData(any:any){
     accreceive = any;
     
@@ -35,5 +36,17 @@ export class TransfersuccessComponent implements OnInit {
     receive['realBalance']  = +receive['realBalance'] + +this.accountService.moneytransfer;
     this.accountService.updateBalance(term);
     this.accountService.updateBalance(receive);
+    this.accountService.createTransaction(term['accountNumber'],receive['accountNumber'],this.accountService.transfertext,this.accountService.moneytransfer).then(
+      function(data){
+        data.subscribe(
+          result=>{
+            console.log("trans success",data);
+          },
+          error=>{
+            console.log("error trans",error);
+          }
+        )
+      }
+    );
   }
 }

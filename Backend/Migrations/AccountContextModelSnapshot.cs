@@ -62,6 +62,27 @@ namespace myMicroservice.Migrations
 
                     b.ToTable("BankAccounts");
                 });
+
+            modelBuilder.Entity("myMicroservice.Models.Transaction", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Content");
+
+                    b.Property<DateTime>("Date");
+
+                    b.Property<int>("Money");
+
+                    b.Property<string>("Receiver");
+
+                    b.Property<string>("Sender");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Transactions");
+                });
 #pragma warning restore 612, 618
         }
     }

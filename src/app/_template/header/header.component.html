@@ -2,7 +2,9 @@
 <div class="mobile" *ngIf="loginService.isMobile">
     <div class="header" style="padding-bottom:0;">
         <div class="header-left">
-            <img src='../../../assets/logo1.png' width="207">
+            <a href="#">
+                <img src='../../../assets/logo1.png' width="207">
+            </a>
         </div>
         <div class="header-right">
             <div class="top-link" style="height: 19px; float:right;">
@@ -35,15 +37,10 @@
                         <img src="../../../assets/logout.png" style="padding:5px 1px 3px 3px;height: 26px;border:0px;width: 22px;vertical-align: -webkit-baseline-middle;">
                     </a>
                 </li>
-                <li>
-                    <a style="padding-left:0">Thoát</a>
+                <li >
+                    <a (click)="logout()" href="#" style="padding-left:0">Thoát</a>
                 </li>
-                <li>
-                    <img src="../../../assets/user-icon.png" style="padding:5px 1px 3px 3px;height: 26px;border:0px;width: 22px;vertical-align: -webkit-baseline-middle;">
-                </li>
-                <li>
-                    <a>NGUYEN TIEN DAT</a>
-                </li>
+                
             </ul>
         </div>
     </div>
@@ -55,7 +52,50 @@
 <!-- LAPTOP -->
 
 <div class="laptop" *ngIf="!loginService.isMobile">
-    <p>header laptop</p>
+    <div class="header" style="padding-bottom:0;">
+        <div class="header-left">
+            <a href="">
+                <img src='../../../assets/logo1.png' width="207">
+            </a>
+        </div>
+        <div class="header-right">
+            <div class="top-link" style="height: 19px; float:right;">
+            </div>
+            <img src='../../../assets/support.jpg' width="115">
+        </div>
+    </div>
+    <div class="topmenu">
+        <div class="topmenu_left">
+            <ul *ngIf="!this.loginService.isLogin">
+                <li class="" [ngClass]="this.loginService.isLogin?'selected':''">
+                    <a (click)="log()">Bản Mobile</a>
+                </li>
+                <li><img src='../../../assets/sepa_topmenu.jpg' style="height: 25px;"></li>
+                <li class="" [ngClass]="!this.loginService.isLogin?'selected':''">
+                    <a>Bản chuẩn</a>
+                </li>
+            </ul>
+            <ul *ngIf="this.loginService.isLogin">
+                <li>
+                    <a style="padding: 0px 0px 0px 0px">
+                        <img src="../../../assets/home-32.png" style="padding:5px 1px 3px 3px;height: 26px;border:0px;width: 22px;vertical-align: -webkit-baseline-middle;;">
+                    </a>
+                </li>
+                <li>
+                    <a style="padding-left:0">Trang Chủ</a>
+                </li>
+                <li>
+                    <a style="padding: 0px 0px 0px 0px">
+                        <img src="../../../assets/logout.png" style="padding:5px 1px 3px 3px;height: 26px;border:0px;width: 22px;vertical-align: -webkit-baseline-middle;">
+                    </a>
+                </li>
+                <li>
+                    <a (click)="logout()" routerLink="../" style="padding-left:0;color: white !important;">Thoát</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
 </div>
 
 <!--END LAPTOP-->

@@ -42,9 +42,13 @@ namespace myMicroservice.Controllers
             return new string[] { "value1", "value2" };
         }
         // GET: api/BankAccount/5
-        [HttpGet("{id}", Name = "GetBA")]
+        [HttpGet("{id:int}", Name = "GetBA")]
         public IActionResult GetBA(int id)
         {
+            if (id >= 1000)
+            {
+                return GetBAWithAccNum(id);
+            }
             try
             {
                 var ba = _baRepository.GetBA(id);
@@ -54,7 +58,20 @@ namespace myMicroservice.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
-
+        // ?AccNum=...
+        [HttpGet]
+        public IActionResult GetBAWithAccNum(int AccNum)
+        {
+            try
+            {
+                var ba = _baRepository.GetBAByAcc(AccNum);
+                return new OkObjectResult(ba);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
         // POST: api/BankAccount
         [HttpPost]
         public IActionResult CreateBA([FromBody] BankAccount ba)

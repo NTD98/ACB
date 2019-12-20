@@ -10,7 +10,7 @@ namespace myMicroservice.Repository
     {
         BankAccount CreateBA(BankAccount BA);
         void UpdateBA(BankAccount BA);
-
+        BankAccount GetBAByAcc(int Accnum);
         BankAccount GetBA(int banum);
     }
 }

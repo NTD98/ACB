@@ -18,6 +18,8 @@ import { TransfersuccessComponent } from './module/transfersuccess/transfersucce
 import { PayservicesuccessComponent } from './module/payservicesuccess/payservicesuccess.component';
 import { NotifyComponent } from './module/notify/notify.component';
 import { from } from 'rxjs';
+import { SignupComponent } from './module/signup/signup.component';
+import { ChangepasssuccessComponent } from './module/changepasssuccess/changepasssuccess.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { from } from 'rxjs';
     TransfersuccessComponent,
     PayservicesuccessComponent,
     NotifyComponent,
+    SignupComponent,
+    ChangepasssuccessComponent,
 
   ],
   imports: [

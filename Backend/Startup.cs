@@ -37,6 +37,7 @@ namespace myMicroservice
             services.AddDbContext<AccountContext>(o => o.UseSqlServer(Configuration.GetConnectionString("AccountDB")));
             services.AddTransient<IAccountRepository, AccountRepository>();
             services.AddTransient<IBankAccountRepository, BankAccountRepository>();
+            services.AddTransient<ITransactionRepository, TransactionRepository>();
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new AutoMapperProfile());
@@ -64,15 +65,17 @@ namespace myMicroservice
                 x.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    //IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
-                    ValidateAudience = false
+                    ValidateAudience = false,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appSettings.Secret))
                 };
             });
 
             // configure DI for application services
             services.AddScoped<IAccountDtoService, AccountDtoService>();
             services.AddScoped<IBankAccountService, BankAccountService>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

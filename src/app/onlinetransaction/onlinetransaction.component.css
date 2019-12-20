@@ -13,3 +13,27 @@ td{
 .InputCbo1 {
     width: 150px;
 }
+a{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+a.name{
+    font-size: 11px;
+    color: #545454;
+    font-family: 'Tahoma',Helvetica,sans-serif;
+    font-weight: bold;
+}
+table.acctSum TH {
+    background-color: #005b90;
+    HEIGHT: 25px;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+td.acctSum{
+    font-size: 12px;
+}

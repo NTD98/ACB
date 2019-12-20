@@ -1,5 +1,5 @@
 <!--MOBILE-->
-<div class="mobile">
+<div class="mobile" *ngIf="loginService.isMobile">
     <div class="container">
         <div class="row">
             <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
@@ -133,31 +133,12 @@
                         </table>
 					</td>
                 </tr>
-                <tr>
-                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
-						
-						XÁC THỰC GIAO DỊCH
-					</td>
-                </tr>
-                <tr>
-                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td style="width: 27%;"> Nhập mật khẩu đăng nhập</td>
-                                    <td style="width:73%">
-                                        <input style="width: 100%;">
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
+                
                 <tr style="text-align:center;">
                     
                     <input (click)="transfer()" name="button" type="button" class="nut1" id="button" value="Xác nhận" routerLink='../notify'>
                     <input name="button2" type="button" class="nut1" id="button2" value="Quay lại" >
-                    <input name="button2" type="button" class="nut1" id="button2" value="Hủy giao dịch">
+                    <input name="button2" routerLink="../home" type="button" class="nut1" id="button2" value="Hủy giao dịch">
                 </tr>
                 <tr>
                     <td style="text-align: left" colspan="2">
@@ -173,5 +154,156 @@
 <!--END MOBILE-->
 
 <!--LAPTOP-->
-
+<div *ngIf="!loginService.isMobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
+                <a style="color: #0071bc; font-weight:bold;font-size: 13px; text-transform: uppercase">Chuyển khoản trong hệ thống ACB</a>
+            </div>
+            <div class="col-xs-12" style="text-align: right;width: 100%;">
+                <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
+            </div>
+            <div class="col-xs-12" style="text-align: center;width: 100%;">
+                <a style="color: red;font-size: 12px;">Quý khách vui lòng kiểm tra lại các thông tin giao dịch bên dưới. Giao dịch này sẽ được ACB Online xử lý ngay khi Quý khách ký xác nhận.</a>
+            </div>
+            <table style="width: 100%;">
+                <tr >
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						THÔNG TIN ĐƠN VỊ CHUYỂN TIỀN 
+					</td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table>
+                            <tbody>
+                                <tr *ngIf="this.accountService.getData()">
+                                    <td style="width: 27%;">Tài khoản trích tiền</td>
+                                    <td style="width:73%">
+                                        <a style="font-weight: bold;">{{this.accountService.getData()['accountNumber']}} – TGTT SINH VIEN KHTN (CN) VND</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 27%;">Chuyển khoản đến</td>
+                                    <td style="width:73%">
+                                        <a style="font-weight: bold;">Trong hệ thống ACB</a>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						THÔNG TIN ĐƠN VỊ THỤ HƯỞNG
+                    </td>
+                </tr>
+                <tr>
+                        <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 27%;">Tên đơn vị thụ hưởng</td>
+                                        <td style="width:73%">
+                                            <a style="font-weight: bold;">{{this.accountService.getAccReName()}}</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 27%;">Tài khoản thụ hưởng</td>
+                                        <td style="width:73%">
+                                            <a style="font-weight: bold;">{{this.accountService.acc}}</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                                </td>
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						Thông tin chuyển khoản
+                    </td>
+                </tr>
+                <tr>
+                    
+					<td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 27%;">Số tiền</td>
+                                    <td style="width:73%">
+                                        <a style="font-weight: bold;">{{this.accountService.moneytransfer}}</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 27%;">Số tiền bằng chữ</td>
+                                    <td style="width:73%">
+                                        <a style="font-weight: bold;">Một trăm nghìn đồng </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 27%;">Phí giao dịch</td>
+                                    <td style="width:73%">
+                                        <a style="font-weight: bold;">0 VND</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 27%;">Số tiền phí bằng chữ</td>
+                                    <td style="width:73%">
+                                        <a style="font-weight: bold;">Không đồng</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 27%;">Nội dung giao dịch</td>
+                                    <td style="width:73%">
+                                        <a style="font-weight: bold;">{{this.accountService.transfertext}}</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+					</td>
+				
+                </tr>
+                <tr>
+                    <td style="background: #005b90;text-align: left;height: 20px;" class="white_tieude">
+						
+						Thời gian chuyển
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 27px;background:#ffffff;padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 27%;">Loại chuyển khoản</td>
+                                    <td style="width:73%">
+                                        <a style="font-weight: bold;">Chuyển khoản ngay
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+					</td>
+                </tr>
+                
+                <tr style="text-align:center;">
+                    
+                    <input (click)="transfer()" name="button" type="button" class="nut1" id="button" value="Xác nhận" routerLink='../notify'>
+                    <input name="button2" type="button" class="nut1" id="button2" value="Quay lại" >
+                    <input name="button2" routerLink="../home" type="button" class="nut1" id="button2" value="Hủy giao dịch">
+                </tr>
+                <tr>
+                    <td style="text-align: left" colspan="2">
+                    <span class="error">Lưu ý:</span><br>
+                    - <span class="copyright">Khi chọn Đơn vị thụ hưởng chịu phí, số tiền phí sẽ được trừ vào số tiền chuyển.</span><br>
+		            - <span class="copyright">Giao dịch chuyển khoản cho cá nhân nước ngoài: chỉ thực hiện giao dịch chuyển lương và công tác phí. Các giao dịch này phải có chứng từ chứng minh theo quy định
+                   </span></td>
+                 </tr>
+            </table>
+        </div>
+    </div>
+</div>
 <!--END LAPTOP-->

@@ -85,26 +85,25 @@ namespace myMicroservice.Repository
         {
             return _accountContext.Accounts.Find(id);
         }
-
-        public void UpdateAccount(Account account,string Password)
+        public Account GetAccountByAccNum(int accnum)
         {
-            var acc = _accountContext.Accounts.Find(account.AccountID);
+            return _accountContext.Accounts.Where(x => x.AccountNumber == accnum).FirstOrDefault();
+        }
+        public void UpdateAccount(int accountid,string Password)
+        {
+            var acc = _accountContext.Accounts.Find(accountid);
             if (acc == null)
                 throw new ApplicationException("User not found");
-            if(account.Name!=acc.Name)
-            {
-                if (_accountContext.Accounts.Any(x => x.Name == account.Name))
-                    throw new ApplicationException("This name has been taken");
-            }
+            
             if (!string.IsNullOrWhiteSpace(Password))
             {
                 byte[] passwordHash, passwordSalt;
                 CreatePasswordHash(Password, out passwordHash, out passwordSalt);
 
-                account.PasswordHash = passwordHash;
-                account.PasswordSalt = passwordSalt;
+                acc.PasswordHash = passwordHash;
+                acc.PasswordSalt = passwordSalt;
             }
-            _accountContext.Entry(account).State = EntityState.Modified;
+            _accountContext.Entry(acc).State = EntityState.Modified;
             _accountContext.SaveChanges();
         }
         public void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
@@ -137,5 +136,7 @@ namespace myMicroservice.Repository
 
             return true;
         }
+
+        
     }
 }

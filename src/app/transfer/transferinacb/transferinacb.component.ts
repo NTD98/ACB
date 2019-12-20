@@ -3,6 +3,7 @@ import {LoginService} from '../../module/login/login.service';
 import { AccountService} from '../../_services/account.services';
 import {Router} from '@angular/router';
 import { map } from 'rxjs/operators';
+import { AuthenticationService } from '../../_services/authentication.service';
 let moneytransfer=0;
 let transfertext="";
 let accreceive=0;
@@ -19,7 +20,7 @@ export class TransferInACBComponent implements OnInit {
   text="abc";
   errortext = new Array<string>("");
   constructor(private loginService:LoginService, private accountService:AccountService,
-    private router : Router) { }
+    private router : Router,private authen:AuthenticationService) { }
 
   ngOnInit() {
   }
@@ -43,7 +44,7 @@ export class TransferInACBComponent implements OnInit {
   
   transfer(){
     console.log(this.errortext)
-    if(this.money<=this.accountService.getData()['realBalance']&&this.money>=50000)
+    if(this.money<=this.accountService.getData()['availableBalance']&&this.money>=50000)
     {
       this.accountService.getAccRe(this.accountNumber)
       if(this.accountService.getAccReData()){

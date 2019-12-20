@@ -10,9 +10,10 @@ namespace myMicroservice.Repository
     public interface IAccountRepository
     {
         BankAccount CreateAccount(Account account,string Password);
-        void UpdateAccount(Account account,string Password);
+        void UpdateAccount(int accountid,string Password);
         void ActivateAccount(Account account);
         Account GetAccountByName(int id);
+        Account GetAccountByAccNum(int accnum);
         Account Authenticate(string username, string password);
         void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt);
         bool VerifyPasswordHash(string password, byte[] storedHash, byte[] storedSalt);

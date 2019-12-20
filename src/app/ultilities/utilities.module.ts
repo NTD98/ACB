@@ -9,7 +9,7 @@ import {ChangepasswordComponent} from './changepassword/changepassword.component
 import {ChangeusernameComponent} from './changeusername/changeusername.component';
 import {DisableaccountstatusComponent} from './disableaccountstatus/disableaccountstatus.component';
 import {SignupctkmComponent} from './signupctkm/signupctkm.component';
-
+import { FormsModule,ReactiveFormsModule, FormControlDirective  } from '@angular/forms';
 const routes = [
   { path:'', component: UltilitiesComponent },
   {path:'changeaccountbalance',component:ChangeaccountbalanceComponent},
@@ -25,6 +25,8 @@ const routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule
   ],
   
 })

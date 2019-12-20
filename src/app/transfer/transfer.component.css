@@ -4,3 +4,7 @@ a{
     font-family: 'Tahoma',Helvetica,sans-serif;
     font-weight: bold;
 }
+.row{
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -14,6 +14,7 @@ namespace myMicroservice.DBContexts
 
         public DbSet<Account> Accounts { get; set; }
         public DbSet<BankAccount> BankAccounts { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
         //    modelBuilder.Entity<Account>().HasData(new Account

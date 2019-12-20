@@ -12,3 +12,7 @@ a.name:hover{
     cursor: pointer;
     color: #0067a1;
 }
+.row{
+    margin-left: auto;
+    margin-right: auto;
+}

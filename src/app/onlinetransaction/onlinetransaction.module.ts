@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { OnlineTransactionComponent } from './onlinetransaction.component'
 import { RouterModule } from '@angular/router';
 const routes = [
@@ -10,6 +11,8 @@ const routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule,
   ],
   
 })

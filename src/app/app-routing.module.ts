@@ -21,6 +21,8 @@ import {BlueDiamondModule} from './bluediamond/bluediamond.module';
 import {TransfersuccessComponent} from './module/transfersuccess/transfersuccess.component';
 import {PayservicesuccessComponent } from './module/payservicesuccess/payservicesuccess.component';
 import {NotifyComponent} from './module/notify/notify.component';
+import {SignupComponent} from './module/signup/signup.component';
+import { ChangepasssuccessComponent } from './module/changepasssuccess/changepasssuccess.component';
 import { from } from 'rxjs';
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -44,6 +46,8 @@ const routes: Routes = [
   {path:'westernunion',loadChildren:'./westernunion/westernunion.module#WesternUnionModule'},
   {path:'ewallet',loadChildren:'./ewallet/ewallet.module#EWalletModule'},
   {path:'bluediamond',loadChildren:'./bluediamond/bluediamond.module#BlueDiamondModule'},
+  {path:"signup",component:SignupComponent},
+  {path:'changepasssucc',component:ChangepasssuccessComponent}
 ];
 
 @NgModule({

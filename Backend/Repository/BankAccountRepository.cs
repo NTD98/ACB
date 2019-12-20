@@ -34,6 +34,11 @@ namespace myMicroservice.Repository
             return _accountContext.BankAccounts.Find(banum);
         }
 
+        public BankAccount GetBAByAcc(int Accnum)
+        {
+            return _accountContext.BankAccounts.Where(x => x.AccountNumber == Accnum).First();
+        }
+
         public void UpdateBA(BankAccount BA)
         {
             var ba = _accountContext.BankAccounts.Where(x => x.AccountNumber == BA.AccountNumber);

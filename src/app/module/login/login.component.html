@@ -17,11 +17,7 @@
                     <br>
                     <input [(ngModel)]="this.password" type="password" name="PassWord" value="" class="text_medium">
                     <br>
-                    <a>Mã xác thực</a>
-                    <br>
-                    <input type="text" style="height: 18px; border:1;" name="SecurityCode" value="" class="input_text txt_verify">
-                    <img src="https://online.acb.com.vn/acbib/Captcha.jpg" class="img_verify">
-                    <br>
+                    
                     <input (click)="login()" name="button" type="button" style="width:85px;" class="nut1" value="Đăng nhập">
                 </div>
             </form>
@@ -49,7 +45,46 @@
 
 <!--LAPTOP-->
 <div class="laptop" *ngIf="!loginService.isMobile">
-    <p>login laptop</p>
+    <div class="left">
+        <div class="space">
+        </div>
+        <div class="box_login" style="min-height: 260px;">
+            <form style="min-height: 215px;">
+                <div class="box_login_in1">
+                    <img src="../../../assets/box_login_h1.png">
+                </div>
+                <div class="box_login_in">
+                    <a>Tên đăng nhập</a>
+                    <br>
+                    <input [(ngModel)]="this.username" type="text" name="UserName" value="" class="text_medium">
+                    <br>
+                    <a>Mật khẩu</a>
+                    <br>
+                    <input [(ngModel)]="this.password" type="password" name="PassWord" value="" class="text_medium">
+                    <br>
+                    <a style="color: red;" *ngIf="wrongnameorpass">Sai tên tài khoản hoặc mật khẩu</a>
+                    <input (click)="login()" name="button" type="button" style="width:85px;" class="nut1" value="Đăng nhập">
+                </div>
+            </form>
+        </div>
+        <div class="new_item col-sm-12" style="margin-left:auto; margin-right:auto;text-align: center;">
+            <span style="text-align: center; font-family:arial;font-size: 0.8em;">
+                    Kính mời Quý khách trải nghiệm ACB Online phiên bản ứng dụng trên thiết bị di động dành cho KHCN tại đây:
+            </span>
+            <br>
+            <p style="text-align: center">
+                <a href="https://itunes.apple.com/vn/app/acb/id950141024?mt=8" target="_blank">
+                    <img src="../../../assets/ios logo 80.png" style="border:0 ;width:80;height:65">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=mobile.acb.com.vn" target="_blank">
+                    <img src="../../../assets/android logo 80.png" style="border:0 ;width:80;height:65">
+                </a>
+                <a href="https://www.microsoft.com/en-us/store/apps/ngan-hang-a-chau-acb/9wzdncrd2qbm" target="_blank">
+                    <img src="../../../assets/win%20store%20logo%2080.png" style="border:0 ;width:80;height:65">
+                </a>
+            </p>
+        </div>
+    </div>
 </div>
 
 <!--END LAPTOP-->

@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row" style="width: 30%;margin-right: auto;margin-left: auto;">
+        <div class="col-12" style="text-align: center;margin-bottom: 25px;">
+            <h1>Sign Up</h1>
+        </div>
+        
+        <div class="col-12" style="text-align: center;">
+            
+            <p style="text-align: left;">Ten Dang Nhap:  </p>
+            <input style="width: 100%;" [(ngModel)]="name">
+        </div>
+        <div class="col-12">
+            <p *ngIf="isexistname" style="color: red;">ten dang nhap da ton tai</p>
+        </div>
+        <div class="col-12" style="text-align: center;">
+            <p style="text-align: left;">Email:  </p>
+            <input style="width: 100%;" [(ngModel)]="email">
+        </div>
+        <div class="col-12" style="text-align: center;">
+            <p style="text-align: left;">Mat Khau:  </p>
+            <input type="password" style="width: 100%;" [(ngModel)]="password">
+        </div>
+        <div class="col-12" *ngIf="!notmatch">
+            <p style="color: red;">mat khau khong trung</p>
+        </div>
+        <div class="col-12" style="text-align: center;">
+            <p style="text-align: left;">Xac Nhan Mat Khau:  </p>
+            <input type="password" (change)="dosomething($event.target.value)" style="width: 100%;" [(ngModel)]="confirmpass">
+        </div>
+        <div class="col-12" style="text-align: center;margin-top: 25px;">
+            <button (click)="signup()" type="button" class="btn btn-primary">Dang Ky</button>
+        </div>
+    </div>
+</div>
