@@ -16,6 +16,9 @@
             <p style="text-align: left;">Email:  </p>
             <input style="width: 100%;" [(ngModel)]="email">
         </div>
+        <div class="col-12">
+            <p *ngIf="mailerror" style="color: red;">email không hợp lệ</p>
+        </div>
         <div class="col-12" style="text-align: center;">
             <p style="text-align: left;">Mat Khau:  </p>
             <input type="password" style="width: 100%;" [(ngModel)]="password">

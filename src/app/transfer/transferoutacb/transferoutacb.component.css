@@ -9,6 +9,10 @@
     text-decoration: none;
     text-transform: uppercase;
 }
+#button{
+    margin-left: 10px;
+    margin-right: 10px;
+}
 td{
     font-size: 12px;
 }

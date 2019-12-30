@@ -8,8 +8,11 @@
             <div class="col-xs-12" style="text-align: right;width: 100%;">
                 <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
             </div>
-            <div  *ngFor="let str of errortext" class="col-xs-12" style="text-align: left;width: 100%;">
-                <a style="color: red;font-size:12px;">{{str}}</a>
+            <div  *ngIf="accounterror" class="col-xs-12" style="text-align: left;width: 100%;">
+                <a style="color: red;font-size:12px;">Tài khoản nhận không tồn tại</a>
+            </div>
+            <div  *ngIf="moneyerror" class="col-xs-12" style="text-align: left;width: 100%;">
+                <a style="color: red;font-size:12px;">Số tiền chuyển phải lớn hơn 50.000 và nhỏ hơn số dư khả dụng</a>
             </div>
             <table style="width: 100%;">
                 <tr>
@@ -24,15 +27,15 @@
                             <tbody>
                                 <tr>
                                     <td style="width: 27%;">Chọn tài khoản trích tiền</td>
-                                    <td *ngIf="this.accountService.getData()" style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
+                                    <td style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
                                         
-                                        <option selected="selected" value="authen.currentUserValue.accountNumber">{{authen.currentUserValue.accountNumber}}</option>
+                                        <option selected="selected" value="authen.currentUserValue.accountNumber">450999</option>
                                         </select>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td><p style="color: royalblue;">Số dư khả dụng {{this.accountService.getData()['availableBalance']}} VND</p></td>
+                                    <td><p style="color: royalblue;">Số dư khả dụng 0 VND</p></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -53,7 +56,7 @@
                                     </tr>
                                     <tr>
                                         <td><input type="radio" name="IsAcctFromList" checked="checked" value="true" id="tkl2"> Nhập số tài khoản</td>
-                                        <td><input [(ngModel)]="accountNumber" type="text" name="AccountNbrCo" value="accountNumber" size="30" id="AccountNbrCo">
+                                        <td><input (ngModelChange)="log($event)" [(ngModel)]="accountNumber" type="text" name="AccountNbrCo" value="accountNumber" size="30" id="AccountNbrCo">
                                         </td>
                                     </tr>
                                     <tr>
@@ -128,11 +131,7 @@
 							<td height="3" colspan="2"></td>
 						</tr>
 						
-						<tr>
-							<td><input type="checkbox" name="ChooseEmail1" value="true" id="ChooseEmail1">Nhận email kết quả giao dịch
-							<input type="hidden" name="ChooseEmail" id="ChooseEmail" value=""></td>
-							<td><input type="text" name="getEmail" value="" size="30" id="getEmail" maxlength="500" disabled=""></td>							
-						</tr>
+						
 						<tr>
 	                        <td colspan="2">
 	                        <span class="note-red">Lưu ý:</span>
@@ -176,8 +175,11 @@
             <div class="col-xs-12" style="text-align: right;width: 100%;">
                 <a style="color: #5abfff; font-size:12px;">Trợ giúp</a>
             </div>
-            <div  *ngFor="let str of errortext" class="col-xs-12" style="text-align: left;width: 100%;">
-                <a style="color: red;font-size:12px;">{{str}}</a>
+            <div  *ngIf="accounterror" class="col-xs-12" style="text-align: left;width: 100%;">
+                <a style="color: red;font-size:12px;">Tài khoản nhận không tồn tại</a>
+            </div>
+            <div  *ngIf="moneyerror" class="col-xs-12" style="text-align: left;width: 100%;">
+                <a style="color: red;font-size:12px;">Số tiền chuyển phải lớn hơn 50.000 và nhỏ hơn số dư khả dụng</a>
             </div>
             <table style="width: 100%;">
                 <tr>
@@ -296,11 +298,7 @@
 							<td height="3" colspan="2"></td>
 						</tr>
 						
-						<tr>
-							<td><input type="checkbox" name="ChooseEmail1" value="true" id="ChooseEmail1">Nhận email kết quả giao dịch
-							<input type="hidden" name="ChooseEmail" id="ChooseEmail" value=""></td>
-							<td><input type="text" name="getEmail" value="" size="30" id="getEmail" maxlength="500" disabled=""></td>							
-						</tr>
+						
 						<tr>
 	                        <td colspan="2">
 	                        <span class="note-red">Lưu ý:</span>

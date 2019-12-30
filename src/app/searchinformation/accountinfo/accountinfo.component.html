@@ -1,5 +1,5 @@
 <!--MOBILE-->
-<div class="mobile" *ngIf="loginService.isMobile">
+<div class="mobile" *ngIf="!loginService.isMobile">
     <div class="container">
         <div class="row">
             <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
@@ -52,7 +52,7 @@
 <!--END MOBILE-->
 
 <!--LAPTOP-->
-<div class="laptop" *ngIf="!loginService.isMobile">
+<div class="laptop" *ngIf="loginService.isMobile">
     <div class="container">
         <div class="row">
             <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
@@ -80,11 +80,11 @@
                             <th class="acctSum" style="text-align: center">Ngày đáo hạn</th><div style="width: 1px;background:white;height:100%;"></div>
                             <th class="acctSum" style="text-align: center">Sản phẩm</th>
                         </tr>
-                        <tr class="oddrowcolor" *ngIf="this.accountservice.getData()!=null">
-                            <td class="acctSum" style="text-align: center" width="15%"><a href="#" class="acc_bold">{{authenticationService.currentUserValue.accountNumber}}</a></td><div></div>
-                            <td class="acctSum" style="text-align: right" width="28%"><span class="text_bold">{{this.accountservice.getData()['realBalance']}}</span> (VND) <sup class="chuthich_num" style="color: red"> 1</sup><br><span class="text_bold">{{this.accountservice.getData()['availableBalance']}}</span> (VND) <sup class="chuthich_num" style="color: red"> 2</sup></td><div></div>
+                        <tr class="oddrowcolor">
+                            <td class="acctSum" style="text-align: center" width="15%"><a href="#" class="acc_bold">450990</a></td><div></div>
+                            <td class="acctSum" style="text-align: right" width="28%"><span class="text_bold">50000</span> (VND) <sup class="chuthich_num" style="color: red"> 1</sup><br><span class="text_bold">0</span> (VND) <sup class="chuthich_num" style="color: red"> 2</sup></td><div></div>
                             <td class="acctSum" style="text-align: center" width="20%">&nbsp;</td><div></div>
-                            <td class="acctSum" style="text-align: left" width="37%">TGTT {{this.accountservice.getData()['accountType']}} KHTN (CN) VND</td>
+                            <td class="acctSum" style="text-align: left" width="37%">TGTT sinh vien KHTN (CN) VND</td>
                         </tr>
                     </tbody>
                 </table>

@@ -8,6 +8,10 @@ a.name{
     font-family: 'Tahoma',Helvetica,sans-serif;
     font-weight: bold;
 }
+#button{
+    margin-left: 10px;
+    margin-right: 10px;
+}
 table.acctSum TH {
     background-color: #005b90;
     HEIGHT: 25px;

@@ -1,6 +1,10 @@
 td{
     font-size: 12px;
 }
+#button{
+    margin-left: 10px;
+    margin-right: 10px;
+}
 .white_tieude {
     padding-left: 5px;
     padding-right: 5px;

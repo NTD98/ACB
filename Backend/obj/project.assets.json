@@ -12972,11 +12972,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\.netmicroservice\\myMicroservice\\myMicroservice.csproj",
+      "projectUniqueName": "D:\\Angular7\\New folder\\ACB\\Backend\\myMicroservice.csproj",
       "projectName": "myMicroservice",
-      "projectPath": "D:\\.netmicroservice\\myMicroservice\\myMicroservice.csproj",
+      "projectPath": "D:\\Angular7\\New folder\\ACB\\Backend\\myMicroservice.csproj",
       "packagesPath": "C:\\Users\\DatTien\\.nuget\\packages\\",
-      "outputPath": "D:\\.netmicroservice\\myMicroservice\\obj\\",
+      "outputPath": "D:\\Angular7\\New folder\\ACB\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"

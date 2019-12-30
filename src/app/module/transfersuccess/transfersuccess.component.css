@@ -35,3 +35,7 @@ td{
     color: #c92538;
     text-decoration: none;
 }
+#button,#button2{
+    margin-left: 10px;
+    margin-right: 10px;
+}

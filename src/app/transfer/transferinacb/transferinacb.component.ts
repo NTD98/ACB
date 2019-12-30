@@ -41,13 +41,19 @@ export class TransferInACBComponent implements OnInit {
       }
     )
   }
-  
+  log(newObj){
+    console.log("accreedata",this.accountService.getAccReData())
+  }
   transfer(){
+    this.router.navigate(['../../transfersuccess']);
+    /*
     console.log(this.errortext)
     if(this.money<=this.accountService.getData()['availableBalance']&&this.money>=50000)
     {
+      this.moneyerror=false;
       this.accountService.getAccRe(this.accountNumber)
       if(this.accountService.getAccReData()){
+        this.accounterror=false;
         this.accountService.SetMoney(this.money);
         this.accountService.SetAccount(this.accountNumber);
         this.accountService.SetText(this.text);
@@ -63,8 +69,8 @@ export class TransferInACBComponent implements OnInit {
         return;
       }
     }
-    else
-    {
+    
+    
       if(!this.moneyerror)
       {
         this.moneyerror=true;
@@ -72,6 +78,6 @@ export class TransferInACBComponent implements OnInit {
         return;
       }
       return;
-    }
+   */ 
   }
 }
