@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,7 +21,7 @@ using Microsoft.AspNetCore.Cors;
 
 namespace myMicroservice.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
@@ -83,7 +83,7 @@ namespace myMicroservice.Controllers
             }
             
         }
-        [HttpGet]
+        [HttpGet("accnum")]
         public IActionResult GetAccountByAccNum(int accnum)
         {
             try
@@ -143,7 +143,29 @@ namespace myMicroservice.Controllers
             }
             return new NoContentResult();
         }
-
+        [HttpPut("changeusername")]
+        public IActionResult ChangeUserName([FromBody] AccountDto accountDto, int id)
+        {
+          var user = _mMapper.Map<Account>(accountDto);
+          user.AccountID = id;
+          if (accountDto != null)
+          {
+            try
+            {
+              using (var scope = new TransactionScope())
+              {
+                _accountRepository.ChangeUsername(id, accountDto.Name,accountDto.Password);
+                scope.Complete();
+                return new OkResult();
+              }
+            }
+            catch (Exception ex)
+            {
+              return BadRequest(new { message = ex.Message });
+            }
+          }
+          return new NoContentResult();
+        }
         [HttpPut("{id}", Name ="Active")]
         public IActionResult Active([FromBody] Account account)
         {

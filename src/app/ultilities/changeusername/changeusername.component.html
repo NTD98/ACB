@@ -1,5 +1,5 @@
 <!--MOBILE-->
-<div class="mobile" *ngIf="loginService.isMobile">
+<div class="mobile">
     <div class="container">
         <div class="row">
             <div class="col-xs-12" style="float: left;background: rgb(240, 240, 240);width: 100%">
@@ -16,39 +16,50 @@
                                 <tbody>
                                     <tr>
 										<td style="width: 45%;height: 30px;text-align: center;" class="text_bold">
-										Tên truy cập cũ</td>
-                                        <td style="width: 55%;text-align: left;">
-                                            <input type="text" name="OldUser" value="" size="25" id="OldUser">
-										</td>
-                                    </tr>
-                                    <tr>
-										<td style="width: 45%;height: 30px;text-align: center;" class="text_bold">
                                                 Tên truy cập mới</td>
                                         <td style="width: 55%;text-align: left;">
-                                            <input type="text" name="OldUser" value="" size="25" id="OldUser">
+                                            <input [(ngModel)]="newName" type="text" name="OldUser" value="" size="25" id="OldUser">
 										</td>
+                                    </tr>
+                                    <tr style="color: red;" *ngIf="nameexist">
+                                        <td></td>
+                                        <td>
+                                            Tên đã tồn tại
+                                        </td>
                                     </tr>
                                     <tr>
 										<td style="width: 45%;height: 30px;text-align: center;" class="text_bold">
 										Xác nhận tên truy cập mới</td>
                                         <td style="width: 55%;text-align: left;">
-                                            <input type="text" name="OldUser" value="" size="25" id="OldUser">
+                                            <input [(ngModel)]="confirmName" type="text" name="OldUser" value="" size="25" id="OldUser">
 										</td>
+                                    </tr>
+                                    <tr style="color: red;" *ngIf="namemismatch">
+                                        <td></td>
+                                        <td>
+                                            Tên không khớp
+                                        </td>
                                     </tr>
                                     <tr>
 										<td style="width: 45%;height: 30px;text-align: center;" class="text_bold">
 										Mật khẩu mới</td>
                                         <td style="width: 55%;text-align: left;">
-                                            <input type="text" name="OldUser" value="" size="25" id="OldUser">
+                                            <input [(ngModel)]="newPass" type="password" name="OldUser" value="" size="25" id="OldUser">
 										</td>
                                     </tr>
                                     <tr>
 										<td style="width: 45%;height: 30px;text-align: center;" class="text_bold">
 										Xác nhận mật khẩu mới</td>
                                         <td style="width: 55%;text-align: left;">
-                                            <input type="text" name="OldUser" value="" size="25" id="OldUser">
+                                            <input [(ngModel)]="confirmPass" type="password" name="OldUser" value="" size="25" id="OldUser">
 										</td>
 									</tr>
+                                    <tr style="color: red;" *ngIf="passmismatch">
+                                        <td></td>
+                                        <td>
+                                            Mật khẩu không khớp
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </td>
@@ -64,11 +75,23 @@
                                 <table>
                                     <tbody>
                                         <tr>
-                                            <td style="width: 27%;">Chọn phương pháp xác thực</td>
-                                            <td style="width:73%"><select name="AccountNbrNo" id="AccountNbrNo" style="width:205px;">
-                                                <option value="" selected="selected"></option>
-                                                <option value="4504727">4504727</option>
-                                                </select>
+                                            <td style="width:45%;height: 30px;" class="text_bold">Nhập lại mật khẩu cũ</td>
+                                            <td style="width:55%;text-align:left;">
+                                                <div>
+                                                    <input [(ngModel)]="oldPass" type="password" name="ReNewPass" value="" size="25" id="ReNewPass" >
+                                                    <div class="validReNewPass" style="display: none;">
+                                                    <img src="/acbib/img/icon/valid.png" width="16px" style="border-style: none; vertical-align: bottom;">
+                                                    </div>
+                                                    <div class="failReNewPass" style="display: none;">
+                                                    <img src="/acbib/img/icon/fail.png" width="16px" style="border-style: none; vertical-align: bottom;">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr style="color: red;" *ngIf="oldpassmismatch">
+                                            <td></td>
+                                            <td>
+                                                Mật khẩu không đúng
                                             </td>
                                         </tr>
                                     </tbody>
@@ -77,7 +100,7 @@
                         </tr>
                         <tr style="text-align:center;">
                             
-                            <input name="button" type="button" class="nut1" id="button" value="Đồng ý">
+                            <input (click)="ChangeUser()" name="button" type="button" class="nut1" id="button" value="Đồng ý">
                             <input name="button2" type="button" class="nut1" id="button2" value="Hủy">
                         </tr>
                         <tr>
@@ -97,9 +120,3 @@
     </div>
 </div>
 <!--END MOBILE-->
-
-<!--LAPTOP-->
-<div class="laptop" *ngIf="!loginService.isMobile">
-    <p>smsbanking laptop</p>
-</div>
-<!--END LAPTOP-->

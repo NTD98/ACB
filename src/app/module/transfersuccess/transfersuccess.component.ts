@@ -34,8 +34,8 @@ export class TransfersuccessComponent implements OnInit {
     var receive = this.accountService.getAccReData();
     receive['availableBalance']  = +receive['availableBalance'] + +this.accountService.moneytransfer;
     receive['realBalance']  = +receive['realBalance'] + +this.accountService.moneytransfer;
-    this.accountService.updateBalance(term);
-    this.accountService.updateBalance(receive);
+    this.accountService.updateBalance(term,1);
+    this.accountService.updateBalance(receive,2);
     this.accountService.createTransaction(term['accountNumber'],receive['accountNumber'],this.accountService.transfertext,this.accountService.moneytransfer).then(
       function(data){
         data.subscribe(

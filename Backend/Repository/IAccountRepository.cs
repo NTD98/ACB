@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,6 +11,7 @@ namespace myMicroservice.Repository
     {
         BankAccount CreateAccount(Account account,string Password);
         void UpdateAccount(int accountid,string Password);
+        void ChangeUsername(int accoundid, string user, string password);
         void ActivateAccount(Account account);
         Account GetAccountByName(int id);
         Account GetAccountByAccNum(int accnum);

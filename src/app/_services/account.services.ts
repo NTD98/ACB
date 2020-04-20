@@ -35,12 +35,12 @@ export class AccountService {
     }
 
     async getAccount(id:number){
-        let data = await this.http.get<any>('http://localhost:5000/api/BankAccount/'+id);
+        let data = await this.http.get<any>('http://localhost:5000/api/BankAccount/accnum?accnum='+id);
         console.log("data",data);
         return data;
     }
     async getAccName(accnum:number){
-        let data = await this.http.get<any>('http://localhost:5000/api/Account/'+accnum).subscribe(
+        let data = await this.http.get<any>('http://localhost:5000/api/Account/accnum?AccNum='+accnum).subscribe(
             data=>{
                 loginreceiacc = data;
                 console.log("loginreice",loginreceiacc);
@@ -72,12 +72,12 @@ export class AccountService {
         console.log("accredata",data);
         return data;
     }
-    updateBalance(ba:object){
+    updateBalance(ba:object, type:number){
         let headers = new HttpHeaders({
             'Content-Type': 'application/json'});
         let options = { headers: headers };
         var id = this.getData()['id'];
-        this.http.put('http://localhost:5000/api/BankAccount/' + ba['id'],ba,options).subscribe(
+        this.http.put('http://localhost:5000/api/BankAccount/' + type,ba,options).subscribe(
             data=>{
                 console.log("success",ba['accountNumber']);
             },
@@ -106,6 +106,27 @@ export class AccountService {
             "password":pass
         };
         return this.http.put<any>('http://localhost:5000/api/Account?id='+this.authen.currentUserValue.id,acc,options).pipe(
+            map(
+                data=>{
+                    console.log("succ")
+                    return true;
+                },
+                error=>{
+                    console.log("fail")
+                    return false;
+                }
+            )
+        );
+    }
+    changeUsername(user:string,pass:string){
+        let headers = new HttpHeaders({
+            'Content-Type': 'application/json'});
+        let options = { headers: headers };
+        let acc = {
+            "name":user,
+            "password":pass
+        };
+        return this.http.put<any>('http://localhost:5000/api/Account/changeusername?id='+this.authen.currentUserValue.id,acc,options).pipe(
             map(
                 data=>{
                     console.log("succ")

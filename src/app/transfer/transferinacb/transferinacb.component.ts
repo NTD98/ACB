@@ -45,8 +45,8 @@ export class TransferInACBComponent implements OnInit {
     console.log("accreedata",this.accountService.getAccReData())
   }
   transfer(){
-    this.router.navigate(['../../transfersuccess']);
-    /*
+    //this.router.navigate(['../../transfersuccess']);
+    
     console.log(this.errortext)
     if(this.money<=this.accountService.getData()['availableBalance']&&this.money>=50000)
     {
@@ -78,6 +78,6 @@ export class TransferInACBComponent implements OnInit {
         return;
       }
       return;
-   */ 
+   
   }
 }

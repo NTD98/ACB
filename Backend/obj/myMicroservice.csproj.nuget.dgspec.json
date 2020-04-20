@@ -1,32 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Angular7\\New folder\\ACB\\Backend\\myMicroservice.csproj": {}
+    "D:\\GitHub\\ACB-master\\Backend\\myMicroservice.csproj": {}
   },
   "projects": {
-    "D:\\Angular7\\New folder\\ACB\\Backend\\myMicroservice.csproj": {
+    "D:\\GitHub\\ACB-master\\Backend\\myMicroservice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Angular7\\New folder\\ACB\\Backend\\myMicroservice.csproj",
+        "projectUniqueName": "D:\\GitHub\\ACB-master\\Backend\\myMicroservice.csproj",
         "projectName": "myMicroservice",
-        "projectPath": "D:\\Angular7\\New folder\\ACB\\Backend\\myMicroservice.csproj",
+        "projectPath": "D:\\GitHub\\ACB-master\\Backend\\myMicroservice.csproj",
         "packagesPath": "C:\\Users\\DatTien\\.nuget\\packages\\",
-        "outputPath": "D:\\Angular7\\New folder\\ACB\\Backend\\obj\\",
+        "outputPath": "D:\\GitHub\\ACB-master\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\DatTien\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\ServiceFabricSDK.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\Microsoft SDKs\\Service Fabric\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -46,6 +44,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[8.1.1, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.6.0, )"
             },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
@@ -75,13 +77,23 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[2.2.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

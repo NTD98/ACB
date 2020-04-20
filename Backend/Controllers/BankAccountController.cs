@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,7 +21,7 @@ using Microsoft.AspNetCore.Cors;
 
 namespace myMicroservice.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BankAccountController : ControllerBase
@@ -59,7 +59,7 @@ namespace myMicroservice.Controllers
             }
         }
         // ?AccNum=...
-        [HttpGet]
+        [HttpGet("accnum")]
         public IActionResult GetBAWithAccNum(int AccNum)
         {
             try
@@ -105,7 +105,7 @@ namespace myMicroservice.Controllers
                 {
                     using (var scope = new TransactionScope())
                     {
-                        _baRepository.UpdateBA(ba);
+                        _baRepository.UpdateBA(ba,id);
                         scope.Complete();
                         return new OkResult();
                     }

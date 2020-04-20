@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -89,6 +89,28 @@ namespace myMicroservice.Repository
         {
             return _accountContext.Accounts.Where(x => x.AccountNumber == accnum).FirstOrDefault();
         }
+        public void ChangeUsername(int accountid, string user, string Password)
+        {
+            var acc = _accountContext.Accounts.Find(accountid);
+            if (acc == null)
+              throw new ApplicationException("User not found");
+            bool isDuplicateName = _accountContext.Accounts.Any(x => x.Name == user);
+            if (isDuplicateName)
+            {
+              throw new ApplicationException("User exist");
+            }
+            acc.Name = user;
+            if (!string.IsNullOrWhiteSpace(Password))
+            {
+              byte[] passwordHash, passwordSalt;
+              CreatePasswordHash(Password, out passwordHash, out passwordSalt);
+
+              acc.PasswordHash = passwordHash;
+              acc.PasswordSalt = passwordSalt;
+            }
+            _accountContext.Entry(acc).State = EntityState.Modified;
+            _accountContext.SaveChanges();
+        }
         public void UpdateAccount(int accountid,string Password)
         {
             var acc = _accountContext.Accounts.Find(accountid);
@@ -137,6 +159,6 @@ namespace myMicroservice.Repository
             return true;
         }
 
-        
-    }
+    
+  }
 }

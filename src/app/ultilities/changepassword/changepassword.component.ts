@@ -22,6 +22,7 @@ export class ChangepasswordComponent implements OnInit {
     }
 
   ngOnInit() {
+    console.log(this.authen.currentUserValue.username)
   }
   changePass(){
     

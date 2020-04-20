@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using myMicroservice.Models;
 using myMicroservice.DBContexts;
 using Microsoft.EntityFrameworkCore;
+
 namespace myMicroservice.Repository
 {
     public class BankAccountRepository : IBankAccountRepository
@@ -39,15 +40,18 @@ namespace myMicroservice.Repository
             return _accountContext.BankAccounts.Where(x => x.AccountNumber == Accnum).First();
         }
 
-        public void UpdateBA(BankAccount BA)
-        {
-            var ba = _accountContext.BankAccounts.Where(x => x.AccountNumber == BA.AccountNumber);
-            if (ba == null)
-            {
-                throw new ApplicationException("Bank Account not found!");
-            }
-            _accountContext.Entry(BA).State = EntityState.Modified;
-            _accountContext.SaveChanges();
-        }
+        
+
+          public void UpdateBA(BankAccount BA, int type)
+          {
+                var ba = _accountContext.BankAccounts.Where(x => x.AccountNumber == BA.AccountNumber);
+                if (ba == null)
+                {
+                    throw new ApplicationException("Bank Account not found!");
+                }
+                _accountContext.Entry(BA).State = EntityState.Modified;
+                _accountContext.SaveChanges();
+                var ac = _accountContext.Accounts.Where(x => x.AccountNumber == BA.AccountNumber).FirstOrDefault();
+          }
     }
 }
