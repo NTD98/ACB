@@ -25,7 +25,7 @@ export class AccountinfoComponent implements OnInit {
     console.log(account);
   }
   ngOnInit() {
-    
+    this.accountservice.initJob(this.authenticationService.currentUserValue.accountNumber);
     isload=false;
   }
   ngDoCheck(){

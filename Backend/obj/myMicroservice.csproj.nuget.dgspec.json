@@ -10,14 +10,11 @@
         "projectUniqueName": "D:\\GitHub\\ACB-master\\Backend\\myMicroservice.csproj",
         "projectName": "myMicroservice",
         "projectPath": "D:\\GitHub\\ACB-master\\Backend\\myMicroservice.csproj",
-        "packagesPath": "C:\\Users\\DatTien\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\16520\\.nuget\\packages\\",
         "outputPath": "D:\\GitHub\\ACB-master\\Backend\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\DatTien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\16520\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,7 +90,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

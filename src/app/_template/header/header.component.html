@@ -45,7 +45,6 @@
         </div>
     </div>
 </div>
-
 <!--END MOBILE-->
 
 
@@ -66,7 +65,7 @@
     </div>
     <div class="topmenu">
         <div class="topmenu_left">
-            <ul *ngIf="!this.loginService.isLogin">
+            <ul *ngIf="!this.authen.currentUserValue">
                 <li class="" [ngClass]="this.loginService.isLogin?'selected':''">
                     <a (click)="log()">Bản Mobile</a>
                 </li>
@@ -75,7 +74,7 @@
                     <a>Bản chuẩn</a>
                 </li>
             </ul>
-            <ul *ngIf="this.loginService.isLogin">
+            <ul *ngIf="this.authen.currentUserValue">
                 <li>
                     <a style="padding: 0px 0px 0px 0px">
                         <img src="../../../assets/home-32.png" style="padding:5px 1px 3px 3px;height: 26px;border:0px;width: 22px;vertical-align: -webkit-baseline-middle;;">

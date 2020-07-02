@@ -22,7 +22,10 @@ export class AccountService {
     @Output() changeText: EventEmitter<string> = new EventEmitter();
     constructor(private http: HttpClient,private authen: AuthenticationService) {
         console.log("accountid",authen.currentUserValue.accountNumber);
-        this.getAccount(authen.currentUserValue.accountNumber).then(
+        this.initJob(authen.currentUserValue.accountNumber);
+    }
+    initJob(id:number){
+        this.getAccount(id).then(
             function(result){
                 result.subscribe(
                     function(data){
@@ -33,7 +36,6 @@ export class AccountService {
             }
         )
     }
-
     async getAccount(id:number){
         let data = await this.http.get<any>('http://localhost:5000/api/BankAccount/accnum?accnum='+id);
         console.log("data",data);

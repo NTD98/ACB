@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from '../../module/login/login.service'
+import { LoginService } from '../../module/login/login.service';
 import { AuthenticationService } from '../../_services/authentication.service';
+import {AccountService} from '../../_services/account.services';
+
 @Component({
   selector: 'header',
   templateUrl: './header.component.html',
@@ -9,16 +11,14 @@ import { AuthenticationService } from '../../_services/authentication.service';
 export class HeaderComponent implements OnInit {
   isLogin = false;
   constructor(private loginService: LoginService,
-    private authen:AuthenticationService) { }
-
+    private authen: AuthenticationService) { }
   ngOnInit() {
-    
+    this.authen.logout();
   }
-  log(){
-    
-    console.log(this.isLogin)
+  log() {
+    console.log(this.authen.currentUserValue);
   }
-  logout(){
+  logout() {
     console.log("out")
     this.authen.logout();
   }

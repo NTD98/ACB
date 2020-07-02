@@ -28,3 +28,5 @@ D:\GitHub\ACB-master\Backend\obj\Debug\netcoreapp2.2\myMicroservice.AssemblyInfo
 D:\GitHub\ACB-master\Backend\obj\Debug\netcoreapp2.2\myMicroservice.RazorTargetAssemblyInfo.cache
 D:\GitHub\ACB-master\Backend\obj\Debug\netcoreapp2.2\myMicroservice.dll
 D:\GitHub\ACB-master\Backend\obj\Debug\netcoreapp2.2\myMicroservice.pdb
+D:\GitHub\ACB-master\Backend\obj\Debug\netcoreapp2.2\myMicroservice.csproj.CoreCompileInputs.cache
+D:\GitHub\ACB-master\Backend\obj\Debug\netcoreapp2.2\myMicroservice.genruntimeconfig.cache

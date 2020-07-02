@@ -49,7 +49,7 @@ namespace myMicroservice.Repository
           email);
           message.To.Add(to);
 
-          message.Subject = "This is email subject";
+          message.Subject = "NTD Bank";
           BodyBuilder bodyBuilder = new BodyBuilder();
           if (type == 2)
             bodyBuilder.TextBody = "Quý khách đã nhận được " + money + " với nội dung: " + content + " từ số tài khoản: " + user;

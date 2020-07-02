@@ -21,7 +21,7 @@ using Microsoft.AspNetCore.Cors;
 
 namespace myMicroservice.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BankAccountController : ControllerBase

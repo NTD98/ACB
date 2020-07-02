@@ -34,6 +34,7 @@ export class AuthenticationService {
                     console.log("User token",user);
                     
                     this.currentUserSubject.next(user);
+
                     this.currentUserSubject.value.username=Name;
                     this.currentUserSubject.value.password=Password;
                 }
