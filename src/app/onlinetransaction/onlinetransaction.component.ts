@@ -24,9 +24,9 @@ export class OnlineTransactionComponent implements OnInit {
       var day = this.getdate.getUTCDate();
       var month =this.getdate.getUTCMonth();
       var year = this.getdate.getUTCFullYear();
-      this.fromday = day + "/" + month + "/" + year;
+      this.fromday = day + "/0" + month + "/" + year;
       
-      this.today = day + "/" + (month+1) + "/" + year;
+      this.today = day + "/0" + (month+1) + "/" + year;
     }
   
   getData(){
@@ -87,40 +87,86 @@ export class OnlineTransactionComponent implements OnInit {
     var tomonth = parseInt(this.today.split("/")[1]);
     var toyear = parseInt(this.today.split("/")[2]);
 
-    
+    if(fromyear>toyear)
+    {
+      this.isvaliddate = true;
+      return;
+    }
+    else{
+      if(frommonth>tomonth)
+      {
+        this.isvaliddate = true;
+        return;
+      }
+      else{
+        if(fromday>today)
+        {
+          this.isvaliddate=true;
+          return;
+        }
+      }
+    }
     this.listitems.forEach(element => {
       console.log("list",element['date'])
       let date = element['date'];
       var year = parseInt(String(date).substring(0,4));
       var month = parseInt(String(date).substring(5,7));
       var day   = parseInt(String(date).substring(8,10));
-
+      console.log("y/m/d",year,month,day)
       var pattern =/^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;
       
       if(!pattern.test(this.fromday)||!pattern.test(this.today)){
         this.isvaliddate=true;
         return;
       }
+      else{
+        this.isvaliddate = false;
+      }
       if(year>toyear||year<fromyear)
       {
-        this.isvaliddate = true;
+        //this.isvaliddate = true;
         console.log("invalid year")
       }else{
         if(month>tomonth||month<frommonth)
         {
-          this.isvaliddate = true;
+          //this.isvaliddate = true;
+          console.log(frommonth,tomonth,month)
           console.log("invalid month")
         }
         else{
           if((day>today||day<fromday)&&(month==tomonth&&month==frommonth))
           {
-            this.isvaliddate = true;
+            //this.isvaliddate = true;
             console.log("invalid day")
           }
           else{
-            this.filteredtrans.push(element);
-            this.isvaliddate=false;
-            
+            if(month==frommonth)
+            {
+              if(day>=fromday)
+              {
+              console.log("filter",element)
+              this.filteredtrans.push(element);
+              this.isvaliddate=false;
+              }
+              else{
+                this.isvaliddate = true;
+              }
+            }
+            else{
+              console.log("filter",element)
+              this.filteredtrans.push(element);
+              this.isvaliddate=false;
+            }
+            /*if(day>=fromday&&day<=today)
+            {
+              console.log("filter",element)
+              this.filteredtrans.push(element);
+              this.isvaliddate=false;
+            }
+            else{
+              console.log("day",day,month)
+              //this.isvaliddate = true;
+            }*/
           }
         }
       }

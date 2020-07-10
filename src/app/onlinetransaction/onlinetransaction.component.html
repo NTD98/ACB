@@ -217,7 +217,8 @@
                     <tr class="oddrowcolor" *ngFor="let item of filteredtrans">
                         <td class="acctSum" style="text-align: center" width="15%"><a href="#" class="acc_bold">{{item.sender}}</a></td><div></div>
                         <td class="acctSum" style="text-align: center" width="15%">{{item.receiver}}</td><div></div>
-                        <td class="acctSum" style="text-align: center" width="15%">{{item.money}}</td><div></div>
+                        <td *ngIf="this.authen.currentUserValue.accountNumber==item.sender" class="acctSum" style="text-align: center;color: red;" width="15%">- {{item.money}}</td><div></div>
+                        <td *ngIf="this.authen.currentUserValue.accountNumber!=item.sender" class="acctSum" style="text-align: center;color: blue;" width="15%">+ {{item.money}}</td><div></div>
                         <td class="acctSum" style="text-align: left" width="20%">{{item.date | date}}</td><div></div>
                         <td class="acctSum" style="text-align: left" width="35%">{{item.content}}</td>
                     </tr>
