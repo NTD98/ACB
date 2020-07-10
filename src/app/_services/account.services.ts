@@ -21,7 +21,8 @@ export class AccountService {
     @Output() changeMoney: EventEmitter<number> = new EventEmitter();
     @Output() changeText: EventEmitter<string> = new EventEmitter();
     constructor(private http: HttpClient,private authen: AuthenticationService) {
-        console.log("accountid",authen.currentUserValue.accountNumber);
+        //console.log("accountid",authen.currentUserValue.accountNumber);
+        if(authen.currentUserValue)
         this.initJob(authen.currentUserValue.accountNumber);
     }
     initJob(id:number){

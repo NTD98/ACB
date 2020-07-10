@@ -14,6 +14,7 @@ export class SignupComponent implements OnInit {
   confirmpass="c";
   mailerror=false;
   notmatch=true;
+  mailtexterror="";
   isexistname=false;
   @Output() change: EventEmitter<boolean> = new EventEmitter();
   constructor(private accountService:AccountService,
@@ -28,6 +29,7 @@ export class SignupComponent implements OnInit {
       this.mailerror=false;
       return (true)
     }
+      this.mailtexterror="mail không hợp lệ";
       this.mailerror=true;
       
       return (false)
@@ -40,6 +42,9 @@ export class SignupComponent implements OnInit {
       this.change.emit(this.notmatch);
       return;
     }
+    else{
+      this.notmatch= true;
+    }
     if(!this.ValidateEmail(this.email)){
       return;
     }
@@ -49,8 +54,18 @@ export class SignupComponent implements OnInit {
         this.router.navigate(['../']);
       },
       error=>{
-        console.log("error sig",error);
-        this.isexistname=true;
+        if(error=='This email has been already taken')
+        {
+          this.mailtexterror="email này đã được sử dụng";
+          console.log("error sigup",error);
+          this.mailerror=true;
+          this.isexistname=false;
+        }
+        else
+        {
+          console.log("error sig",error);
+          this.isexistname=true
+        };
       }
     );
     
